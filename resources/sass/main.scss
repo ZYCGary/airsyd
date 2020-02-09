@@ -1,3 +1,16 @@
+/* Header Nav */
 .navbar-nav > .dropdown > .dropdown-menu > .dropdown-item button {
     min-width: 100%;
+}
+
+/* Authentication Pages */
+#login {
+    .text-center {
+        min-width: 100%;
+        padding-top: 8em;
+    }
+
+    form input {
+        text-align: center;
+    }
 }
