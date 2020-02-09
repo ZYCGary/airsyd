@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="{{ route('theme.home') }}">Air Sydney</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
 
@@ -14,6 +15,31 @@
                 <li class="nav-item"><a href="{{ route('theme.properties') }}" class="nav-link">Properties</a></li>
                 <li class="nav-item"><a href="{{ route('theme.blog') }}" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="{{ route('theme.contact') }}" class="nav-link">Contact</a></li>
+                @guest
+                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">{{ __('Login') }}</a></li>
+                    <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">{{ __('Register') }}</a>
+                    </li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a href="#" id="navbarDropdown" class="nav-link dropdown-toggle" role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">{{ __('profile') }}</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="">
+                                <button class="btn btn-primary">{{ __('profile-edit') }}</button>
+                            </a>
+                            <a class="dropdown-item" id="logout" href="javascript:void(0)">
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="btn btn-primary" type="submit"
+                                            name="button">{{ __('Logout') }}</button>
+                                </form>
+                            </a>
+                        </div>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>
