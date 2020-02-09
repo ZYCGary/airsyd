@@ -36981,6 +36981,20 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/amd-define.js":
+/*!***************************************!*\
+  !*** (webpack)/buildin/amd-define.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function() {
+	throw new Error("define cannot be used indirect");
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -37045,6 +37059,620 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/aos.js":
+/*!*****************************!*\
+  !*** ./resources/js/aos.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+!function (e, t) {
+  "object" == ( false ? undefined : _typeof(exports)) && "object" == ( false ? undefined : _typeof(module)) ? module.exports = t() :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (t),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+}(this, function () {
+  return function (e) {
+    function t(o) {
+      if (n[o]) return n[o].exports;
+      var i = n[o] = {
+        exports: {},
+        id: o,
+        loaded: !1
+      };
+      return e[o].call(i.exports, i, i.exports, t), i.loaded = !0, i.exports;
+    }
+
+    var n = {};
+    return t.m = e, t.c = n, t.p = "dist/", t(0);
+  }([function (e, t, n) {
+    "use strict";
+
+    function o(e) {
+      return e && e.__esModule ? e : {
+        "default": e
+      };
+    }
+
+    var i = Object.assign || function (e) {
+      for (var t = 1; t < arguments.length; t++) {
+        var n = arguments[t];
+
+        for (var o in n) {
+          Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+        }
+      }
+
+      return e;
+    },
+        r = n(1),
+        a = (o(r), n(6)),
+        u = o(a),
+        c = n(7),
+        f = o(c),
+        s = n(8),
+        d = o(s),
+        l = n(9),
+        p = o(l),
+        m = n(10),
+        b = o(m),
+        v = n(11),
+        y = o(v),
+        g = n(14),
+        h = o(g),
+        w = [],
+        k = !1,
+        x = document.all && !window.atob,
+        j = {
+      offset: 120,
+      delay: 0,
+      easing: "ease",
+      duration: 400,
+      disable: !1,
+      once: !1,
+      startEvent: "DOMContentLoaded"
+    },
+        O = function O() {
+      var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      if (e && (k = !0), k) return w = (0, y["default"])(w, j), (0, b["default"])(w, j.once), w;
+    },
+        S = function S() {
+      w = (0, h["default"])(), O();
+    },
+        _ = function _() {
+      w.forEach(function (e, t) {
+        e.node.removeAttribute("data-aos"), e.node.removeAttribute("data-aos-easing"), e.node.removeAttribute("data-aos-duration"), e.node.removeAttribute("data-aos-delay");
+      });
+    },
+        E = function E(e) {
+      return e === !0 || "mobile" === e && p["default"].mobile() || "phone" === e && p["default"].phone() || "tablet" === e && p["default"].tablet() || "function" == typeof e && e() === !0;
+    },
+        z = function z(e) {
+      return j = i(j, e), w = (0, h["default"])(), E(j.disable) || x ? _() : (document.querySelector("body").setAttribute("data-aos-easing", j.easing), document.querySelector("body").setAttribute("data-aos-duration", j.duration), document.querySelector("body").setAttribute("data-aos-delay", j.delay), "DOMContentLoaded" === j.startEvent && ["complete", "interactive"].indexOf(document.readyState) > -1 ? O(!0) : "load" === j.startEvent ? window.addEventListener(j.startEvent, function () {
+        O(!0);
+      }) : document.addEventListener(j.startEvent, function () {
+        O(!0);
+      }), window.addEventListener("resize", (0, f["default"])(O, 50, !0)), window.addEventListener("orientationchange", (0, f["default"])(O, 50, !0)), window.addEventListener("scroll", (0, u["default"])(function () {
+        (0, b["default"])(w, j.once);
+      }, 99)), document.addEventListener("DOMNodeRemoved", function (e) {
+        var t = e.target;
+        t && 1 === t.nodeType && t.hasAttribute && t.hasAttribute("data-aos") && (0, f["default"])(S, 50, !0);
+      }), (0, d["default"])("[data-aos]", S), w);
+    };
+
+    e.exports = {
+      init: z,
+      refresh: O,
+      refreshHard: S
+    };
+  }, function (e, t) {},,,,, function (e, t) {
+    (function (t) {
+      "use strict";
+
+      function n(e, t, n) {
+        function o(t) {
+          var n = b,
+              o = v;
+          return b = v = void 0, k = t, g = e.apply(o, n);
+        }
+
+        function r(e) {
+          return k = e, h = setTimeout(s, t), S ? o(e) : g;
+        }
+
+        function a(e) {
+          var n = e - w,
+              o = e - k,
+              i = t - n;
+          return _ ? j(i, y - o) : i;
+        }
+
+        function c(e) {
+          var n = e - w,
+              o = e - k;
+          return void 0 === w || n >= t || n < 0 || _ && o >= y;
+        }
+
+        function s() {
+          var e = O();
+          return c(e) ? d(e) : void (h = setTimeout(s, a(e)));
+        }
+
+        function d(e) {
+          return h = void 0, E && b ? o(e) : (b = v = void 0, g);
+        }
+
+        function l() {
+          void 0 !== h && clearTimeout(h), k = 0, b = w = v = h = void 0;
+        }
+
+        function p() {
+          return void 0 === h ? g : d(O());
+        }
+
+        function m() {
+          var e = O(),
+              n = c(e);
+
+          if (b = arguments, v = this, w = e, n) {
+            if (void 0 === h) return r(w);
+            if (_) return h = setTimeout(s, t), o(w);
+          }
+
+          return void 0 === h && (h = setTimeout(s, t)), g;
+        }
+
+        var b,
+            v,
+            y,
+            g,
+            h,
+            w,
+            k = 0,
+            S = !1,
+            _ = !1,
+            E = !0;
+
+        if ("function" != typeof e) throw new TypeError(f);
+        return t = u(t) || 0, i(n) && (S = !!n.leading, _ = "maxWait" in n, y = _ ? x(u(n.maxWait) || 0, t) : y, E = "trailing" in n ? !!n.trailing : E), m.cancel = l, m.flush = p, m;
+      }
+
+      function o(e, t, o) {
+        var r = !0,
+            a = !0;
+        if ("function" != typeof e) throw new TypeError(f);
+        return i(o) && (r = "leading" in o ? !!o.leading : r, a = "trailing" in o ? !!o.trailing : a), n(e, t, {
+          leading: r,
+          maxWait: t,
+          trailing: a
+        });
+      }
+
+      function i(e) {
+        var t = "undefined" == typeof e ? "undefined" : c(e);
+        return !!e && ("object" == t || "function" == t);
+      }
+
+      function r(e) {
+        return !!e && "object" == ("undefined" == typeof e ? "undefined" : c(e));
+      }
+
+      function a(e) {
+        return "symbol" == ("undefined" == typeof e ? "undefined" : c(e)) || r(e) && k.call(e) == d;
+      }
+
+      function u(e) {
+        if ("number" == typeof e) return e;
+        if (a(e)) return s;
+
+        if (i(e)) {
+          var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+          e = i(t) ? t + "" : t;
+        }
+
+        if ("string" != typeof e) return 0 === e ? e : +e;
+        e = e.replace(l, "");
+        var n = m.test(e);
+        return n || b.test(e) ? v(e.slice(2), n ? 2 : 8) : p.test(e) ? s : +e;
+      }
+
+      var c = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (e) {
+        return _typeof(e);
+      } : function (e) {
+        return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : _typeof(e);
+      },
+          f = "Expected a function",
+          s = NaN,
+          d = "[object Symbol]",
+          l = /^\s+|\s+$/g,
+          p = /^[-+]0x[0-9a-f]+$/i,
+          m = /^0b[01]+$/i,
+          b = /^0o[0-7]+$/i,
+          v = parseInt,
+          y = "object" == ("undefined" == typeof t ? "undefined" : c(t)) && t && t.Object === Object && t,
+          g = "object" == ("undefined" == typeof self ? "undefined" : c(self)) && self && self.Object === Object && self,
+          h = y || g || Function("return this")(),
+          w = Object.prototype,
+          k = w.toString,
+          x = Math.max,
+          j = Math.min,
+          O = function O() {
+        return h.Date.now();
+      };
+
+      e.exports = o;
+    }).call(t, function () {
+      return this;
+    }());
+  }, function (e, t) {
+    (function (t) {
+      "use strict";
+
+      function n(e, t, n) {
+        function i(t) {
+          var n = b,
+              o = v;
+          return b = v = void 0, O = t, g = e.apply(o, n);
+        }
+
+        function r(e) {
+          return O = e, h = setTimeout(s, t), S ? i(e) : g;
+        }
+
+        function u(e) {
+          var n = e - w,
+              o = e - O,
+              i = t - n;
+          return _ ? x(i, y - o) : i;
+        }
+
+        function f(e) {
+          var n = e - w,
+              o = e - O;
+          return void 0 === w || n >= t || n < 0 || _ && o >= y;
+        }
+
+        function s() {
+          var e = j();
+          return f(e) ? d(e) : void (h = setTimeout(s, u(e)));
+        }
+
+        function d(e) {
+          return h = void 0, E && b ? i(e) : (b = v = void 0, g);
+        }
+
+        function l() {
+          void 0 !== h && clearTimeout(h), O = 0, b = w = v = h = void 0;
+        }
+
+        function p() {
+          return void 0 === h ? g : d(j());
+        }
+
+        function m() {
+          var e = j(),
+              n = f(e);
+
+          if (b = arguments, v = this, w = e, n) {
+            if (void 0 === h) return r(w);
+            if (_) return h = setTimeout(s, t), i(w);
+          }
+
+          return void 0 === h && (h = setTimeout(s, t)), g;
+        }
+
+        var b,
+            v,
+            y,
+            g,
+            h,
+            w,
+            O = 0,
+            S = !1,
+            _ = !1,
+            E = !0;
+
+        if ("function" != typeof e) throw new TypeError(c);
+        return t = a(t) || 0, o(n) && (S = !!n.leading, _ = "maxWait" in n, y = _ ? k(a(n.maxWait) || 0, t) : y, E = "trailing" in n ? !!n.trailing : E), m.cancel = l, m.flush = p, m;
+      }
+
+      function o(e) {
+        var t = "undefined" == typeof e ? "undefined" : u(e);
+        return !!e && ("object" == t || "function" == t);
+      }
+
+      function i(e) {
+        return !!e && "object" == ("undefined" == typeof e ? "undefined" : u(e));
+      }
+
+      function r(e) {
+        return "symbol" == ("undefined" == typeof e ? "undefined" : u(e)) || i(e) && w.call(e) == s;
+      }
+
+      function a(e) {
+        if ("number" == typeof e) return e;
+        if (r(e)) return f;
+
+        if (o(e)) {
+          var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+          e = o(t) ? t + "" : t;
+        }
+
+        if ("string" != typeof e) return 0 === e ? e : +e;
+        e = e.replace(d, "");
+        var n = p.test(e);
+        return n || m.test(e) ? b(e.slice(2), n ? 2 : 8) : l.test(e) ? f : +e;
+      }
+
+      var u = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (e) {
+        return _typeof(e);
+      } : function (e) {
+        return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : _typeof(e);
+      },
+          c = "Expected a function",
+          f = NaN,
+          s = "[object Symbol]",
+          d = /^\s+|\s+$/g,
+          l = /^[-+]0x[0-9a-f]+$/i,
+          p = /^0b[01]+$/i,
+          m = /^0o[0-7]+$/i,
+          b = parseInt,
+          v = "object" == ("undefined" == typeof t ? "undefined" : u(t)) && t && t.Object === Object && t,
+          y = "object" == ("undefined" == typeof self ? "undefined" : u(self)) && self && self.Object === Object && self,
+          g = v || y || Function("return this")(),
+          h = Object.prototype,
+          w = h.toString,
+          k = Math.max,
+          x = Math.min,
+          j = function j() {
+        return g.Date.now();
+      };
+
+      e.exports = n;
+    }).call(t, function () {
+      return this;
+    }());
+  }, function (e, t) {
+    "use strict";
+
+    function n(e, t) {
+      a.push({
+        selector: e,
+        fn: t
+      }), !u && r && (u = new r(o), u.observe(i.documentElement, {
+        childList: !0,
+        subtree: !0,
+        removedNodes: !0
+      })), o();
+    }
+
+    function o() {
+      for (var e, t, n = 0, o = a.length; n < o; n++) {
+        e = a[n], t = i.querySelectorAll(e.selector);
+
+        for (var r, u = 0, c = t.length; u < c; u++) {
+          r = t[u], r.ready || (r.ready = !0, e.fn.call(r, r));
+        }
+      }
+    }
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+    var i = window.document,
+        r = window.MutationObserver || window.WebKitMutationObserver,
+        a = [],
+        u = void 0;
+    t["default"] = n;
+  }, function (e, t) {
+    "use strict";
+
+    function n(e, t) {
+      if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+    }
+
+    function o() {
+      return navigator.userAgent || navigator.vendor || window.opera || "";
+    }
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+
+    var i = function () {
+      function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var o = t[n];
+          o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, o.key, o);
+        }
+      }
+
+      return function (t, n, o) {
+        return n && e(t.prototype, n), o && e(t, o), t;
+      };
+    }(),
+        r = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,
+        a = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
+        u = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,
+        c = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
+        f = function () {
+      function e() {
+        n(this, e);
+      }
+
+      return i(e, [{
+        key: "phone",
+        value: function value() {
+          var e = o();
+          return !(!r.test(e) && !a.test(e.substr(0, 4)));
+        }
+      }, {
+        key: "mobile",
+        value: function value() {
+          var e = o();
+          return !(!u.test(e) && !c.test(e.substr(0, 4)));
+        }
+      }, {
+        key: "tablet",
+        value: function value() {
+          return this.mobile() && !this.phone();
+        }
+      }]), e;
+    }();
+
+    t["default"] = new f();
+  }, function (e, t) {
+    "use strict";
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+
+    var n = function n(e, t, _n) {
+      var o = e.node.getAttribute("data-aos-once");
+      t > e.position ? e.node.classList.add("aos-animate") : "undefined" != typeof o && ("false" === o || !_n && "true" !== o) && e.node.classList.remove("aos-animate");
+    },
+        o = function o(e, t) {
+      var o = window.pageYOffset,
+          i = window.innerHeight;
+      e.forEach(function (e, r) {
+        n(e, i + o, t);
+      });
+    };
+
+    t["default"] = o;
+  }, function (e, t, n) {
+    "use strict";
+
+    function o(e) {
+      return e && e.__esModule ? e : {
+        "default": e
+      };
+    }
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+
+    var i = n(12),
+        r = o(i),
+        a = function a(e, t) {
+      return e.forEach(function (e, n) {
+        e.node.classList.add("aos-init"), e.position = (0, r["default"])(e.node, t.offset);
+      }), e;
+    };
+
+    t["default"] = a;
+  }, function (e, t, n) {
+    "use strict";
+
+    function o(e) {
+      return e && e.__esModule ? e : {
+        "default": e
+      };
+    }
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+
+    var i = n(13),
+        r = o(i),
+        a = function a(e, t) {
+      var n = 0,
+          o = 0,
+          i = window.innerHeight,
+          a = {
+        offset: e.getAttribute("data-aos-offset"),
+        anchor: e.getAttribute("data-aos-anchor"),
+        anchorPlacement: e.getAttribute("data-aos-anchor-placement")
+      };
+
+      switch (a.offset && !isNaN(a.offset) && (o = parseInt(a.offset)), a.anchor && document.querySelectorAll(a.anchor) && (e = document.querySelectorAll(a.anchor)[0]), n = (0, r["default"])(e).top, a.anchorPlacement) {
+        case "top-bottom":
+          break;
+
+        case "center-bottom":
+          n += e.offsetHeight / 2;
+          break;
+
+        case "bottom-bottom":
+          n += e.offsetHeight;
+          break;
+
+        case "top-center":
+          n += i / 2;
+          break;
+
+        case "bottom-center":
+          n += i / 2 + e.offsetHeight;
+          break;
+
+        case "center-center":
+          n += i / 2 + e.offsetHeight / 2;
+          break;
+
+        case "top-top":
+          n += i;
+          break;
+
+        case "bottom-top":
+          n += e.offsetHeight + i;
+          break;
+
+        case "center-top":
+          n += e.offsetHeight / 2 + i;
+      }
+
+      return a.anchorPlacement || a.offset || isNaN(t) || (o = t), n + o;
+    };
+
+    t["default"] = a;
+  }, function (e, t) {
+    "use strict";
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+
+    var n = function n(e) {
+      for (var t = 0, n = 0; e && !isNaN(e.offsetLeft) && !isNaN(e.offsetTop);) {
+        t += e.offsetLeft - ("BODY" != e.tagName ? e.scrollLeft : 0), n += e.offsetTop - ("BODY" != e.tagName ? e.scrollTop : 0), e = e.offsetParent;
+      }
+
+      return {
+        top: n,
+        left: t
+      };
+    };
+
+    t["default"] = n;
+  }, function (e, t) {
+    "use strict";
+
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+
+    var n = function n(e) {
+      e = e || document.querySelectorAll("[data-aos]");
+      var t = [];
+      return [].forEach.call(e, function (e, n) {
+        t.push({
+          node: e
+        });
+      }), t;
+    };
+
+    t["default"] = n;
+  }]);
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -37053,6 +37681,1925 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+__webpack_require__(/*! ./aos */ "./resources/js/aos.js");
+
+__webpack_require__(/*! ./bootstrap-datepicker */ "./resources/js/bootstrap-datepicker.js");
+
+__webpack_require__(/*! ./google-map */ "./resources/js/google-map.js");
+
+__webpack_require__(/*! ./jquery.animateNumber.min */ "./resources/js/jquery.animateNumber.min.js");
+
+__webpack_require__(/*! ./jquery.easing.1.3 */ "./resources/js/jquery.easing.1.3.js");
+
+__webpack_require__(/*! ./jquery.magnific-popup.min */ "./resources/js/jquery.magnific-popup.min.js");
+
+__webpack_require__(/*! ./jquery.stellar.min */ "./resources/js/jquery.stellar.min.js");
+
+__webpack_require__(/*! ./jquery.timepicker.min */ "./resources/js/jquery.timepicker.min.js");
+
+__webpack_require__(/*! ./jquery.waypoints.min */ "./resources/js/jquery.waypoints.min.js");
+
+__webpack_require__(/*! ./jquery-migrate-3.0.1.min */ "./resources/js/jquery-migrate-3.0.1.min.js");
+
+__webpack_require__(/*! ./owl.carousel.min */ "./resources/js/owl.carousel.min.js");
+
+__webpack_require__(/*! ./range */ "./resources/js/range.js");
+
+__webpack_require__(/*! ./scrollax.min */ "./resources/js/scrollax.min.js");
+
+AOS.init({
+  duration: 800,
+  easing: 'slide'
+});
+
+(function ($) {
+  "use strict";
+
+  var isMobile = {
+    Android: function Android() {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function BlackBerry() {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function iOS() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function Opera() {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function Windows() {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function any() {
+      return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+    }
+  };
+  $(window).stellar({
+    responsive: true,
+    parallaxBackgrounds: true,
+    parallaxElements: true,
+    horizontalScrolling: false,
+    hideDistantElements: false,
+    scrollProperty: 'scroll'
+  });
+
+  var fullHeight = function fullHeight() {
+    $('.js-fullheight').css('height', $(window).height());
+    $(window).resize(function () {
+      $('.js-fullheight').css('height', $(window).height());
+    });
+  };
+
+  fullHeight(); // loader
+
+  var loader = function loader() {
+    setTimeout(function () {
+      if ($('#ftco-loader').length > 0) {
+        $('#ftco-loader').removeClass('show');
+      }
+    }, 1);
+  };
+
+  loader(); // Scrollax
+
+  $.Scrollax();
+
+  var carousel = function carousel() {
+    $('.carousel-testimony').owlCarousel({
+      center: true,
+      loop: true,
+      items: 1,
+      margin: 30,
+      stagePadding: 0,
+      nav: false,
+      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  };
+
+  carousel();
+  $('nav .dropdown').hover(function () {
+    var $this = $(this); // 	 timer;
+    // clearTimeout(timer);
+
+    $this.addClass('show');
+    $this.find('> a').attr('aria-expanded', true); // $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
+
+    $this.find('.dropdown-menu').addClass('show');
+  }, function () {
+    var $this = $(this); // timer;
+    // timer = setTimeout(function(){
+
+    $this.removeClass('show');
+    $this.find('> a').attr('aria-expanded', false); // $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
+
+    $this.find('.dropdown-menu').removeClass('show'); // }, 100);
+  });
+  $('#dropdown04').on('show.bs.dropdown', function () {
+    console.log('show');
+  }); // scroll
+
+  var scrollWindow = function scrollWindow() {
+    $(window).scroll(function () {
+      var $w = $(this),
+          st = $w.scrollTop(),
+          navbar = $('.ftco_navbar'),
+          sd = $('.js-scroll-wrap');
+
+      if (st > 150) {
+        if (!navbar.hasClass('scrolled')) {
+          navbar.addClass('scrolled');
+        }
+      }
+
+      if (st < 150) {
+        if (navbar.hasClass('scrolled')) {
+          navbar.removeClass('scrolled sleep');
+        }
+      }
+
+      if (st > 350) {
+        if (!navbar.hasClass('awake')) {
+          navbar.addClass('awake');
+        }
+
+        if (sd.length > 0) {
+          sd.addClass('sleep');
+        }
+      }
+
+      if (st < 350) {
+        if (navbar.hasClass('awake')) {
+          navbar.removeClass('awake');
+          navbar.addClass('sleep');
+        }
+
+        if (sd.length > 0) {
+          sd.removeClass('sleep');
+        }
+      }
+    });
+  };
+
+  scrollWindow();
+  var isMobile = {
+    Android: function Android() {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function BlackBerry() {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function iOS() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function Opera() {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function Windows() {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function any() {
+      return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+    }
+  };
+
+  var counter = function counter() {
+    $('#section-counter, .hero-wrap, .ftco-counter').waypoint(function (direction) {
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+        $('.number').each(function () {
+          var $this = $(this),
+              num = $this.data('number');
+          console.log(num);
+          $this.animateNumber({
+            number: num,
+            numberStep: comma_separator_number_step
+          }, 7000);
+        });
+      }
+    }, {
+      offset: '95%'
+    });
+  };
+
+  counter();
+
+  var contentWayPoint = function contentWayPoint() {
+    var i = 0;
+    $('.ftco-animate').waypoint(function (direction) {
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+        i++;
+        $(this.element).addClass('item-animate');
+        setTimeout(function () {
+          $('body .ftco-animate.item-animate').each(function (k) {
+            var el = $(this);
+            setTimeout(function () {
+              var effect = el.data('animate-effect');
+
+              if (effect === 'fadeIn') {
+                el.addClass('fadeIn ftco-animated');
+              } else if (effect === 'fadeInLeft') {
+                el.addClass('fadeInLeft ftco-animated');
+              } else if (effect === 'fadeInRight') {
+                el.addClass('fadeInRight ftco-animated');
+              } else {
+                el.addClass('fadeInUp ftco-animated');
+              }
+
+              el.removeClass('item-animate');
+            }, k * 50, 'easeInOutExpo');
+          });
+        }, 100);
+      }
+    }, {
+      offset: '95%'
+    });
+  };
+
+  contentWayPoint(); // navigation
+
+  var OnePageNav = function OnePageNav() {
+    $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function (e) {
+      e.preventDefault();
+      var hash = this.hash,
+          navToggler = $('.navbar-toggler');
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 700, 'easeInOutExpo', function () {
+        window.location.hash = hash;
+      });
+
+      if (navToggler.is(':visible')) {
+        navToggler.click();
+      }
+    });
+    $('body').on('activate.bs.scrollspy', function () {
+      console.log('nice');
+    });
+  };
+
+  OnePageNav(); // magnific popup
+
+  $('.image-popup').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom',
+    // class to remove default margin from left and right side
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+
+    },
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+
+    }
+  });
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
+  $('#book_pick_date,#book_off_date').datepicker({
+    'format': 'm/d/yyyy',
+    'autoclose': true
+  });
+  $('#time_pick').timepicker();
+
+  var goHere = function goHere() {
+    $('.mouse-icon').on('click', function (event) {
+      event.preventDefault();
+      $('html,body').animate({
+        scrollTop: $('.goto-here').offset().top
+      }, 500, 'easeInOutExpo');
+      return false;
+    });
+  };
+
+  goHere();
+})(jQuery);
+
+/***/ }),
+
+/***/ "./resources/js/bootstrap-datepicker.js":
+/*!**********************************************!*\
+  !*** ./resources/js/bootstrap-datepicker.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/* =========================================================
+ * bootstrap-datepicker.js
+ * Repo: https://github.com/eternicode/bootstrap-datepicker/
+ * Demo: http://eternicode.github.io/bootstrap-datepicker/
+ * Docs: http://bootstrap-datepicker.readthedocs.org/
+ * Forked from http://www.eyecon.ro/bootstrap-datepicker
+ * =========================================================
+ * Started by Stefan Petre; improvements by Andrew Rowls + contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================= */
+(function ($, undefined) {
+  var $window = $(window);
+
+  function UTCDate() {
+    return new Date(Date.UTC.apply(Date, arguments));
+  }
+
+  function UTCToday() {
+    var today = new Date();
+    return UTCDate(today.getFullYear(), today.getMonth(), today.getDate());
+  }
+
+  function alias(method) {
+    return function () {
+      return this[method].apply(this, arguments);
+    };
+  }
+
+  var DateArray = function () {
+    var extras = {
+      get: function get(i) {
+        return this.slice(i)[0];
+      },
+      contains: function contains(d) {
+        // Array.indexOf is not cross-browser;
+        // $.inArray doesn't work with Dates
+        var val = d && d.valueOf();
+
+        for (var i = 0, l = this.length; i < l; i++) {
+          if (this[i].valueOf() === val) return i;
+        }
+
+        return -1;
+      },
+      remove: function remove(i) {
+        this.splice(i, 1);
+      },
+      replace: function replace(new_array) {
+        if (!new_array) return;
+        if (!$.isArray(new_array)) new_array = [new_array];
+        this.clear();
+        this.push.apply(this, new_array);
+      },
+      clear: function clear() {
+        this.splice(0);
+      },
+      copy: function copy() {
+        var a = new DateArray();
+        a.replace(this);
+        return a;
+      }
+    };
+    return function () {
+      var a = [];
+      a.push.apply(a, arguments);
+      $.extend(a, extras);
+      return a;
+    };
+  }(); // Picker object
+
+
+  var Datepicker = function Datepicker(element, options) {
+    this.dates = new DateArray();
+    this.viewDate = UTCToday();
+    this.focusDate = null;
+
+    this._process_options(options);
+
+    this.element = $(element);
+    this.isInline = false;
+    this.isInput = this.element.is('input');
+    this.component = this.element.is('.date') ? this.element.find('.add-on, .input-group-addon, .btn') : false;
+    this.hasInput = this.component && this.element.find('input').length;
+    if (this.component && this.component.length === 0) this.component = false;
+    this.picker = $(DPGlobal.template);
+
+    this._buildEvents();
+
+    this._attachEvents();
+
+    if (this.isInline) {
+      this.picker.addClass('datepicker-inline').appendTo(this.element);
+    } else {
+      this.picker.addClass('datepicker-dropdown dropdown-menu');
+    }
+
+    if (this.o.rtl) {
+      this.picker.addClass('datepicker-rtl');
+    }
+
+    this.viewMode = this.o.startView;
+    if (this.o.calendarWeeks) this.picker.find('tfoot th.today').attr('colspan', function (i, val) {
+      return parseInt(val) + 1;
+    });
+    this._allow_update = false;
+    this.setStartDate(this._o.startDate);
+    this.setEndDate(this._o.endDate);
+    this.setDaysOfWeekDisabled(this.o.daysOfWeekDisabled);
+    this.fillDow();
+    this.fillMonths();
+    this._allow_update = true;
+    this.update();
+    this.showMode();
+
+    if (this.isInline) {
+      this.show();
+    }
+  };
+
+  Datepicker.prototype = {
+    constructor: Datepicker,
+    _process_options: function _process_options(opts) {
+      // Store raw options for reference
+      this._o = $.extend({}, this._o, opts); // Processed options
+
+      var o = this.o = $.extend({}, this._o); // Check if "de-DE" style date is available, if not language should
+      // fallback to 2 letter code eg "de"
+
+      var lang = o.language;
+
+      if (!dates[lang]) {
+        lang = lang.split('-')[0];
+        if (!dates[lang]) lang = defaults.language;
+      }
+
+      o.language = lang;
+
+      switch (o.startView) {
+        case 2:
+        case 'decade':
+          o.startView = 2;
+          break;
+
+        case 1:
+        case 'year':
+          o.startView = 1;
+          break;
+
+        default:
+          o.startView = 0;
+      }
+
+      switch (o.minViewMode) {
+        case 1:
+        case 'months':
+          o.minViewMode = 1;
+          break;
+
+        case 2:
+        case 'years':
+          o.minViewMode = 2;
+          break;
+
+        default:
+          o.minViewMode = 0;
+      }
+
+      o.startView = Math.max(o.startView, o.minViewMode); // true, false, or Number > 0
+
+      if (o.multidate !== true) {
+        o.multidate = Number(o.multidate) || false;
+        if (o.multidate !== false) o.multidate = Math.max(0, o.multidate);else o.multidate = 1;
+      }
+
+      o.multidateSeparator = String(o.multidateSeparator);
+      o.weekStart %= 7;
+      o.weekEnd = (o.weekStart + 6) % 7;
+      var format = DPGlobal.parseFormat(o.format);
+
+      if (o.startDate !== -Infinity) {
+        if (!!o.startDate) {
+          if (o.startDate instanceof Date) o.startDate = this._local_to_utc(this._zero_time(o.startDate));else o.startDate = DPGlobal.parseDate(o.startDate, format, o.language);
+        } else {
+          o.startDate = -Infinity;
+        }
+      }
+
+      if (o.endDate !== Infinity) {
+        if (!!o.endDate) {
+          if (o.endDate instanceof Date) o.endDate = this._local_to_utc(this._zero_time(o.endDate));else o.endDate = DPGlobal.parseDate(o.endDate, format, o.language);
+        } else {
+          o.endDate = Infinity;
+        }
+      }
+
+      o.daysOfWeekDisabled = o.daysOfWeekDisabled || [];
+      if (!$.isArray(o.daysOfWeekDisabled)) o.daysOfWeekDisabled = o.daysOfWeekDisabled.split(/[,\s]*/);
+      o.daysOfWeekDisabled = $.map(o.daysOfWeekDisabled, function (d) {
+        return parseInt(d, 10);
+      });
+
+      var plc = String(o.orientation).toLowerCase().split(/\s+/g),
+          _plc = o.orientation.toLowerCase();
+
+      plc = $.grep(plc, function (word) {
+        return /^auto|left|right|top|bottom$/.test(word);
+      });
+      o.orientation = {
+        x: 'auto',
+        y: 'auto'
+      };
+      if (!_plc || _plc === 'auto') ; // no action
+      else if (plc.length === 1) {
+          switch (plc[0]) {
+            case 'top':
+            case 'bottom':
+              o.orientation.y = plc[0];
+              break;
+
+            case 'left':
+            case 'right':
+              o.orientation.x = plc[0];
+              break;
+          }
+        } else {
+          _plc = $.grep(plc, function (word) {
+            return /^left|right$/.test(word);
+          });
+          o.orientation.x = _plc[0] || 'auto';
+          _plc = $.grep(plc, function (word) {
+            return /^top|bottom$/.test(word);
+          });
+          o.orientation.y = _plc[0] || 'auto';
+        }
+    },
+    _events: [],
+    _secondaryEvents: [],
+    _applyEvents: function _applyEvents(evs) {
+      for (var i = 0, el, ch, ev; i < evs.length; i++) {
+        el = evs[i][0];
+
+        if (evs[i].length === 2) {
+          ch = undefined;
+          ev = evs[i][1];
+        } else if (evs[i].length === 3) {
+          ch = evs[i][1];
+          ev = evs[i][2];
+        }
+
+        el.on(ev, ch);
+      }
+    },
+    _unapplyEvents: function _unapplyEvents(evs) {
+      for (var i = 0, el, ev, ch; i < evs.length; i++) {
+        el = evs[i][0];
+
+        if (evs[i].length === 2) {
+          ch = undefined;
+          ev = evs[i][1];
+        } else if (evs[i].length === 3) {
+          ch = evs[i][1];
+          ev = evs[i][2];
+        }
+
+        el.off(ev, ch);
+      }
+    },
+    _buildEvents: function _buildEvents() {
+      if (this.isInput) {
+        // single input
+        this._events = [[this.element, {
+          focus: $.proxy(this.show, this),
+          keyup: $.proxy(function (e) {
+            if ($.inArray(e.keyCode, [27, 37, 39, 38, 40, 32, 13, 9]) === -1) this.update();
+          }, this),
+          keydown: $.proxy(this.keydown, this)
+        }]];
+      } else if (this.component && this.hasInput) {
+        // component: input + button
+        this._events = [// For components that are not readonly, allow keyboard nav
+        [this.element.find('input'), {
+          focus: $.proxy(this.show, this),
+          keyup: $.proxy(function (e) {
+            if ($.inArray(e.keyCode, [27, 37, 39, 38, 40, 32, 13, 9]) === -1) this.update();
+          }, this),
+          keydown: $.proxy(this.keydown, this)
+        }], [this.component, {
+          click: $.proxy(this.show, this)
+        }]];
+      } else if (this.element.is('div')) {
+        // inline datepicker
+        this.isInline = true;
+      } else {
+        this._events = [[this.element, {
+          click: $.proxy(this.show, this)
+        }]];
+      }
+
+      this._events.push( // Component: listen for blur on element descendants
+      [this.element, '*', {
+        blur: $.proxy(function (e) {
+          this._focused_from = e.target;
+        }, this)
+      }], // Input: listen for blur on element
+      [this.element, {
+        blur: $.proxy(function (e) {
+          this._focused_from = e.target;
+        }, this)
+      }]);
+
+      this._secondaryEvents = [[this.picker, {
+        click: $.proxy(this.click, this)
+      }], [$(window), {
+        resize: $.proxy(this.place, this)
+      }], [$(document), {
+        'mousedown touchstart': $.proxy(function (e) {
+          // Clicked outside the datepicker, hide it
+          if (!(this.element.is(e.target) || this.element.find(e.target).length || this.picker.is(e.target) || this.picker.find(e.target).length)) {
+            this.hide();
+          }
+        }, this)
+      }]];
+    },
+    _attachEvents: function _attachEvents() {
+      this._detachEvents();
+
+      this._applyEvents(this._events);
+    },
+    _detachEvents: function _detachEvents() {
+      this._unapplyEvents(this._events);
+    },
+    _attachSecondaryEvents: function _attachSecondaryEvents() {
+      this._detachSecondaryEvents();
+
+      this._applyEvents(this._secondaryEvents);
+    },
+    _detachSecondaryEvents: function _detachSecondaryEvents() {
+      this._unapplyEvents(this._secondaryEvents);
+    },
+    _trigger: function _trigger(event, altdate) {
+      var date = altdate || this.dates.get(-1),
+          local_date = this._utc_to_local(date);
+
+      this.element.trigger({
+        type: event,
+        date: local_date,
+        dates: $.map(this.dates, this._utc_to_local),
+        format: $.proxy(function (ix, format) {
+          if (arguments.length === 0) {
+            ix = this.dates.length - 1;
+            format = this.o.format;
+          } else if (typeof ix === 'string') {
+            format = ix;
+            ix = this.dates.length - 1;
+          }
+
+          format = format || this.o.format;
+          var date = this.dates.get(ix);
+          return DPGlobal.formatDate(date, format, this.o.language);
+        }, this)
+      });
+    },
+    show: function show() {
+      if (!this.isInline) this.picker.appendTo('body');
+      this.picker.show();
+      this.place();
+
+      this._attachSecondaryEvents();
+
+      this._trigger('show');
+    },
+    hide: function hide() {
+      if (this.isInline) return;
+      if (!this.picker.is(':visible')) return;
+      this.focusDate = null;
+      this.picker.hide().detach();
+
+      this._detachSecondaryEvents();
+
+      this.viewMode = this.o.startView;
+      this.showMode();
+      if (this.o.forceParse && (this.isInput && this.element.val() || this.hasInput && this.element.find('input').val())) this.setValue();
+
+      this._trigger('hide');
+    },
+    remove: function remove() {
+      this.hide();
+
+      this._detachEvents();
+
+      this._detachSecondaryEvents();
+
+      this.picker.remove();
+      delete this.element.data().datepicker;
+
+      if (!this.isInput) {
+        delete this.element.data().date;
+      }
+    },
+    _utc_to_local: function _utc_to_local(utc) {
+      return utc && new Date(utc.getTime() + utc.getTimezoneOffset() * 60000);
+    },
+    _local_to_utc: function _local_to_utc(local) {
+      return local && new Date(local.getTime() - local.getTimezoneOffset() * 60000);
+    },
+    _zero_time: function _zero_time(local) {
+      return local && new Date(local.getFullYear(), local.getMonth(), local.getDate());
+    },
+    _zero_utc_time: function _zero_utc_time(utc) {
+      return utc && new Date(Date.UTC(utc.getUTCFullYear(), utc.getUTCMonth(), utc.getUTCDate()));
+    },
+    getDates: function getDates() {
+      return $.map(this.dates, this._utc_to_local);
+    },
+    getUTCDates: function getUTCDates() {
+      return $.map(this.dates, function (d) {
+        return new Date(d);
+      });
+    },
+    getDate: function getDate() {
+      return this._utc_to_local(this.getUTCDate());
+    },
+    getUTCDate: function getUTCDate() {
+      return new Date(this.dates.get(-1));
+    },
+    setDates: function setDates() {
+      var args = $.isArray(arguments[0]) ? arguments[0] : arguments;
+      this.update.apply(this, args);
+
+      this._trigger('changeDate');
+
+      this.setValue();
+    },
+    setUTCDates: function setUTCDates() {
+      var args = $.isArray(arguments[0]) ? arguments[0] : arguments;
+      this.update.apply(this, $.map(args, this._utc_to_local));
+
+      this._trigger('changeDate');
+
+      this.setValue();
+    },
+    setDate: alias('setDates'),
+    setUTCDate: alias('setUTCDates'),
+    setValue: function setValue() {
+      var formatted = this.getFormattedDate();
+
+      if (!this.isInput) {
+        if (this.component) {
+          this.element.find('input').val(formatted).change();
+        }
+      } else {
+        this.element.val(formatted).change();
+      }
+    },
+    getFormattedDate: function getFormattedDate(format) {
+      if (format === undefined) format = this.o.format;
+      var lang = this.o.language;
+      return $.map(this.dates, function (d) {
+        return DPGlobal.formatDate(d, format, lang);
+      }).join(this.o.multidateSeparator);
+    },
+    setStartDate: function setStartDate(startDate) {
+      this._process_options({
+        startDate: startDate
+      });
+
+      this.update();
+      this.updateNavArrows();
+    },
+    setEndDate: function setEndDate(endDate) {
+      this._process_options({
+        endDate: endDate
+      });
+
+      this.update();
+      this.updateNavArrows();
+    },
+    setDaysOfWeekDisabled: function setDaysOfWeekDisabled(daysOfWeekDisabled) {
+      this._process_options({
+        daysOfWeekDisabled: daysOfWeekDisabled
+      });
+
+      this.update();
+      this.updateNavArrows();
+    },
+    place: function place() {
+      if (this.isInline) return;
+      var calendarWidth = this.picker.outerWidth(),
+          calendarHeight = this.picker.outerHeight(),
+          visualPadding = 10,
+          windowWidth = $window.width(),
+          windowHeight = $window.height(),
+          scrollTop = $window.scrollTop();
+      var zIndex = parseInt(this.element.parents().filter(function () {
+        return $(this).css('z-index') !== 'auto';
+      }).first().css('z-index')) + 10;
+      var offset = this.component ? this.component.parent().offset() : this.element.offset();
+      var height = this.component ? this.component.outerHeight(true) : this.element.outerHeight(false);
+      var width = this.component ? this.component.outerWidth(true) : this.element.outerWidth(false);
+      var left = offset.left,
+          top = offset.top;
+      this.picker.removeClass('datepicker-orient-top datepicker-orient-bottom ' + 'datepicker-orient-right datepicker-orient-left');
+
+      if (this.o.orientation.x !== 'auto') {
+        this.picker.addClass('datepicker-orient-' + this.o.orientation.x);
+        if (this.o.orientation.x === 'right') left -= calendarWidth - width;
+      } // auto x orientation is best-placement: if it crosses a window
+      // edge, fudge it sideways
+      else {
+          // Default to left
+          this.picker.addClass('datepicker-orient-left');
+          if (offset.left < 0) left -= offset.left - visualPadding;else if (offset.left + calendarWidth > windowWidth) left = windowWidth - calendarWidth - visualPadding;
+        } // auto y orientation is best-situation: top or bottom, no fudging,
+      // decision based on which shows more of the calendar
+
+
+      var yorient = this.o.orientation.y,
+          top_overflow,
+          bottom_overflow;
+
+      if (yorient === 'auto') {
+        top_overflow = -scrollTop + offset.top - calendarHeight;
+        bottom_overflow = scrollTop + windowHeight - (offset.top + height + calendarHeight);
+        if (Math.max(top_overflow, bottom_overflow) === bottom_overflow) yorient = 'top';else yorient = 'bottom';
+      }
+
+      this.picker.addClass('datepicker-orient-' + yorient);
+      if (yorient === 'top') top += height;else top -= calendarHeight + parseInt(this.picker.css('padding-top'));
+      this.picker.css({
+        top: top,
+        left: left,
+        zIndex: zIndex
+      });
+    },
+    _allow_update: true,
+    update: function update() {
+      if (!this._allow_update) return;
+      var oldDates = this.dates.copy(),
+          dates = [],
+          fromArgs = false;
+
+      if (arguments.length) {
+        $.each(arguments, $.proxy(function (i, date) {
+          if (date instanceof Date) date = this._local_to_utc(date);
+          dates.push(date);
+        }, this));
+        fromArgs = true;
+      } else {
+        dates = this.isInput ? this.element.val() : this.element.data('date') || this.element.find('input').val();
+        if (dates && this.o.multidate) dates = dates.split(this.o.multidateSeparator);else dates = [dates];
+        delete this.element.data().date;
+      }
+
+      dates = $.map(dates, $.proxy(function (date) {
+        return DPGlobal.parseDate(date, this.o.format, this.o.language);
+      }, this));
+      dates = $.grep(dates, $.proxy(function (date) {
+        return date < this.o.startDate || date > this.o.endDate || !date;
+      }, this), true);
+      this.dates.replace(dates);
+      if (this.dates.length) this.viewDate = new Date(this.dates.get(-1));else if (this.viewDate < this.o.startDate) this.viewDate = new Date(this.o.startDate);else if (this.viewDate > this.o.endDate) this.viewDate = new Date(this.o.endDate);
+
+      if (fromArgs) {
+        // setting date by clicking
+        this.setValue();
+      } else if (dates.length) {
+        // setting date by typing
+        if (String(oldDates) !== String(this.dates)) this._trigger('changeDate');
+      }
+
+      if (!this.dates.length && oldDates.length) this._trigger('clearDate');
+      this.fill();
+    },
+    fillDow: function fillDow() {
+      var dowCnt = this.o.weekStart,
+          html = '<tr>';
+
+      if (this.o.calendarWeeks) {
+        var cell = '<th class="cw">&nbsp;</th>';
+        html += cell;
+        this.picker.find('.datepicker-days thead tr:first-child').prepend(cell);
+      }
+
+      while (dowCnt < this.o.weekStart + 7) {
+        html += '<th class="dow">' + dates[this.o.language].daysMin[dowCnt++ % 7] + '</th>';
+      }
+
+      html += '</tr>';
+      this.picker.find('.datepicker-days thead').append(html);
+    },
+    fillMonths: function fillMonths() {
+      var html = '',
+          i = 0;
+
+      while (i < 12) {
+        html += '<span class="month">' + dates[this.o.language].monthsShort[i++] + '</span>';
+      }
+
+      this.picker.find('.datepicker-months td').html(html);
+    },
+    setRange: function setRange(range) {
+      if (!range || !range.length) delete this.range;else this.range = $.map(range, function (d) {
+        return d.valueOf();
+      });
+      this.fill();
+    },
+    getClassNames: function getClassNames(date) {
+      var cls = [],
+          year = this.viewDate.getUTCFullYear(),
+          month = this.viewDate.getUTCMonth(),
+          today = new Date();
+
+      if (date.getUTCFullYear() < year || date.getUTCFullYear() === year && date.getUTCMonth() < month) {
+        cls.push('old');
+      } else if (date.getUTCFullYear() > year || date.getUTCFullYear() === year && date.getUTCMonth() > month) {
+        cls.push('new');
+      }
+
+      if (this.focusDate && date.valueOf() === this.focusDate.valueOf()) cls.push('focused'); // Compare internal UTC date with local today, not UTC today
+
+      if (this.o.todayHighlight && date.getUTCFullYear() === today.getFullYear() && date.getUTCMonth() === today.getMonth() && date.getUTCDate() === today.getDate()) {
+        cls.push('today');
+      }
+
+      if (this.dates.contains(date) !== -1) cls.push('active');
+
+      if (date.valueOf() < this.o.startDate || date.valueOf() > this.o.endDate || $.inArray(date.getUTCDay(), this.o.daysOfWeekDisabled) !== -1) {
+        cls.push('disabled');
+      }
+
+      if (this.range) {
+        if (date > this.range[0] && date < this.range[this.range.length - 1]) {
+          cls.push('range');
+        }
+
+        if ($.inArray(date.valueOf(), this.range) !== -1) {
+          cls.push('selected');
+        }
+      }
+
+      return cls;
+    },
+    fill: function fill() {
+      var d = new Date(this.viewDate),
+          year = d.getUTCFullYear(),
+          month = d.getUTCMonth(),
+          startYear = this.o.startDate !== -Infinity ? this.o.startDate.getUTCFullYear() : -Infinity,
+          startMonth = this.o.startDate !== -Infinity ? this.o.startDate.getUTCMonth() : -Infinity,
+          endYear = this.o.endDate !== Infinity ? this.o.endDate.getUTCFullYear() : Infinity,
+          endMonth = this.o.endDate !== Infinity ? this.o.endDate.getUTCMonth() : Infinity,
+          todaytxt = dates[this.o.language].today || dates['en'].today || '',
+          cleartxt = dates[this.o.language].clear || dates['en'].clear || '',
+          tooltip;
+      this.picker.find('.datepicker-days thead th.datepicker-switch').text(dates[this.o.language].months[month] + ' ' + year);
+      this.picker.find('tfoot th.today').text(todaytxt).toggle(this.o.todayBtn !== false);
+      this.picker.find('tfoot th.clear').text(cleartxt).toggle(this.o.clearBtn !== false);
+      this.updateNavArrows();
+      this.fillMonths();
+      var prevMonth = UTCDate(year, month - 1, 28),
+          day = DPGlobal.getDaysInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
+      prevMonth.setUTCDate(day);
+      prevMonth.setUTCDate(day - (prevMonth.getUTCDay() - this.o.weekStart + 7) % 7);
+      var nextMonth = new Date(prevMonth);
+      nextMonth.setUTCDate(nextMonth.getUTCDate() + 42);
+      nextMonth = nextMonth.valueOf();
+      var html = [];
+      var clsName;
+
+      while (prevMonth.valueOf() < nextMonth) {
+        if (prevMonth.getUTCDay() === this.o.weekStart) {
+          html.push('<tr>');
+
+          if (this.o.calendarWeeks) {
+            // ISO 8601: First week contains first thursday.
+            // ISO also states week starts on Monday, but we can be more abstract here.
+            var // Start of current week: based on weekstart/current date
+            ws = new Date(+prevMonth + (this.o.weekStart - prevMonth.getUTCDay() - 7) % 7 * 864e5),
+                // Thursday of this week
+            th = new Date(Number(ws) + (7 + 4 - ws.getUTCDay()) % 7 * 864e5),
+                // First Thursday of year, year from thursday
+            yth = new Date(Number(yth = UTCDate(th.getUTCFullYear(), 0, 1)) + (7 + 4 - yth.getUTCDay()) % 7 * 864e5),
+                // Calendar week: ms between thursdays, div ms per day, div 7 days
+            calWeek = (th - yth) / 864e5 / 7 + 1;
+            html.push('<td class="cw">' + calWeek + '</td>');
+          }
+        }
+
+        clsName = this.getClassNames(prevMonth);
+        clsName.push('day');
+
+        if (this.o.beforeShowDay !== $.noop) {
+          var before = this.o.beforeShowDay(this._utc_to_local(prevMonth));
+          if (before === undefined) before = {};else if (typeof before === 'boolean') before = {
+            enabled: before
+          };else if (typeof before === 'string') before = {
+            classes: before
+          };
+          if (before.enabled === false) clsName.push('disabled');
+          if (before.classes) clsName = clsName.concat(before.classes.split(/\s+/));
+          if (before.tooltip) tooltip = before.tooltip;
+        }
+
+        clsName = $.unique(clsName);
+        html.push('<td class="' + clsName.join(' ') + '"' + (tooltip ? ' title="' + tooltip + '"' : '') + '>' + prevMonth.getUTCDate() + '</td>');
+
+        if (prevMonth.getUTCDay() === this.o.weekEnd) {
+          html.push('</tr>');
+        }
+
+        prevMonth.setUTCDate(prevMonth.getUTCDate() + 1);
+      }
+
+      this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
+      var months = this.picker.find('.datepicker-months').find('th:eq(1)').text(year).end().find('span').removeClass('active');
+      $.each(this.dates, function (i, d) {
+        if (d.getUTCFullYear() === year) months.eq(d.getUTCMonth()).addClass('active');
+      });
+
+      if (year < startYear || year > endYear) {
+        months.addClass('disabled');
+      }
+
+      if (year === startYear) {
+        months.slice(0, startMonth).addClass('disabled');
+      }
+
+      if (year === endYear) {
+        months.slice(endMonth + 1).addClass('disabled');
+      }
+
+      html = '';
+      year = parseInt(year / 10, 10) * 10;
+      var yearCont = this.picker.find('.datepicker-years').find('th:eq(1)').text(year + '-' + (year + 9)).end().find('td');
+      year -= 1;
+      var years = $.map(this.dates, function (d) {
+        return d.getUTCFullYear();
+      }),
+          classes;
+
+      for (var i = -1; i < 11; i++) {
+        classes = ['year'];
+        if (i === -1) classes.push('old');else if (i === 10) classes.push('new');
+        if ($.inArray(year, years) !== -1) classes.push('active');
+        if (year < startYear || year > endYear) classes.push('disabled');
+        html += '<span class="' + classes.join(' ') + '">' + year + '</span>';
+        year += 1;
+      }
+
+      yearCont.html(html);
+    },
+    updateNavArrows: function updateNavArrows() {
+      if (!this._allow_update) return;
+      var d = new Date(this.viewDate),
+          year = d.getUTCFullYear(),
+          month = d.getUTCMonth();
+
+      switch (this.viewMode) {
+        case 0:
+          if (this.o.startDate !== -Infinity && year <= this.o.startDate.getUTCFullYear() && month <= this.o.startDate.getUTCMonth()) {
+            this.picker.find('.prev').css({
+              visibility: 'hidden'
+            });
+          } else {
+            this.picker.find('.prev').css({
+              visibility: 'visible'
+            });
+          }
+
+          if (this.o.endDate !== Infinity && year >= this.o.endDate.getUTCFullYear() && month >= this.o.endDate.getUTCMonth()) {
+            this.picker.find('.next').css({
+              visibility: 'hidden'
+            });
+          } else {
+            this.picker.find('.next').css({
+              visibility: 'visible'
+            });
+          }
+
+          break;
+
+        case 1:
+        case 2:
+          if (this.o.startDate !== -Infinity && year <= this.o.startDate.getUTCFullYear()) {
+            this.picker.find('.prev').css({
+              visibility: 'hidden'
+            });
+          } else {
+            this.picker.find('.prev').css({
+              visibility: 'visible'
+            });
+          }
+
+          if (this.o.endDate !== Infinity && year >= this.o.endDate.getUTCFullYear()) {
+            this.picker.find('.next').css({
+              visibility: 'hidden'
+            });
+          } else {
+            this.picker.find('.next').css({
+              visibility: 'visible'
+            });
+          }
+
+          break;
+      }
+    },
+    click: function click(e) {
+      e.preventDefault();
+      var target = $(e.target).closest('span, td, th'),
+          year,
+          month,
+          day;
+
+      if (target.length === 1) {
+        switch (target[0].nodeName.toLowerCase()) {
+          case 'th':
+            switch (target[0].className) {
+              case 'datepicker-switch':
+                this.showMode(1);
+                break;
+
+              case 'prev':
+              case 'next':
+                var dir = DPGlobal.modes[this.viewMode].navStep * (target[0].className === 'prev' ? -1 : 1);
+
+                switch (this.viewMode) {
+                  case 0:
+                    this.viewDate = this.moveMonth(this.viewDate, dir);
+
+                    this._trigger('changeMonth', this.viewDate);
+
+                    break;
+
+                  case 1:
+                  case 2:
+                    this.viewDate = this.moveYear(this.viewDate, dir);
+                    if (this.viewMode === 1) this._trigger('changeYear', this.viewDate);
+                    break;
+                }
+
+                this.fill();
+                break;
+
+              case 'today':
+                var date = new Date();
+                date = UTCDate(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
+                this.showMode(-2);
+                var which = this.o.todayBtn === 'linked' ? null : 'view';
+
+                this._setDate(date, which);
+
+                break;
+
+              case 'clear':
+                var element;
+                if (this.isInput) element = this.element;else if (this.component) element = this.element.find('input');
+                if (element) element.val("").change();
+                this.update();
+
+                this._trigger('changeDate');
+
+                if (this.o.autoclose) this.hide();
+                break;
+            }
+
+            break;
+
+          case 'span':
+            if (!target.is('.disabled')) {
+              this.viewDate.setUTCDate(1);
+
+              if (target.is('.month')) {
+                day = 1;
+                month = target.parent().find('span').index(target);
+                year = this.viewDate.getUTCFullYear();
+                this.viewDate.setUTCMonth(month);
+
+                this._trigger('changeMonth', this.viewDate);
+
+                if (this.o.minViewMode === 1) {
+                  this._setDate(UTCDate(year, month, day));
+                }
+              } else {
+                day = 1;
+                month = 0;
+                year = parseInt(target.text(), 10) || 0;
+                this.viewDate.setUTCFullYear(year);
+
+                this._trigger('changeYear', this.viewDate);
+
+                if (this.o.minViewMode === 2) {
+                  this._setDate(UTCDate(year, month, day));
+                }
+              }
+
+              this.showMode(-1);
+              this.fill();
+            }
+
+            break;
+
+          case 'td':
+            if (target.is('.day') && !target.is('.disabled')) {
+              day = parseInt(target.text(), 10) || 1;
+              year = this.viewDate.getUTCFullYear();
+              month = this.viewDate.getUTCMonth();
+
+              if (target.is('.old')) {
+                if (month === 0) {
+                  month = 11;
+                  year -= 1;
+                } else {
+                  month -= 1;
+                }
+              } else if (target.is('.new')) {
+                if (month === 11) {
+                  month = 0;
+                  year += 1;
+                } else {
+                  month += 1;
+                }
+              }
+
+              this._setDate(UTCDate(year, month, day));
+            }
+
+            break;
+        }
+      }
+
+      if (this.picker.is(':visible') && this._focused_from) {
+        $(this._focused_from).focus();
+      }
+
+      delete this._focused_from;
+    },
+    _toggle_multidate: function _toggle_multidate(date) {
+      var ix = this.dates.contains(date);
+
+      if (!date) {
+        this.dates.clear();
+      } else if (ix !== -1) {
+        this.dates.remove(ix);
+      } else {
+        this.dates.push(date);
+      }
+
+      if (typeof this.o.multidate === 'number') while (this.dates.length > this.o.multidate) {
+        this.dates.remove(0);
+      }
+    },
+    _setDate: function _setDate(date, which) {
+      if (!which || which === 'date') this._toggle_multidate(date && new Date(date));
+      if (!which || which === 'view') this.viewDate = date && new Date(date);
+      this.fill();
+      this.setValue();
+
+      this._trigger('changeDate');
+
+      var element;
+
+      if (this.isInput) {
+        element = this.element;
+      } else if (this.component) {
+        element = this.element.find('input');
+      }
+
+      if (element) {
+        element.change();
+      }
+
+      if (this.o.autoclose && (!which || which === 'date')) {
+        this.hide();
+      }
+    },
+    moveMonth: function moveMonth(date, dir) {
+      if (!date) return undefined;
+      if (!dir) return date;
+      var new_date = new Date(date.valueOf()),
+          day = new_date.getUTCDate(),
+          month = new_date.getUTCMonth(),
+          mag = Math.abs(dir),
+          new_month,
+          test;
+      dir = dir > 0 ? 1 : -1;
+
+      if (mag === 1) {
+        test = dir === -1 // If going back one month, make sure month is not current month
+        // (eg, Mar 31 -> Feb 31 == Feb 28, not Mar 02)
+        ? function () {
+          return new_date.getUTCMonth() === month;
+        } // If going forward one month, make sure month is as expected
+        // (eg, Jan 31 -> Feb 31 == Feb 28, not Mar 02)
+        : function () {
+          return new_date.getUTCMonth() !== new_month;
+        };
+        new_month = month + dir;
+        new_date.setUTCMonth(new_month); // Dec -> Jan (12) or Jan -> Dec (-1) -- limit expected date to 0-11
+
+        if (new_month < 0 || new_month > 11) new_month = (new_month + 12) % 12;
+      } else {
+        // For magnitudes >1, move one month at a time...
+        for (var i = 0; i < mag; i++) {
+          // ...which might decrease the day (eg, Jan 31 to Feb 28, etc)...
+          new_date = this.moveMonth(new_date, dir);
+        } // ...then reset the day, keeping it in the new month
+
+
+        new_month = new_date.getUTCMonth();
+        new_date.setUTCDate(day);
+
+        test = function test() {
+          return new_month !== new_date.getUTCMonth();
+        };
+      } // Common date-resetting loop -- if date is beyond end of month, make it
+      // end of month
+
+
+      while (test()) {
+        new_date.setUTCDate(--day);
+        new_date.setUTCMonth(new_month);
+      }
+
+      return new_date;
+    },
+    moveYear: function moveYear(date, dir) {
+      return this.moveMonth(date, dir * 12);
+    },
+    dateWithinRange: function dateWithinRange(date) {
+      return date >= this.o.startDate && date <= this.o.endDate;
+    },
+    keydown: function keydown(e) {
+      if (this.picker.is(':not(:visible)')) {
+        if (e.keyCode === 27) // allow escape to hide and re-show picker
+          this.show();
+        return;
+      }
+
+      var dateChanged = false,
+          dir,
+          newDate,
+          newViewDate,
+          focusDate = this.focusDate || this.viewDate;
+
+      switch (e.keyCode) {
+        case 27:
+          // escape
+          if (this.focusDate) {
+            this.focusDate = null;
+            this.viewDate = this.dates.get(-1) || this.viewDate;
+            this.fill();
+          } else this.hide();
+
+          e.preventDefault();
+          break;
+
+        case 37: // left
+
+        case 39:
+          // right
+          if (!this.o.keyboardNavigation) break;
+          dir = e.keyCode === 37 ? -1 : 1;
+
+          if (e.ctrlKey) {
+            newDate = this.moveYear(this.dates.get(-1) || UTCToday(), dir);
+            newViewDate = this.moveYear(focusDate, dir);
+
+            this._trigger('changeYear', this.viewDate);
+          } else if (e.shiftKey) {
+            newDate = this.moveMonth(this.dates.get(-1) || UTCToday(), dir);
+            newViewDate = this.moveMonth(focusDate, dir);
+
+            this._trigger('changeMonth', this.viewDate);
+          } else {
+            newDate = new Date(this.dates.get(-1) || UTCToday());
+            newDate.setUTCDate(newDate.getUTCDate() + dir);
+            newViewDate = new Date(focusDate);
+            newViewDate.setUTCDate(focusDate.getUTCDate() + dir);
+          }
+
+          if (this.dateWithinRange(newDate)) {
+            this.focusDate = this.viewDate = newViewDate;
+            this.setValue();
+            this.fill();
+            e.preventDefault();
+          }
+
+          break;
+
+        case 38: // up
+
+        case 40:
+          // down
+          if (!this.o.keyboardNavigation) break;
+          dir = e.keyCode === 38 ? -1 : 1;
+
+          if (e.ctrlKey) {
+            newDate = this.moveYear(this.dates.get(-1) || UTCToday(), dir);
+            newViewDate = this.moveYear(focusDate, dir);
+
+            this._trigger('changeYear', this.viewDate);
+          } else if (e.shiftKey) {
+            newDate = this.moveMonth(this.dates.get(-1) || UTCToday(), dir);
+            newViewDate = this.moveMonth(focusDate, dir);
+
+            this._trigger('changeMonth', this.viewDate);
+          } else {
+            newDate = new Date(this.dates.get(-1) || UTCToday());
+            newDate.setUTCDate(newDate.getUTCDate() + dir * 7);
+            newViewDate = new Date(focusDate);
+            newViewDate.setUTCDate(focusDate.getUTCDate() + dir * 7);
+          }
+
+          if (this.dateWithinRange(newDate)) {
+            this.focusDate = this.viewDate = newViewDate;
+            this.setValue();
+            this.fill();
+            e.preventDefault();
+          }
+
+          break;
+
+        case 32:
+          // spacebar
+          // Spacebar is used in manually typing dates in some formats.
+          // As such, its behavior should not be hijacked.
+          break;
+
+        case 13:
+          // enter
+          focusDate = this.focusDate || this.dates.get(-1) || this.viewDate;
+
+          this._toggle_multidate(focusDate);
+
+          dateChanged = true;
+          this.focusDate = null;
+          this.viewDate = this.dates.get(-1) || this.viewDate;
+          this.setValue();
+          this.fill();
+
+          if (this.picker.is(':visible')) {
+            e.preventDefault();
+            if (this.o.autoclose) this.hide();
+          }
+
+          break;
+
+        case 9:
+          // tab
+          this.focusDate = null;
+          this.viewDate = this.dates.get(-1) || this.viewDate;
+          this.fill();
+          this.hide();
+          break;
+      }
+
+      if (dateChanged) {
+        if (this.dates.length) this._trigger('changeDate');else this._trigger('clearDate');
+        var element;
+
+        if (this.isInput) {
+          element = this.element;
+        } else if (this.component) {
+          element = this.element.find('input');
+        }
+
+        if (element) {
+          element.change();
+        }
+      }
+    },
+    showMode: function showMode(dir) {
+      if (dir) {
+        this.viewMode = Math.max(this.o.minViewMode, Math.min(2, this.viewMode + dir));
+      }
+
+      this.picker.find('>div').hide().filter('.datepicker-' + DPGlobal.modes[this.viewMode].clsName).css('display', 'block');
+      this.updateNavArrows();
+    }
+  };
+
+  var DateRangePicker = function DateRangePicker(element, options) {
+    this.element = $(element);
+    this.inputs = $.map(options.inputs, function (i) {
+      return i.jquery ? i[0] : i;
+    });
+    delete options.inputs;
+    $(this.inputs).datepicker(options).bind('changeDate', $.proxy(this.dateUpdated, this));
+    this.pickers = $.map(this.inputs, function (i) {
+      return $(i).data('datepicker');
+    });
+    this.updateDates();
+  };
+
+  DateRangePicker.prototype = {
+    updateDates: function updateDates() {
+      this.dates = $.map(this.pickers, function (i) {
+        return i.getUTCDate();
+      });
+      this.updateRanges();
+    },
+    updateRanges: function updateRanges() {
+      var range = $.map(this.dates, function (d) {
+        return d.valueOf();
+      });
+      $.each(this.pickers, function (i, p) {
+        p.setRange(range);
+      });
+    },
+    dateUpdated: function dateUpdated(e) {
+      // `this.updating` is a workaround for preventing infinite recursion
+      // between `changeDate` triggering and `setUTCDate` calling.  Until
+      // there is a better mechanism.
+      if (this.updating) return;
+      this.updating = true;
+      var dp = $(e.target).data('datepicker'),
+          new_date = dp.getUTCDate(),
+          i = $.inArray(e.target, this.inputs),
+          l = this.inputs.length;
+      if (i === -1) return;
+      $.each(this.pickers, function (i, p) {
+        if (!p.getUTCDate()) p.setUTCDate(new_date);
+      });
+
+      if (new_date < this.dates[i]) {
+        // Date being moved earlier/left
+        while (i >= 0 && new_date < this.dates[i]) {
+          this.pickers[i--].setUTCDate(new_date);
+        }
+      } else if (new_date > this.dates[i]) {
+        // Date being moved later/right
+        while (i < l && new_date > this.dates[i]) {
+          this.pickers[i++].setUTCDate(new_date);
+        }
+      }
+
+      this.updateDates();
+      delete this.updating;
+    },
+    remove: function remove() {
+      $.map(this.pickers, function (p) {
+        p.remove();
+      });
+      delete this.element.data().datepicker;
+    }
+  };
+
+  function opts_from_el(el, prefix) {
+    // Derive options from element data-attrs
+    var data = $(el).data(),
+        out = {},
+        inkey,
+        replace = new RegExp('^' + prefix.toLowerCase() + '([A-Z])');
+    prefix = new RegExp('^' + prefix.toLowerCase());
+
+    function re_lower(_, a) {
+      return a.toLowerCase();
+    }
+
+    for (var key in data) {
+      if (prefix.test(key)) {
+        inkey = key.replace(replace, re_lower);
+        out[inkey] = data[key];
+      }
+    }
+
+    return out;
+  }
+
+  function opts_from_locale(lang) {
+    // Derive options from locale plugins
+    var out = {}; // Check if "de-DE" style date is available, if not language should
+    // fallback to 2 letter code eg "de"
+
+    if (!dates[lang]) {
+      lang = lang.split('-')[0];
+      if (!dates[lang]) return;
+    }
+
+    var d = dates[lang];
+    $.each(locale_opts, function (i, k) {
+      if (k in d) out[k] = d[k];
+    });
+    return out;
+  }
+
+  var old = $.fn.datepicker;
+
+  $.fn.datepicker = function (option) {
+    var args = Array.apply(null, arguments);
+    args.shift();
+    var internal_return;
+    this.each(function () {
+      var $this = $(this),
+          data = $this.data('datepicker'),
+          options = _typeof(option) === 'object' && option;
+
+      if (!data) {
+        var elopts = opts_from_el(this, 'date'),
+            // Preliminary otions
+        xopts = $.extend({}, defaults, elopts, options),
+            locopts = opts_from_locale(xopts.language),
+            // Options priority: js args, data-attrs, locales, defaults
+        opts = $.extend({}, defaults, locopts, elopts, options);
+
+        if ($this.is('.input-daterange') || opts.inputs) {
+          var ropts = {
+            inputs: opts.inputs || $this.find('input').toArray()
+          };
+          $this.data('datepicker', data = new DateRangePicker(this, $.extend(opts, ropts)));
+        } else {
+          $this.data('datepicker', data = new Datepicker(this, opts));
+        }
+      }
+
+      if (typeof option === 'string' && typeof data[option] === 'function') {
+        internal_return = data[option].apply(data, args);
+        if (internal_return !== undefined) return false;
+      }
+    });
+    if (internal_return !== undefined) return internal_return;else return this;
+  };
+
+  var defaults = $.fn.datepicker.defaults = {
+    autoclose: false,
+    beforeShowDay: $.noop,
+    calendarWeeks: false,
+    clearBtn: false,
+    daysOfWeekDisabled: [],
+    endDate: Infinity,
+    forceParse: true,
+    format: 'mm/dd/yyyy',
+    keyboardNavigation: true,
+    language: 'en',
+    minViewMode: 0,
+    multidate: false,
+    multidateSeparator: ',',
+    orientation: "auto",
+    rtl: false,
+    startDate: -Infinity,
+    startView: 0,
+    todayBtn: false,
+    todayHighlight: false,
+    weekStart: 0
+  };
+  var locale_opts = $.fn.datepicker.locale_opts = ['format', 'rtl', 'weekStart'];
+  $.fn.datepicker.Constructor = Datepicker;
+  var dates = $.fn.datepicker.dates = {
+    en: {
+      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      today: "Today",
+      clear: "Clear"
+    }
+  };
+  var DPGlobal = {
+    modes: [{
+      clsName: 'days',
+      navFnc: 'Month',
+      navStep: 1
+    }, {
+      clsName: 'months',
+      navFnc: 'FullYear',
+      navStep: 1
+    }, {
+      clsName: 'years',
+      navFnc: 'FullYear',
+      navStep: 10
+    }],
+    isLeapYear: function isLeapYear(year) {
+      return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+    },
+    getDaysInMonth: function getDaysInMonth(year, month) {
+      return [31, DPGlobal.isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+    },
+    validParts: /dd?|DD?|mm?|MM?|yy(?:yy)?/g,
+    nonpunctuation: /[^ -\/:-@\[\u3400-\u9fff-`{-~\t\n\r]+/g,
+    parseFormat: function parseFormat(format) {
+      // IE treats \0 as a string end in inputs (truncating the value),
+      // so it's a bad format delimiter, anyway
+      var separators = format.replace(this.validParts, '\0').split('\0'),
+          parts = format.match(this.validParts);
+
+      if (!separators || !separators.length || !parts || parts.length === 0) {
+        throw new Error("Invalid date format.");
+      }
+
+      return {
+        separators: separators,
+        parts: parts
+      };
+    },
+    parseDate: function parseDate(date, format, language) {
+      if (!date) return undefined;
+      if (date instanceof Date) return date;
+      if (typeof format === 'string') format = DPGlobal.parseFormat(format);
+      var part_re = /([\-+]\d+)([dmwy])/,
+          parts = date.match(/([\-+]\d+)([dmwy])/g),
+          part,
+          dir,
+          i;
+
+      if (/^[\-+]\d+[dmwy]([\s,]+[\-+]\d+[dmwy])*$/.test(date)) {
+        date = new Date();
+
+        for (i = 0; i < parts.length; i++) {
+          part = part_re.exec(parts[i]);
+          dir = parseInt(part[1]);
+
+          switch (part[2]) {
+            case 'd':
+              date.setUTCDate(date.getUTCDate() + dir);
+              break;
+
+            case 'm':
+              date = Datepicker.prototype.moveMonth.call(Datepicker.prototype, date, dir);
+              break;
+
+            case 'w':
+              date.setUTCDate(date.getUTCDate() + dir * 7);
+              break;
+
+            case 'y':
+              date = Datepicker.prototype.moveYear.call(Datepicker.prototype, date, dir);
+              break;
+          }
+        }
+
+        return UTCDate(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 0, 0, 0);
+      }
+
+      parts = date && date.match(this.nonpunctuation) || [];
+      date = new Date();
+      var parsed = {},
+          setters_order = ['yyyy', 'yy', 'M', 'MM', 'm', 'mm', 'd', 'dd'],
+          setters_map = {
+        yyyy: function yyyy(d, v) {
+          return d.setUTCFullYear(v);
+        },
+        yy: function yy(d, v) {
+          return d.setUTCFullYear(2000 + v);
+        },
+        m: function m(d, v) {
+          if (isNaN(d)) return d;
+          v -= 1;
+
+          while (v < 0) {
+            v += 12;
+          }
+
+          v %= 12;
+          d.setUTCMonth(v);
+
+          while (d.getUTCMonth() !== v) {
+            d.setUTCDate(d.getUTCDate() - 1);
+          }
+
+          return d;
+        },
+        d: function d(_d, v) {
+          return _d.setUTCDate(v);
+        }
+      },
+          val,
+          filtered;
+      setters_map['M'] = setters_map['MM'] = setters_map['mm'] = setters_map['m'];
+      setters_map['dd'] = setters_map['d'];
+      date = UTCDate(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
+      var fparts = format.parts.slice(); // Remove noop parts
+
+      if (parts.length !== fparts.length) {
+        fparts = $(fparts).filter(function (i, p) {
+          return $.inArray(p, setters_order) !== -1;
+        }).toArray();
+      } // Process remainder
+
+
+      function match_part() {
+        var m = this.slice(0, parts[i].length),
+            p = parts[i].slice(0, m.length);
+        return m === p;
+      }
+
+      if (parts.length === fparts.length) {
+        var cnt;
+
+        for (i = 0, cnt = fparts.length; i < cnt; i++) {
+          val = parseInt(parts[i], 10);
+          part = fparts[i];
+
+          if (isNaN(val)) {
+            switch (part) {
+              case 'MM':
+                filtered = $(dates[language].months).filter(match_part);
+                val = $.inArray(filtered[0], dates[language].months) + 1;
+                break;
+
+              case 'M':
+                filtered = $(dates[language].monthsShort).filter(match_part);
+                val = $.inArray(filtered[0], dates[language].monthsShort) + 1;
+                break;
+            }
+          }
+
+          parsed[part] = val;
+        }
+
+        var _date, s;
+
+        for (i = 0; i < setters_order.length; i++) {
+          s = setters_order[i];
+
+          if (s in parsed && !isNaN(parsed[s])) {
+            _date = new Date(date);
+            setters_map[s](_date, parsed[s]);
+            if (!isNaN(_date)) date = _date;
+          }
+        }
+      }
+
+      return date;
+    },
+    formatDate: function formatDate(date, format, language) {
+      if (!date) return '';
+      if (typeof format === 'string') format = DPGlobal.parseFormat(format);
+      var val = {
+        d: date.getUTCDate(),
+        D: dates[language].daysShort[date.getUTCDay()],
+        DD: dates[language].days[date.getUTCDay()],
+        m: date.getUTCMonth() + 1,
+        M: dates[language].monthsShort[date.getUTCMonth()],
+        MM: dates[language].months[date.getUTCMonth()],
+        yy: date.getUTCFullYear().toString().substring(2),
+        yyyy: date.getUTCFullYear()
+      };
+      val.dd = (val.d < 10 ? '0' : '') + val.d;
+      val.mm = (val.m < 10 ? '0' : '') + val.m;
+      date = [];
+      var seps = $.extend([], format.separators);
+
+      for (var i = 0, cnt = format.parts.length; i <= cnt; i++) {
+        if (seps.length) date.push(seps.shift());
+        date.push(val[format.parts[i]]);
+      }
+
+      return date.join('');
+    },
+    headTemplate: '<thead>' + '<tr>' + '<th class="prev">&laquo;</th>' + '<th colspan="5" class="datepicker-switch"></th>' + '<th class="next">&raquo;</th>' + '</tr>' + '</thead>',
+    contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
+    footTemplate: '<tfoot>' + '<tr>' + '<th colspan="7" class="today"></th>' + '</tr>' + '<tr>' + '<th colspan="7" class="clear"></th>' + '</tr>' + '</tfoot>'
+  };
+  DPGlobal.template = '<div class="datepicker">' + '<div class="datepicker-days">' + '<table class=" table-condensed">' + DPGlobal.headTemplate + '<tbody></tbody>' + DPGlobal.footTemplate + '</table>' + '</div>' + '<div class="datepicker-months">' + '<table class="table-condensed">' + DPGlobal.headTemplate + DPGlobal.contTemplate + DPGlobal.footTemplate + '</table>' + '</div>' + '<div class="datepicker-years">' + '<table class="table-condensed">' + DPGlobal.headTemplate + DPGlobal.contTemplate + DPGlobal.footTemplate + '</table>' + '</div>' + '</div>';
+  $.fn.datepicker.DPGlobal = DPGlobal;
+  /* DATEPICKER NO CONFLICT
+  * =================== */
+
+  $.fn.datepicker.noConflict = function () {
+    $.fn.datepicker = old;
+    return this;
+  };
+  /* DATEPICKER DATA-API
+  * ================== */
+
+
+  $(document).on('focus.datepicker.data-api click.datepicker.data-api', '[data-provide="datepicker"]', function (e) {
+    var $this = $(this);
+    if ($this.data('datepicker')) return;
+    e.preventDefault(); // component click requires us to explicitly show it
+
+    $this.datepicker('show');
+  });
+  $(function () {
+    $('[data-provide="datepicker-inline"]').datepicker();
+  });
+})(window.jQuery);
 
 /***/ }),
 
@@ -37101,14 +39648,4327 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/_topic_body.scss":
-/*!*****************************************!*\
-  !*** ./resources/sass/_topic_body.scss ***!
-  \*****************************************/
+/***/ "./resources/js/google-map.js":
+/*!************************************!*\
+  !*** ./resources/js/google-map.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+var google;
+
+function init() {
+  // Basic options for a simple Google Map
+  // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+  // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
+  var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687); // 39.399872
+  // -8.224454
+
+  var mapOptions = {
+    // How zoomed in you want the map to start at (always required)
+    zoom: 7,
+    // The latitude and longitude to center the map (always required)
+    center: myLatlng,
+    // How you would like to style the map. 
+    scrollwheel: false,
+    styles: [{
+      "featureType": "administrative.country",
+      "elementType": "geometry",
+      "stylers": [{
+        "visibility": "simplified"
+      }, {
+        "hue": "#ff0000"
+      }]
+    }]
+  }; // Get the HTML DOM element that will contain your map 
+  // We are using a div with id="map" seen below in the <body>
+
+  var mapElement = document.getElementById('map'); // Create the Google Map using out element and options defined above
+
+  var map = new google.maps.Map(mapElement, mapOptions);
+  var addresses = ['New York'];
+
+  for (var x = 0; x < addresses.length; x++) {
+    $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&sensor=false', null, function (data) {
+      var p = data.results[0].geometry.location;
+      var latlng = new google.maps.LatLng(p.lat, p.lng);
+      new google.maps.Marker({
+        position: latlng,
+        map: map,
+        icon: 'images/loc.png'
+      });
+    });
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', init);
+
+/***/ }),
+
+/***/ "./resources/js/jquery-migrate-3.0.1.min.js":
+/*!**************************************************!*\
+  !*** ./resources/js/jquery-migrate-3.0.1.min.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*! jQuery Migrate v3.0.1 | (c) jQuery Foundation and other contributors | jquery.org/license */
+void 0 === jQuery.migrateMute && (jQuery.migrateMute = !0), function (e) {
+   true ? __webpack_require__(/*! !webpack amd define */ "./node_modules/webpack/buildin/amd-define.js")(["jquery"], window, e) : undefined;
+}(function (e, t) {
+  "use strict";
+
+  function r(r) {
+    var n = t.console;
+    o[r] || (o[r] = !0, e.migrateWarnings.push(r), n && n.warn && !e.migrateMute && (n.warn("JQMIGRATE: " + r), e.migrateTrace && n.trace && n.trace()));
+  }
+
+  function n(e, t, n, a) {
+    Object.defineProperty(e, t, {
+      configurable: !0,
+      enumerable: !0,
+      get: function get() {
+        return r(a), n;
+      },
+      set: function set(e) {
+        r(a), n = e;
+      }
+    });
+  }
+
+  function a(e, t, n, a) {
+    e[t] = function () {
+      return r(a), n.apply(this, arguments);
+    };
+  }
+
+  e.migrateVersion = "3.0.1", function () {
+    var r = /^[12]\./;
+    t.console && t.console.log && (e && !r.test(e.fn.jquery) || t.console.log("JQMIGRATE: jQuery 3.0.0+ REQUIRED"), e.migrateWarnings && t.console.log("JQMIGRATE: Migrate plugin loaded multiple times"), t.console.log("JQMIGRATE: Migrate is installed" + (e.migrateMute ? "" : " with logging active") + ", version " + e.migrateVersion));
+  }();
+  var o = {};
+  e.migrateWarnings = [], void 0 === e.migrateTrace && (e.migrateTrace = !0), e.migrateReset = function () {
+    o = {}, e.migrateWarnings.length = 0;
+  }, "BackCompat" === t.document.compatMode && r("jQuery is not compatible with Quirks Mode");
+  var i = e.fn.init,
+      s = e.isNumeric,
+      u = e.find,
+      c = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,
+      l = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g;
+  e.fn.init = function (e) {
+    var t = Array.prototype.slice.call(arguments);
+    return "string" == typeof e && "#" === e && (r("jQuery( '#' ) is not a valid selector"), t[0] = []), i.apply(this, t);
+  }, e.fn.init.prototype = e.fn, e.find = function (e) {
+    var n = Array.prototype.slice.call(arguments);
+    if ("string" == typeof e && c.test(e)) try {
+      t.document.querySelector(e);
+    } catch (a) {
+      e = e.replace(l, function (e, t, r, n) {
+        return "[" + t + r + '"' + n + '"]';
+      });
+
+      try {
+        t.document.querySelector(e), r("Attribute selector with '#' must be quoted: " + n[0]), n[0] = e;
+      } catch (e) {
+        r("Attribute selector with '#' was not fixed: " + n[0]);
+      }
+    }
+    return u.apply(this, n);
+  };
+  var d;
+
+  for (d in u) {
+    Object.prototype.hasOwnProperty.call(u, d) && (e.find[d] = u[d]);
+  }
+
+  e.fn.size = function () {
+    return r("jQuery.fn.size() is deprecated and removed; use the .length property"), this.length;
+  }, e.parseJSON = function () {
+    return r("jQuery.parseJSON is deprecated; use JSON.parse"), JSON.parse.apply(null, arguments);
+  }, e.isNumeric = function (t) {
+    var n = s(t),
+        a = function (t) {
+      var r = t && t.toString();
+      return !e.isArray(t) && r - parseFloat(r) + 1 >= 0;
+    }(t);
+
+    return n !== a && r("jQuery.isNumeric() should not be called on constructed objects"), a;
+  }, a(e, "holdReady", e.holdReady, "jQuery.holdReady is deprecated"), a(e, "unique", e.uniqueSort, "jQuery.unique is deprecated; use jQuery.uniqueSort"), n(e.expr, "filters", e.expr.pseudos, "jQuery.expr.filters is deprecated; use jQuery.expr.pseudos"), n(e.expr, ":", e.expr.pseudos, "jQuery.expr[':'] is deprecated; use jQuery.expr.pseudos");
+  var p = e.ajax;
+
+  e.ajax = function () {
+    var e = p.apply(this, arguments);
+    return e.promise && (a(e, "success", e.done, "jQXHR.success is deprecated and removed"), a(e, "error", e.fail, "jQXHR.error is deprecated and removed"), a(e, "complete", e.always, "jQXHR.complete is deprecated and removed")), e;
+  };
+
+  var f = e.fn.removeAttr,
+      y = e.fn.toggleClass,
+      m = /\S+/g;
+  e.fn.removeAttr = function (t) {
+    var n = this;
+    return e.each(t.match(m), function (t, a) {
+      e.expr.match.bool.test(a) && (r("jQuery.fn.removeAttr no longer sets boolean properties: " + a), n.prop(a, !1));
+    }), f.apply(this, arguments);
+  }, e.fn.toggleClass = function (t) {
+    return void 0 !== t && "boolean" != typeof t ? y.apply(this, arguments) : (r("jQuery.fn.toggleClass( boolean ) is deprecated"), this.each(function () {
+      var r = this.getAttribute && this.getAttribute("class") || "";
+      r && e.data(this, "__className__", r), this.setAttribute && this.setAttribute("class", r || !1 === t ? "" : e.data(this, "__className__") || "");
+    }));
+  };
+  var h = !1;
+  e.swap && e.each(["height", "width", "reliableMarginRight"], function (t, r) {
+    var n = e.cssHooks[r] && e.cssHooks[r].get;
+    n && (e.cssHooks[r].get = function () {
+      var e;
+      return h = !0, e = n.apply(this, arguments), h = !1, e;
+    });
+  }), e.swap = function (e, t, n, a) {
+    var o,
+        i,
+        s = {};
+    h || r("jQuery.swap() is undocumented and deprecated");
+
+    for (i in t) {
+      s[i] = e.style[i], e.style[i] = t[i];
+    }
+
+    o = n.apply(e, a || []);
+
+    for (i in t) {
+      e.style[i] = s[i];
+    }
+
+    return o;
+  };
+  var g = e.data;
+
+  e.data = function (t, n, a) {
+    var o;
+
+    if (n && "object" == _typeof(n) && 2 === arguments.length) {
+      o = e.hasData(t) && g.call(this, t);
+      var i = {};
+
+      for (var s in n) {
+        s !== e.camelCase(s) ? (r("jQuery.data() always sets/gets camelCased names: " + s), o[s] = n[s]) : i[s] = n[s];
+      }
+
+      return g.call(this, t, i), n;
+    }
+
+    return n && "string" == typeof n && n !== e.camelCase(n) && (o = e.hasData(t) && g.call(this, t)) && n in o ? (r("jQuery.data() always sets/gets camelCased names: " + n), arguments.length > 2 && (o[n] = a), o[n]) : g.apply(this, arguments);
+  };
+
+  var v = e.Tween.prototype.run,
+      j = function j(e) {
+    return e;
+  };
+
+  e.Tween.prototype.run = function () {
+    e.easing[this.easing].length > 1 && (r("'jQuery.easing." + this.easing.toString() + "' should use only one argument"), e.easing[this.easing] = j), v.apply(this, arguments);
+  }, e.fx.interval = e.fx.interval || 13, t.requestAnimationFrame && n(e.fx, "interval", e.fx.interval, "jQuery.fx.interval is deprecated");
+  var Q = e.fn.load,
+      b = e.event.add,
+      w = e.event.fix;
+  e.event.props = [], e.event.fixHooks = {}, n(e.event.props, "concat", e.event.props.concat, "jQuery.event.props.concat() is deprecated and removed"), e.event.fix = function (t) {
+    var n,
+        a = t.type,
+        o = this.fixHooks[a],
+        i = e.event.props;
+    if (i.length) for (r("jQuery.event.props are deprecated and removed: " + i.join()); i.length;) {
+      e.event.addProp(i.pop());
+    }
+    if (o && !o._migrated_ && (o._migrated_ = !0, r("jQuery.event.fixHooks are deprecated and removed: " + a), (i = o.props) && i.length)) for (; i.length;) {
+      e.event.addProp(i.pop());
+    }
+    return n = w.call(this, t), o && o.filter ? o.filter(n, t) : n;
+  }, e.event.add = function (e, n) {
+    return e === t && "load" === n && "complete" === t.document.readyState && r("jQuery(window).on('load'...) called after load event occurred"), b.apply(this, arguments);
+  }, e.each(["load", "unload", "error"], function (t, n) {
+    e.fn[n] = function () {
+      var e = Array.prototype.slice.call(arguments, 0);
+      return "load" === n && "string" == typeof e[0] ? Q.apply(this, e) : (r("jQuery.fn." + n + "() is deprecated"), e.splice(0, 0, n), arguments.length ? this.on.apply(this, e) : (this.triggerHandler.apply(this, e), this));
+    };
+  }), e.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "), function (t, n) {
+    e.fn[n] = function (e, t) {
+      return r("jQuery.fn." + n + "() event shorthand is deprecated"), arguments.length > 0 ? this.on(n, null, e, t) : this.trigger(n);
+    };
+  }), e(function () {
+    e(t.document).triggerHandler("ready");
+  }), e.event.special.ready = {
+    setup: function setup() {
+      this === t.document && r("'ready' event is deprecated");
+    }
+  }, e.fn.extend({
+    bind: function bind(e, t, n) {
+      return r("jQuery.fn.bind() is deprecated"), this.on(e, null, t, n);
+    },
+    unbind: function unbind(e, t) {
+      return r("jQuery.fn.unbind() is deprecated"), this.off(e, null, t);
+    },
+    delegate: function delegate(e, t, n, a) {
+      return r("jQuery.fn.delegate() is deprecated"), this.on(t, e, n, a);
+    },
+    undelegate: function undelegate(e, t, n) {
+      return r("jQuery.fn.undelegate() is deprecated"), 1 === arguments.length ? this.off(e, "**") : this.off(t, e || "**", n);
+    },
+    hover: function hover(e, t) {
+      return r("jQuery.fn.hover() is deprecated"), this.on("mouseenter", e).on("mouseleave", t || e);
+    }
+  });
+  var x = e.fn.offset;
+
+  e.fn.offset = function () {
+    var n,
+        a = this[0],
+        o = {
+      top: 0,
+      left: 0
+    };
+    return a && a.nodeType ? (n = (a.ownerDocument || t.document).documentElement, e.contains(n, a) ? x.apply(this, arguments) : (r("jQuery.fn.offset() requires an element connected to a document"), o)) : (r("jQuery.fn.offset() requires a valid DOM element"), o);
+  };
+
+  var k = e.param;
+
+  e.param = function (t, n) {
+    var a = e.ajaxSettings && e.ajaxSettings.traditional;
+    return void 0 === n && a && (r("jQuery.param() no longer uses jQuery.ajaxSettings.traditional"), n = a), k.call(this, t, n);
+  };
+
+  var A = e.fn.andSelf || e.fn.addBack;
+
+  e.fn.andSelf = function () {
+    return r("jQuery.fn.andSelf() is deprecated and removed, use jQuery.fn.addBack()"), A.apply(this, arguments);
+  };
+
+  var S = e.Deferred,
+      q = [["resolve", "done", e.Callbacks("once memory"), e.Callbacks("once memory"), "resolved"], ["reject", "fail", e.Callbacks("once memory"), e.Callbacks("once memory"), "rejected"], ["notify", "progress", e.Callbacks("memory"), e.Callbacks("memory")]];
+  return e.Deferred = function (t) {
+    var n = S(),
+        a = n.promise();
+    return n.pipe = a.pipe = function () {
+      var t = arguments;
+      return r("deferred.pipe() is deprecated"), e.Deferred(function (r) {
+        e.each(q, function (o, i) {
+          var s = e.isFunction(t[o]) && t[o];
+          n[i[1]](function () {
+            var t = s && s.apply(this, arguments);
+            t && e.isFunction(t.promise) ? t.promise().done(r.resolve).fail(r.reject).progress(r.notify) : r[i[0] + "With"](this === a ? r.promise() : this, s ? [t] : arguments);
+          });
+        }), t = null;
+      }).promise();
+    }, t && t.call(n, n), n;
+  }, e.Deferred.exceptionHook = S.exceptionHook, e;
+});
+
+/***/ }),
+
+/***/ "./resources/js/jquery.animateNumber.min.js":
+/*!**************************************************!*\
+  !*** ./resources/js/jquery.animateNumber.min.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ jQuery animateNumber plugin v0.0.14
+ (c) 2013, Alexandr Borisov.
+ https://github.com/aishek/jquery-animateNumber
+*/
+(function (d) {
+  var r = function r(b) {
+    return b.split("").reverse().join("");
+  },
+      m = {
+    numberStep: function numberStep(b, a) {
+      var e = Math.floor(b);
+      d(a.elem).text(e);
+    }
+  },
+      g = function g(b) {
+    var a = b.elem;
+    a.nodeType && a.parentNode && (a = a._animateNumberSetter, a || (a = m.numberStep), a(b.now, b));
+  };
+
+  d.Tween && d.Tween.propHooks ? d.Tween.propHooks.number = {
+    set: g
+  } : d.fx.step.number = g;
+  d.animateNumber = {
+    numberStepFactories: {
+      append: function append(b) {
+        return function (a, e) {
+          var f = Math.floor(a);
+          d(e.elem).prop("number", a).text(f + b);
+        };
+      },
+      separator: function separator(b, a, e) {
+        b = b || " ";
+        a = a || 3;
+        e = e || "";
+        return function (f, k) {
+          var u = 0 > f,
+              c = Math.floor((u ? -1 : 1) * f).toString(),
+              n = d(k.elem);
+
+          if (c.length > a) {
+            for (var h = c, l = a, m = h.split("").reverse(), c = [], p, s, q, t = 0, g = Math.ceil(h.length / l); t < g; t++) {
+              p = "";
+
+              for (q = 0; q < l; q++) {
+                s = t * l + q;
+                if (s === h.length) break;
+                p += m[s];
+              }
+
+              c.push(p);
+            }
+
+            h = c.length - 1;
+            l = r(c[h]);
+            c[h] = r(parseInt(l, 10).toString());
+            c = c.join(b);
+            c = r(c);
+          }
+
+          n.prop("number", f).text((u ? "-" : "") + c + e);
+        };
+      }
+    }
+  };
+
+  d.fn.animateNumber = function () {
+    for (var b = arguments[0], a = d.extend({}, m, b), e = d(this), f = [a], k = 1, g = arguments.length; k < g; k++) {
+      f.push(arguments[k]);
+    }
+
+    if (b.numberStep) {
+      var c = this.each(function () {
+        this._animateNumberSetter = b.numberStep;
+      }),
+          n = a.complete;
+
+      a.complete = function () {
+        c.each(function () {
+          delete this._animateNumberSetter;
+        });
+        n && n.apply(this, arguments);
+      };
+    }
+
+    return e.animate.apply(e, f);
+  };
+})(jQuery);
+
+/***/ }),
+
+/***/ "./resources/js/jquery.easing.1.3.js":
+/*!*******************************************!*\
+  !*** ./resources/js/jquery.easing.1.3.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+ *
+ * Uses the built in easing capabilities added In jQuery 1.1
+ * to offer multiple easing options
+ *
+ * TERMS OF USE - jQuery Easing
+ * 
+ * Open source under the BSD License. 
+ * 
+ * Copyright Ã‚Â© 2008 George McGinley Smith
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
+ * conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
+ * provided with the distribution.
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
+ * or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *
+*/
+// t: current time, b: begInnIng value, c: change In value, d: duration
+jQuery.easing['jswing'] = jQuery.easing['swing'];
+jQuery.extend(jQuery.easing, {
+  def: 'easeOutQuad',
+  swing: function swing(x, t, b, c, d) {
+    //alert(jQuery.easing.default);
+    return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+  },
+  easeInQuad: function easeInQuad(x, t, b, c, d) {
+    return c * (t /= d) * t + b;
+  },
+  easeOutQuad: function easeOutQuad(x, t, b, c, d) {
+    return -c * (t /= d) * (t - 2) + b;
+  },
+  easeInOutQuad: function easeInOutQuad(x, t, b, c, d) {
+    if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+    return -c / 2 * (--t * (t - 2) - 1) + b;
+  },
+  easeInCubic: function easeInCubic(x, t, b, c, d) {
+    return c * (t /= d) * t * t + b;
+  },
+  easeOutCubic: function easeOutCubic(x, t, b, c, d) {
+    return c * ((t = t / d - 1) * t * t + 1) + b;
+  },
+  easeInOutCubic: function easeInOutCubic(x, t, b, c, d) {
+    if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+    return c / 2 * ((t -= 2) * t * t + 2) + b;
+  },
+  easeInQuart: function easeInQuart(x, t, b, c, d) {
+    return c * (t /= d) * t * t * t + b;
+  },
+  easeOutQuart: function easeOutQuart(x, t, b, c, d) {
+    return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+  },
+  easeInOutQuart: function easeInOutQuart(x, t, b, c, d) {
+    if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+    return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+  },
+  easeInQuint: function easeInQuint(x, t, b, c, d) {
+    return c * (t /= d) * t * t * t * t + b;
+  },
+  easeOutQuint: function easeOutQuint(x, t, b, c, d) {
+    return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+  },
+  easeInOutQuint: function easeInOutQuint(x, t, b, c, d) {
+    if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+    return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+  },
+  easeInSine: function easeInSine(x, t, b, c, d) {
+    return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
+  },
+  easeOutSine: function easeOutSine(x, t, b, c, d) {
+    return c * Math.sin(t / d * (Math.PI / 2)) + b;
+  },
+  easeInOutSine: function easeInOutSine(x, t, b, c, d) {
+    return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+  },
+  easeInExpo: function easeInExpo(x, t, b, c, d) {
+    return t == 0 ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
+  },
+  easeOutExpo: function easeOutExpo(x, t, b, c, d) {
+    return t == d ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+  },
+  easeInOutExpo: function easeInOutExpo(x, t, b, c, d) {
+    if (t == 0) return b;
+    if (t == d) return b + c;
+    if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+    return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+  },
+  easeInCirc: function easeInCirc(x, t, b, c, d) {
+    return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
+  },
+  easeOutCirc: function easeOutCirc(x, t, b, c, d) {
+    return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
+  },
+  easeInOutCirc: function easeInOutCirc(x, t, b, c, d) {
+    if ((t /= d / 2) < 1) return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+    return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
+  },
+  easeInElastic: function easeInElastic(x, t, b, c, d) {
+    var s = 1.70158;
+    var p = 0;
+    var a = c;
+    if (t == 0) return b;
+    if ((t /= d) == 1) return b + c;
+    if (!p) p = d * .3;
+
+    if (a < Math.abs(c)) {
+      a = c;
+      var s = p / 4;
+    } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+
+    return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+  },
+  easeOutElastic: function easeOutElastic(x, t, b, c, d) {
+    var s = 1.70158;
+    var p = 0;
+    var a = c;
+    if (t == 0) return b;
+    if ((t /= d) == 1) return b + c;
+    if (!p) p = d * .3;
+
+    if (a < Math.abs(c)) {
+      a = c;
+      var s = p / 4;
+    } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+
+    return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
+  },
+  easeInOutElastic: function easeInOutElastic(x, t, b, c, d) {
+    var s = 1.70158;
+    var p = 0;
+    var a = c;
+    if (t == 0) return b;
+    if ((t /= d / 2) == 2) return b + c;
+    if (!p) p = d * (.3 * 1.5);
+
+    if (a < Math.abs(c)) {
+      a = c;
+      var s = p / 4;
+    } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+
+    if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+    return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
+  },
+  easeInBack: function easeInBack(x, t, b, c, d, s) {
+    if (s == undefined) s = 1.70158;
+    return c * (t /= d) * t * ((s + 1) * t - s) + b;
+  },
+  easeOutBack: function easeOutBack(x, t, b, c, d, s) {
+    if (s == undefined) s = 1.70158;
+    return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+  },
+  easeInOutBack: function easeInOutBack(x, t, b, c, d, s) {
+    if (s == undefined) s = 1.70158;
+    if ((t /= d / 2) < 1) return c / 2 * (t * t * (((s *= 1.525) + 1) * t - s)) + b;
+    return c / 2 * ((t -= 2) * t * (((s *= 1.525) + 1) * t + s) + 2) + b;
+  },
+  easeInBounce: function easeInBounce(x, t, b, c, d) {
+    return c - jQuery.easing.easeOutBounce(x, d - t, 0, c, d) + b;
+  },
+  easeOutBounce: function easeOutBounce(x, t, b, c, d) {
+    if ((t /= d) < 1 / 2.75) {
+      return c * (7.5625 * t * t) + b;
+    } else if (t < 2 / 2.75) {
+      return c * (7.5625 * (t -= 1.5 / 2.75) * t + .75) + b;
+    } else if (t < 2.5 / 2.75) {
+      return c * (7.5625 * (t -= 2.25 / 2.75) * t + .9375) + b;
+    } else {
+      return c * (7.5625 * (t -= 2.625 / 2.75) * t + .984375) + b;
+    }
+  },
+  easeInOutBounce: function easeInOutBounce(x, t, b, c, d) {
+    if (t < d / 2) return jQuery.easing.easeInBounce(x, t * 2, 0, c, d) * .5 + b;
+    return jQuery.easing.easeOutBounce(x, t * 2 - d, 0, c, d) * .5 + c * .5 + b;
+  }
+});
+/*
+ *
+ * TERMS OF USE - EASING EQUATIONS
+ * 
+ * Open source under the BSD License. 
+ * 
+ * Copyright Ã‚Â© 2001 Robert Penner
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
+ * conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
+ * provided with the distribution.
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
+ * or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *
+ */
+
+/***/ }),
+
+/***/ "./resources/js/jquery.magnific-popup.min.js":
+/*!***************************************************!*\
+  !*** ./resources/js/jquery.magnific-popup.min.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*! Magnific Popup - v1.1.0 - 2016-02-20
+* http://dimsemenov.com/plugins/magnific-popup/
+* Copyright (c) 2016 Dmitry Semenov; */
+!function (a) {
+   true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (a),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+}(function (a) {
+  var b,
+      c,
+      d,
+      e,
+      f,
+      g,
+      h = "Close",
+      i = "BeforeClose",
+      j = "AfterClose",
+      k = "BeforeAppend",
+      l = "MarkupParse",
+      m = "Open",
+      n = "Change",
+      o = "mfp",
+      p = "." + o,
+      q = "mfp-ready",
+      r = "mfp-removing",
+      s = "mfp-prevent-close",
+      t = function t() {},
+      u = !!window.jQuery,
+      v = a(window),
+      w = function w(a, c) {
+    b.ev.on(o + a + p, c);
+  },
+      x = function x(b, c, d, e) {
+    var f = document.createElement("div");
+    return f.className = "mfp-" + b, d && (f.innerHTML = d), e ? c && c.appendChild(f) : (f = a(f), c && f.appendTo(c)), f;
+  },
+      y = function y(c, d) {
+    b.ev.triggerHandler(o + c, d), b.st.callbacks && (c = c.charAt(0).toLowerCase() + c.slice(1), b.st.callbacks[c] && b.st.callbacks[c].apply(b, a.isArray(d) ? d : [d]));
+  },
+      z = function z(c) {
+    return c === g && b.currTemplate.closeBtn || (b.currTemplate.closeBtn = a(b.st.closeMarkup.replace("%title%", b.st.tClose)), g = c), b.currTemplate.closeBtn;
+  },
+      A = function A() {
+    a.magnificPopup.instance || (b = new t(), b.init(), a.magnificPopup.instance = b);
+  },
+      B = function B() {
+    var a = document.createElement("p").style,
+        b = ["ms", "O", "Moz", "Webkit"];
+    if (void 0 !== a.transition) return !0;
+
+    for (; b.length;) {
+      if (b.pop() + "Transition" in a) return !0;
+    }
+
+    return !1;
+  };
+
+  t.prototype = {
+    constructor: t,
+    init: function init() {
+      var c = navigator.appVersion;
+      b.isLowIE = b.isIE8 = document.all && !document.addEventListener, b.isAndroid = /android/gi.test(c), b.isIOS = /iphone|ipad|ipod/gi.test(c), b.supportsTransition = B(), b.probablyMobile = b.isAndroid || b.isIOS || /(Opera Mini)|Kindle|webOS|BlackBerry|(Opera Mobi)|(Windows Phone)|IEMobile/i.test(navigator.userAgent), d = a(document), b.popupsCache = {};
+    },
+    open: function open(c) {
+      var e;
+
+      if (c.isObj === !1) {
+        b.items = c.items.toArray(), b.index = 0;
+        var g,
+            h = c.items;
+
+        for (e = 0; e < h.length; e++) {
+          if (g = h[e], g.parsed && (g = g.el[0]), g === c.el[0]) {
+            b.index = e;
+            break;
+          }
+        }
+      } else b.items = a.isArray(c.items) ? c.items : [c.items], b.index = c.index || 0;
+
+      if (b.isOpen) return void b.updateItemHTML();
+      b.types = [], f = "", c.mainEl && c.mainEl.length ? b.ev = c.mainEl.eq(0) : b.ev = d, c.key ? (b.popupsCache[c.key] || (b.popupsCache[c.key] = {}), b.currTemplate = b.popupsCache[c.key]) : b.currTemplate = {}, b.st = a.extend(!0, {}, a.magnificPopup.defaults, c), b.fixedContentPos = "auto" === b.st.fixedContentPos ? !b.probablyMobile : b.st.fixedContentPos, b.st.modal && (b.st.closeOnContentClick = !1, b.st.closeOnBgClick = !1, b.st.showCloseBtn = !1, b.st.enableEscapeKey = !1), b.bgOverlay || (b.bgOverlay = x("bg").on("click" + p, function () {
+        b.close();
+      }), b.wrap = x("wrap").attr("tabindex", -1).on("click" + p, function (a) {
+        b._checkIfClose(a.target) && b.close();
+      }), b.container = x("container", b.wrap)), b.contentContainer = x("content"), b.st.preloader && (b.preloader = x("preloader", b.container, b.st.tLoading));
+      var i = a.magnificPopup.modules;
+
+      for (e = 0; e < i.length; e++) {
+        var j = i[e];
+        j = j.charAt(0).toUpperCase() + j.slice(1), b["init" + j].call(b);
+      }
+
+      y("BeforeOpen"), b.st.showCloseBtn && (b.st.closeBtnInside ? (w(l, function (a, b, c, d) {
+        c.close_replaceWith = z(d.type);
+      }), f += " mfp-close-btn-in") : b.wrap.append(z())), b.st.alignTop && (f += " mfp-align-top"), b.fixedContentPos ? b.wrap.css({
+        overflow: b.st.overflowY,
+        overflowX: "hidden",
+        overflowY: b.st.overflowY
+      }) : b.wrap.css({
+        top: v.scrollTop(),
+        position: "absolute"
+      }), (b.st.fixedBgPos === !1 || "auto" === b.st.fixedBgPos && !b.fixedContentPos) && b.bgOverlay.css({
+        height: d.height(),
+        position: "absolute"
+      }), b.st.enableEscapeKey && d.on("keyup" + p, function (a) {
+        27 === a.keyCode && b.close();
+      }), v.on("resize" + p, function () {
+        b.updateSize();
+      }), b.st.closeOnContentClick || (f += " mfp-auto-cursor"), f && b.wrap.addClass(f);
+      var k = b.wH = v.height(),
+          n = {};
+
+      if (b.fixedContentPos && b._hasScrollBar(k)) {
+        var o = b._getScrollbarSize();
+
+        o && (n.marginRight = o);
+      }
+
+      b.fixedContentPos && (b.isIE7 ? a("body, html").css("overflow", "hidden") : n.overflow = "hidden");
+      var r = b.st.mainClass;
+      return b.isIE7 && (r += " mfp-ie7"), r && b._addClassToMFP(r), b.updateItemHTML(), y("BuildControls"), a("html").css(n), b.bgOverlay.add(b.wrap).prependTo(b.st.prependTo || a(document.body)), b._lastFocusedEl = document.activeElement, setTimeout(function () {
+        b.content ? (b._addClassToMFP(q), b._setFocus()) : b.bgOverlay.addClass(q), d.on("focusin" + p, b._onFocusIn);
+      }, 16), b.isOpen = !0, b.updateSize(k), y(m), c;
+    },
+    close: function close() {
+      b.isOpen && (y(i), b.isOpen = !1, b.st.removalDelay && !b.isLowIE && b.supportsTransition ? (b._addClassToMFP(r), setTimeout(function () {
+        b._close();
+      }, b.st.removalDelay)) : b._close());
+    },
+    _close: function _close() {
+      y(h);
+      var c = r + " " + q + " ";
+
+      if (b.bgOverlay.detach(), b.wrap.detach(), b.container.empty(), b.st.mainClass && (c += b.st.mainClass + " "), b._removeClassFromMFP(c), b.fixedContentPos) {
+        var e = {
+          marginRight: ""
+        };
+        b.isIE7 ? a("body, html").css("overflow", "") : e.overflow = "", a("html").css(e);
+      }
+
+      d.off("keyup" + p + " focusin" + p), b.ev.off(p), b.wrap.attr("class", "mfp-wrap").removeAttr("style"), b.bgOverlay.attr("class", "mfp-bg"), b.container.attr("class", "mfp-container"), !b.st.showCloseBtn || b.st.closeBtnInside && b.currTemplate[b.currItem.type] !== !0 || b.currTemplate.closeBtn && b.currTemplate.closeBtn.detach(), b.st.autoFocusLast && b._lastFocusedEl && a(b._lastFocusedEl).focus(), b.currItem = null, b.content = null, b.currTemplate = null, b.prevHeight = 0, y(j);
+    },
+    updateSize: function updateSize(a) {
+      if (b.isIOS) {
+        var c = document.documentElement.clientWidth / window.innerWidth,
+            d = window.innerHeight * c;
+        b.wrap.css("height", d), b.wH = d;
+      } else b.wH = a || v.height();
+
+      b.fixedContentPos || b.wrap.css("height", b.wH), y("Resize");
+    },
+    updateItemHTML: function updateItemHTML() {
+      var c = b.items[b.index];
+      b.contentContainer.detach(), b.content && b.content.detach(), c.parsed || (c = b.parseEl(b.index));
+      var d = c.type;
+
+      if (y("BeforeChange", [b.currItem ? b.currItem.type : "", d]), b.currItem = c, !b.currTemplate[d]) {
+        var f = b.st[d] ? b.st[d].markup : !1;
+        y("FirstMarkupParse", f), f ? b.currTemplate[d] = a(f) : b.currTemplate[d] = !0;
+      }
+
+      e && e !== c.type && b.container.removeClass("mfp-" + e + "-holder");
+      var g = b["get" + d.charAt(0).toUpperCase() + d.slice(1)](c, b.currTemplate[d]);
+      b.appendContent(g, d), c.preloaded = !0, y(n, c), e = c.type, b.container.prepend(b.contentContainer), y("AfterChange");
+    },
+    appendContent: function appendContent(a, c) {
+      b.content = a, a ? b.st.showCloseBtn && b.st.closeBtnInside && b.currTemplate[c] === !0 ? b.content.find(".mfp-close").length || b.content.append(z()) : b.content = a : b.content = "", y(k), b.container.addClass("mfp-" + c + "-holder"), b.contentContainer.append(b.content);
+    },
+    parseEl: function parseEl(c) {
+      var d,
+          e = b.items[c];
+
+      if (e.tagName ? e = {
+        el: a(e)
+      } : (d = e.type, e = {
+        data: e,
+        src: e.src
+      }), e.el) {
+        for (var f = b.types, g = 0; g < f.length; g++) {
+          if (e.el.hasClass("mfp-" + f[g])) {
+            d = f[g];
+            break;
+          }
+        }
+
+        e.src = e.el.attr("data-mfp-src"), e.src || (e.src = e.el.attr("href"));
+      }
+
+      return e.type = d || b.st.type || "inline", e.index = c, e.parsed = !0, b.items[c] = e, y("ElementParse", e), b.items[c];
+    },
+    addGroup: function addGroup(a, c) {
+      var d = function d(_d) {
+        _d.mfpEl = this, b._openClick(_d, a, c);
+      };
+
+      c || (c = {});
+      var e = "click.magnificPopup";
+      c.mainEl = a, c.items ? (c.isObj = !0, a.off(e).on(e, d)) : (c.isObj = !1, c.delegate ? a.off(e).on(e, c.delegate, d) : (c.items = a, a.off(e).on(e, d)));
+    },
+    _openClick: function _openClick(c, d, e) {
+      var f = void 0 !== e.midClick ? e.midClick : a.magnificPopup.defaults.midClick;
+
+      if (f || !(2 === c.which || c.ctrlKey || c.metaKey || c.altKey || c.shiftKey)) {
+        var g = void 0 !== e.disableOn ? e.disableOn : a.magnificPopup.defaults.disableOn;
+        if (g) if (a.isFunction(g)) {
+          if (!g.call(b)) return !0;
+        } else if (v.width() < g) return !0;
+        c.type && (c.preventDefault(), b.isOpen && c.stopPropagation()), e.el = a(c.mfpEl), e.delegate && (e.items = d.find(e.delegate)), b.open(e);
+      }
+    },
+    updateStatus: function updateStatus(a, d) {
+      if (b.preloader) {
+        c !== a && b.container.removeClass("mfp-s-" + c), d || "loading" !== a || (d = b.st.tLoading);
+        var e = {
+          status: a,
+          text: d
+        };
+        y("UpdateStatus", e), a = e.status, d = e.text, b.preloader.html(d), b.preloader.find("a").on("click", function (a) {
+          a.stopImmediatePropagation();
+        }), b.container.addClass("mfp-s-" + a), c = a;
+      }
+    },
+    _checkIfClose: function _checkIfClose(c) {
+      if (!a(c).hasClass(s)) {
+        var d = b.st.closeOnContentClick,
+            e = b.st.closeOnBgClick;
+        if (d && e) return !0;
+        if (!b.content || a(c).hasClass("mfp-close") || b.preloader && c === b.preloader[0]) return !0;
+
+        if (c === b.content[0] || a.contains(b.content[0], c)) {
+          if (d) return !0;
+        } else if (e && a.contains(document, c)) return !0;
+
+        return !1;
+      }
+    },
+    _addClassToMFP: function _addClassToMFP(a) {
+      b.bgOverlay.addClass(a), b.wrap.addClass(a);
+    },
+    _removeClassFromMFP: function _removeClassFromMFP(a) {
+      this.bgOverlay.removeClass(a), b.wrap.removeClass(a);
+    },
+    _hasScrollBar: function _hasScrollBar(a) {
+      return (b.isIE7 ? d.height() : document.body.scrollHeight) > (a || v.height());
+    },
+    _setFocus: function _setFocus() {
+      (b.st.focus ? b.content.find(b.st.focus).eq(0) : b.wrap).focus();
+    },
+    _onFocusIn: function _onFocusIn(c) {
+      return c.target === b.wrap[0] || a.contains(b.wrap[0], c.target) ? void 0 : (b._setFocus(), !1);
+    },
+    _parseMarkup: function _parseMarkup(b, c, d) {
+      var e;
+      d.data && (c = a.extend(d.data, c)), y(l, [b, c, d]), a.each(c, function (c, d) {
+        if (void 0 === d || d === !1) return !0;
+
+        if (e = c.split("_"), e.length > 1) {
+          var f = b.find(p + "-" + e[0]);
+
+          if (f.length > 0) {
+            var g = e[1];
+            "replaceWith" === g ? f[0] !== d[0] && f.replaceWith(d) : "img" === g ? f.is("img") ? f.attr("src", d) : f.replaceWith(a("<img>").attr("src", d).attr("class", f.attr("class"))) : f.attr(e[1], d);
+          }
+        } else b.find(p + "-" + c).html(d);
+      });
+    },
+    _getScrollbarSize: function _getScrollbarSize() {
+      if (void 0 === b.scrollbarSize) {
+        var a = document.createElement("div");
+        a.style.cssText = "width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;", document.body.appendChild(a), b.scrollbarSize = a.offsetWidth - a.clientWidth, document.body.removeChild(a);
+      }
+
+      return b.scrollbarSize;
+    }
+  }, a.magnificPopup = {
+    instance: null,
+    proto: t.prototype,
+    modules: [],
+    open: function open(b, c) {
+      return A(), b = b ? a.extend(!0, {}, b) : {}, b.isObj = !0, b.index = c || 0, this.instance.open(b);
+    },
+    close: function close() {
+      return a.magnificPopup.instance && a.magnificPopup.instance.close();
+    },
+    registerModule: function registerModule(b, c) {
+      c.options && (a.magnificPopup.defaults[b] = c.options), a.extend(this.proto, c.proto), this.modules.push(b);
+    },
+    defaults: {
+      disableOn: 0,
+      key: null,
+      midClick: !1,
+      mainClass: "",
+      preloader: !0,
+      focus: "",
+      closeOnContentClick: !1,
+      closeOnBgClick: !0,
+      closeBtnInside: !0,
+      showCloseBtn: !0,
+      enableEscapeKey: !0,
+      modal: !1,
+      alignTop: !1,
+      removalDelay: 0,
+      prependTo: null,
+      fixedContentPos: "auto",
+      fixedBgPos: "auto",
+      overflowY: "auto",
+      closeMarkup: '<button title="%title%" type="button" class="mfp-close">&#215;</button>',
+      tClose: "Close (Esc)",
+      tLoading: "Loading...",
+      autoFocusLast: !0
+    }
+  }, a.fn.magnificPopup = function (c) {
+    A();
+    var d = a(this);
+    if ("string" == typeof c) {
+      if ("open" === c) {
+        var e,
+            f = u ? d.data("magnificPopup") : d[0].magnificPopup,
+            g = parseInt(arguments[1], 10) || 0;
+        f.items ? e = f.items[g] : (e = d, f.delegate && (e = e.find(f.delegate)), e = e.eq(g)), b._openClick({
+          mfpEl: e
+        }, d, f);
+      } else b.isOpen && b[c].apply(b, Array.prototype.slice.call(arguments, 1));
+    } else c = a.extend(!0, {}, c), u ? d.data("magnificPopup", c) : d[0].magnificPopup = c, b.addGroup(d, c);
+    return d;
+  };
+
+  var C,
+      D,
+      E,
+      F = "inline",
+      G = function G() {
+    E && (D.after(E.addClass(C)).detach(), E = null);
+  };
+
+  a.magnificPopup.registerModule(F, {
+    options: {
+      hiddenClass: "hide",
+      markup: "",
+      tNotFound: "Content not found"
+    },
+    proto: {
+      initInline: function initInline() {
+        b.types.push(F), w(h + "." + F, function () {
+          G();
+        });
+      },
+      getInline: function getInline(c, d) {
+        if (G(), c.src) {
+          var e = b.st.inline,
+              f = a(c.src);
+
+          if (f.length) {
+            var g = f[0].parentNode;
+            g && g.tagName && (D || (C = e.hiddenClass, D = x(C), C = "mfp-" + C), E = f.after(D).detach().removeClass(C)), b.updateStatus("ready");
+          } else b.updateStatus("error", e.tNotFound), f = a("<div>");
+
+          return c.inlineElement = f, f;
+        }
+
+        return b.updateStatus("ready"), b._parseMarkup(d, {}, c), d;
+      }
+    }
+  });
+
+  var H,
+      I = "ajax",
+      J = function J() {
+    H && a(document.body).removeClass(H);
+  },
+      K = function K() {
+    J(), b.req && b.req.abort();
+  };
+
+  a.magnificPopup.registerModule(I, {
+    options: {
+      settings: null,
+      cursor: "mfp-ajax-cur",
+      tError: '<a href="%url%">The content</a> could not be loaded.'
+    },
+    proto: {
+      initAjax: function initAjax() {
+        b.types.push(I), H = b.st.ajax.cursor, w(h + "." + I, K), w("BeforeChange." + I, K);
+      },
+      getAjax: function getAjax(c) {
+        H && a(document.body).addClass(H), b.updateStatus("loading");
+        var d = a.extend({
+          url: c.src,
+          success: function success(d, e, f) {
+            var g = {
+              data: d,
+              xhr: f
+            };
+            y("ParseAjax", g), b.appendContent(a(g.data), I), c.finished = !0, J(), b._setFocus(), setTimeout(function () {
+              b.wrap.addClass(q);
+            }, 16), b.updateStatus("ready"), y("AjaxContentAdded");
+          },
+          error: function error() {
+            J(), c.finished = c.loadError = !0, b.updateStatus("error", b.st.ajax.tError.replace("%url%", c.src));
+          }
+        }, b.st.ajax.settings);
+        return b.req = a.ajax(d), "";
+      }
+    }
+  });
+
+  var L,
+      M = function M(c) {
+    if (c.data && void 0 !== c.data.title) return c.data.title;
+    var d = b.st.image.titleSrc;
+
+    if (d) {
+      if (a.isFunction(d)) return d.call(b, c);
+      if (c.el) return c.el.attr(d) || "";
+    }
+
+    return "";
+  };
+
+  a.magnificPopup.registerModule("image", {
+    options: {
+      markup: '<div class="mfp-figure"><div class="mfp-close"></div><figure><div class="mfp-img"></div><figcaption><div class="mfp-bottom-bar"><div class="mfp-title"></div><div class="mfp-counter"></div></div></figcaption></figure></div>',
+      cursor: "mfp-zoom-out-cur",
+      titleSrc: "title",
+      verticalFit: !0,
+      tError: '<a href="%url%">The image</a> could not be loaded.'
+    },
+    proto: {
+      initImage: function initImage() {
+        var c = b.st.image,
+            d = ".image";
+        b.types.push("image"), w(m + d, function () {
+          "image" === b.currItem.type && c.cursor && a(document.body).addClass(c.cursor);
+        }), w(h + d, function () {
+          c.cursor && a(document.body).removeClass(c.cursor), v.off("resize" + p);
+        }), w("Resize" + d, b.resizeImage), b.isLowIE && w("AfterChange", b.resizeImage);
+      },
+      resizeImage: function resizeImage() {
+        var a = b.currItem;
+
+        if (a && a.img && b.st.image.verticalFit) {
+          var c = 0;
+          b.isLowIE && (c = parseInt(a.img.css("padding-top"), 10) + parseInt(a.img.css("padding-bottom"), 10)), a.img.css("max-height", b.wH - c);
+        }
+      },
+      _onImageHasSize: function _onImageHasSize(a) {
+        a.img && (a.hasSize = !0, L && clearInterval(L), a.isCheckingImgSize = !1, y("ImageHasSize", a), a.imgHidden && (b.content && b.content.removeClass("mfp-loading"), a.imgHidden = !1));
+      },
+      findImageSize: function findImageSize(a) {
+        var c = 0,
+            d = a.img[0],
+            e = function e(f) {
+          L && clearInterval(L), L = setInterval(function () {
+            return d.naturalWidth > 0 ? void b._onImageHasSize(a) : (c > 200 && clearInterval(L), c++, void (3 === c ? e(10) : 40 === c ? e(50) : 100 === c && e(500)));
+          }, f);
+        };
+
+        e(1);
+      },
+      getImage: function getImage(c, d) {
+        var e = 0,
+            f = function f() {
+          c && (c.img[0].complete ? (c.img.off(".mfploader"), c === b.currItem && (b._onImageHasSize(c), b.updateStatus("ready")), c.hasSize = !0, c.loaded = !0, y("ImageLoadComplete")) : (e++, 200 > e ? setTimeout(f, 100) : g()));
+        },
+            g = function g() {
+          c && (c.img.off(".mfploader"), c === b.currItem && (b._onImageHasSize(c), b.updateStatus("error", h.tError.replace("%url%", c.src))), c.hasSize = !0, c.loaded = !0, c.loadError = !0);
+        },
+            h = b.st.image,
+            i = d.find(".mfp-img");
+
+        if (i.length) {
+          var j = document.createElement("img");
+          j.className = "mfp-img", c.el && c.el.find("img").length && (j.alt = c.el.find("img").attr("alt")), c.img = a(j).on("load.mfploader", f).on("error.mfploader", g), j.src = c.src, i.is("img") && (c.img = c.img.clone()), j = c.img[0], j.naturalWidth > 0 ? c.hasSize = !0 : j.width || (c.hasSize = !1);
+        }
+
+        return b._parseMarkup(d, {
+          title: M(c),
+          img_replaceWith: c.img
+        }, c), b.resizeImage(), c.hasSize ? (L && clearInterval(L), c.loadError ? (d.addClass("mfp-loading"), b.updateStatus("error", h.tError.replace("%url%", c.src))) : (d.removeClass("mfp-loading"), b.updateStatus("ready")), d) : (b.updateStatus("loading"), c.loading = !0, c.hasSize || (c.imgHidden = !0, d.addClass("mfp-loading"), b.findImageSize(c)), d);
+      }
+    }
+  });
+
+  var N,
+      O = function O() {
+    return void 0 === N && (N = void 0 !== document.createElement("p").style.MozTransform), N;
+  };
+
+  a.magnificPopup.registerModule("zoom", {
+    options: {
+      enabled: !1,
+      easing: "ease-in-out",
+      duration: 300,
+      opener: function opener(a) {
+        return a.is("img") ? a : a.find("img");
+      }
+    },
+    proto: {
+      initZoom: function initZoom() {
+        var a,
+            c = b.st.zoom,
+            d = ".zoom";
+
+        if (c.enabled && b.supportsTransition) {
+          var e,
+              f,
+              g = c.duration,
+              j = function j(a) {
+            var b = a.clone().removeAttr("style").removeAttr("class").addClass("mfp-animated-image"),
+                d = "all " + c.duration / 1e3 + "s " + c.easing,
+                e = {
+              position: "fixed",
+              zIndex: 9999,
+              left: 0,
+              top: 0,
+              "-webkit-backface-visibility": "hidden"
+            },
+                f = "transition";
+            return e["-webkit-" + f] = e["-moz-" + f] = e["-o-" + f] = e[f] = d, b.css(e), b;
+          },
+              k = function k() {
+            b.content.css("visibility", "visible");
+          };
+
+          w("BuildControls" + d, function () {
+            if (b._allowZoom()) {
+              if (clearTimeout(e), b.content.css("visibility", "hidden"), a = b._getItemToZoom(), !a) return void k();
+              f = j(a), f.css(b._getOffset()), b.wrap.append(f), e = setTimeout(function () {
+                f.css(b._getOffset(!0)), e = setTimeout(function () {
+                  k(), setTimeout(function () {
+                    f.remove(), a = f = null, y("ZoomAnimationEnded");
+                  }, 16);
+                }, g);
+              }, 16);
+            }
+          }), w(i + d, function () {
+            if (b._allowZoom()) {
+              if (clearTimeout(e), b.st.removalDelay = g, !a) {
+                if (a = b._getItemToZoom(), !a) return;
+                f = j(a);
+              }
+
+              f.css(b._getOffset(!0)), b.wrap.append(f), b.content.css("visibility", "hidden"), setTimeout(function () {
+                f.css(b._getOffset());
+              }, 16);
+            }
+          }), w(h + d, function () {
+            b._allowZoom() && (k(), f && f.remove(), a = null);
+          });
+        }
+      },
+      _allowZoom: function _allowZoom() {
+        return "image" === b.currItem.type;
+      },
+      _getItemToZoom: function _getItemToZoom() {
+        return b.currItem.hasSize ? b.currItem.img : !1;
+      },
+      _getOffset: function _getOffset(c) {
+        var d;
+        d = c ? b.currItem.img : b.st.zoom.opener(b.currItem.el || b.currItem);
+        var e = d.offset(),
+            f = parseInt(d.css("padding-top"), 10),
+            g = parseInt(d.css("padding-bottom"), 10);
+        e.top -= a(window).scrollTop() - f;
+        var h = {
+          width: d.width(),
+          height: (u ? d.innerHeight() : d[0].offsetHeight) - g - f
+        };
+        return O() ? h["-moz-transform"] = h.transform = "translate(" + e.left + "px," + e.top + "px)" : (h.left = e.left, h.top = e.top), h;
+      }
+    }
+  });
+
+  var P = "iframe",
+      Q = "//about:blank",
+      R = function R(a) {
+    if (b.currTemplate[P]) {
+      var c = b.currTemplate[P].find("iframe");
+      c.length && (a || (c[0].src = Q), b.isIE8 && c.css("display", a ? "block" : "none"));
+    }
+  };
+
+  a.magnificPopup.registerModule(P, {
+    options: {
+      markup: '<div class="mfp-iframe-scaler"><div class="mfp-close"></div><iframe class="mfp-iframe" src="//about:blank" frameborder="0" allowfullscreen></iframe></div>',
+      srcAction: "iframe_src",
+      patterns: {
+        youtube: {
+          index: "youtube.com",
+          id: "v=",
+          src: "//www.youtube.com/embed/%id%?autoplay=1"
+        },
+        vimeo: {
+          index: "vimeo.com/",
+          id: "/",
+          src: "//player.vimeo.com/video/%id%?autoplay=1"
+        },
+        gmaps: {
+          index: "//maps.google.",
+          src: "%id%&output=embed"
+        }
+      }
+    },
+    proto: {
+      initIframe: function initIframe() {
+        b.types.push(P), w("BeforeChange", function (a, b, c) {
+          b !== c && (b === P ? R() : c === P && R(!0));
+        }), w(h + "." + P, function () {
+          R();
+        });
+      },
+      getIframe: function getIframe(c, d) {
+        var e = c.src,
+            f = b.st.iframe;
+        a.each(f.patterns, function () {
+          return e.indexOf(this.index) > -1 ? (this.id && (e = "string" == typeof this.id ? e.substr(e.lastIndexOf(this.id) + this.id.length, e.length) : this.id.call(this, e)), e = this.src.replace("%id%", e), !1) : void 0;
+        });
+        var g = {};
+        return f.srcAction && (g[f.srcAction] = e), b._parseMarkup(d, g, c), b.updateStatus("ready"), d;
+      }
+    }
+  });
+
+  var S = function S(a) {
+    var c = b.items.length;
+    return a > c - 1 ? a - c : 0 > a ? c + a : a;
+  },
+      T = function T(a, b, c) {
+    return a.replace(/%curr%/gi, b + 1).replace(/%total%/gi, c);
+  };
+
+  a.magnificPopup.registerModule("gallery", {
+    options: {
+      enabled: !1,
+      arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+      preload: [0, 2],
+      navigateByImgClick: !0,
+      arrows: !0,
+      tPrev: "Previous (Left arrow key)",
+      tNext: "Next (Right arrow key)",
+      tCounter: "%curr% of %total%"
+    },
+    proto: {
+      initGallery: function initGallery() {
+        var c = b.st.gallery,
+            e = ".mfp-gallery";
+        return b.direction = !0, c && c.enabled ? (f += " mfp-gallery", w(m + e, function () {
+          c.navigateByImgClick && b.wrap.on("click" + e, ".mfp-img", function () {
+            return b.items.length > 1 ? (b.next(), !1) : void 0;
+          }), d.on("keydown" + e, function (a) {
+            37 === a.keyCode ? b.prev() : 39 === a.keyCode && b.next();
+          });
+        }), w("UpdateStatus" + e, function (a, c) {
+          c.text && (c.text = T(c.text, b.currItem.index, b.items.length));
+        }), w(l + e, function (a, d, e, f) {
+          var g = b.items.length;
+          e.counter = g > 1 ? T(c.tCounter, f.index, g) : "";
+        }), w("BuildControls" + e, function () {
+          if (b.items.length > 1 && c.arrows && !b.arrowLeft) {
+            var d = c.arrowMarkup,
+                e = b.arrowLeft = a(d.replace(/%title%/gi, c.tPrev).replace(/%dir%/gi, "left")).addClass(s),
+                f = b.arrowRight = a(d.replace(/%title%/gi, c.tNext).replace(/%dir%/gi, "right")).addClass(s);
+            e.click(function () {
+              b.prev();
+            }), f.click(function () {
+              b.next();
+            }), b.container.append(e.add(f));
+          }
+        }), w(n + e, function () {
+          b._preloadTimeout && clearTimeout(b._preloadTimeout), b._preloadTimeout = setTimeout(function () {
+            b.preloadNearbyImages(), b._preloadTimeout = null;
+          }, 16);
+        }), void w(h + e, function () {
+          d.off(e), b.wrap.off("click" + e), b.arrowRight = b.arrowLeft = null;
+        })) : !1;
+      },
+      next: function next() {
+        b.direction = !0, b.index = S(b.index + 1), b.updateItemHTML();
+      },
+      prev: function prev() {
+        b.direction = !1, b.index = S(b.index - 1), b.updateItemHTML();
+      },
+      goTo: function goTo(a) {
+        b.direction = a >= b.index, b.index = a, b.updateItemHTML();
+      },
+      preloadNearbyImages: function preloadNearbyImages() {
+        var a,
+            c = b.st.gallery.preload,
+            d = Math.min(c[0], b.items.length),
+            e = Math.min(c[1], b.items.length);
+
+        for (a = 1; a <= (b.direction ? e : d); a++) {
+          b._preloadItem(b.index + a);
+        }
+
+        for (a = 1; a <= (b.direction ? d : e); a++) {
+          b._preloadItem(b.index - a);
+        }
+      },
+      _preloadItem: function _preloadItem(c) {
+        if (c = S(c), !b.items[c].preloaded) {
+          var d = b.items[c];
+          d.parsed || (d = b.parseEl(c)), y("LazyLoad", d), "image" === d.type && (d.img = a('<img class="mfp-img" />').on("load.mfploader", function () {
+            d.hasSize = !0;
+          }).on("error.mfploader", function () {
+            d.hasSize = !0, d.loadError = !0, y("LazyLoadError", d);
+          }).attr("src", d.src)), d.preloaded = !0;
+        }
+      }
+    }
+  });
+  var U = "retina";
+  a.magnificPopup.registerModule(U, {
+    options: {
+      replaceSrc: function replaceSrc(a) {
+        return a.src.replace(/\.\w+$/, function (a) {
+          return "@2x" + a;
+        });
+      },
+      ratio: 1
+    },
+    proto: {
+      initRetina: function initRetina() {
+        if (window.devicePixelRatio > 1) {
+          var a = b.st.retina,
+              c = a.ratio;
+          c = isNaN(c) ? c() : c, c > 1 && (w("ImageHasSize." + U, function (a, b) {
+            b.img.css({
+              "max-width": b.img[0].naturalWidth / c,
+              width: "100%"
+            });
+          }), w("ElementParse." + U, function (b, d) {
+            d.src = a.replaceSrc(d, c);
+          }));
+        }
+      }
+    }
+  }), A();
+});
+
+/***/ }),
+
+/***/ "./resources/js/jquery.stellar.min.js":
+/*!********************************************!*\
+  !*** ./resources/js/jquery.stellar.min.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*! Stellar.js v0.6.2 | Copyright 2014, Mark Dalgleish | http://markdalgleish.com/projects/stellar.js | http://markdalgleish.mit-license.org */
+!function (a, b, c, d) {
+  function e(b, c) {
+    this.element = b, this.options = a.extend({}, g, c), this._defaults = g, this._name = f, this.init();
+  }
+
+  var f = "stellar",
+      g = {
+    scrollProperty: "scroll",
+    positionProperty: "position",
+    horizontalScrolling: !0,
+    verticalScrolling: !0,
+    horizontalOffset: 0,
+    verticalOffset: 0,
+    responsive: !1,
+    parallaxBackgrounds: !0,
+    parallaxElements: !0,
+    hideDistantElements: !0,
+    hideElement: function hideElement(a) {
+      a.hide();
+    },
+    showElement: function showElement(a) {
+      a.show();
+    }
+  },
+      h = {
+    scroll: {
+      getLeft: function getLeft(a) {
+        return a.scrollLeft();
+      },
+      setLeft: function setLeft(a, b) {
+        a.scrollLeft(b);
+      },
+      getTop: function getTop(a) {
+        return a.scrollTop();
+      },
+      setTop: function setTop(a, b) {
+        a.scrollTop(b);
+      }
+    },
+    position: {
+      getLeft: function getLeft(a) {
+        return -1 * parseInt(a.css("left"), 10);
+      },
+      getTop: function getTop(a) {
+        return -1 * parseInt(a.css("top"), 10);
+      }
+    },
+    margin: {
+      getLeft: function getLeft(a) {
+        return -1 * parseInt(a.css("margin-left"), 10);
+      },
+      getTop: function getTop(a) {
+        return -1 * parseInt(a.css("margin-top"), 10);
+      }
+    },
+    transform: {
+      getLeft: function getLeft(a) {
+        var b = getComputedStyle(a[0])[k];
+        return "none" !== b ? -1 * parseInt(b.match(/(-?[0-9]+)/g)[4], 10) : 0;
+      },
+      getTop: function getTop(a) {
+        var b = getComputedStyle(a[0])[k];
+        return "none" !== b ? -1 * parseInt(b.match(/(-?[0-9]+)/g)[5], 10) : 0;
+      }
+    }
+  },
+      i = {
+    position: {
+      setLeft: function setLeft(a, b) {
+        a.css("left", b);
+      },
+      setTop: function setTop(a, b) {
+        a.css("top", b);
+      }
+    },
+    transform: {
+      setPosition: function setPosition(a, b, c, d, e) {
+        a[0].style[k] = "translate3d(" + (b - c) + "px, " + (d - e) + "px, 0)";
+      }
+    }
+  },
+      j = function () {
+    var b,
+        c = /^(Moz|Webkit|Khtml|O|ms|Icab)(?=[A-Z])/,
+        d = a("script")[0].style,
+        e = "";
+
+    for (b in d) {
+      if (c.test(b)) {
+        e = b.match(c)[0];
+        break;
+      }
+    }
+
+    return "WebkitOpacity" in d && (e = "Webkit"), "KhtmlOpacity" in d && (e = "Khtml"), function (a) {
+      return e + (e.length > 0 ? a.charAt(0).toUpperCase() + a.slice(1) : a);
+    };
+  }(),
+      k = j("transform"),
+      l = a("<div />", {
+    style: "background:#fff"
+  }).css("background-position-x") !== d,
+      m = l ? function (a, b, c) {
+    a.css({
+      "background-position-x": b,
+      "background-position-y": c
+    });
+  } : function (a, b, c) {
+    a.css("background-position", b + " " + c);
+  },
+      n = l ? function (a) {
+    return [a.css("background-position-x"), a.css("background-position-y")];
+  } : function (a) {
+    return a.css("background-position").split(" ");
+  },
+      o = b.requestAnimationFrame || b.webkitRequestAnimationFrame || b.mozRequestAnimationFrame || b.oRequestAnimationFrame || b.msRequestAnimationFrame || function (a) {
+    setTimeout(a, 1e3 / 60);
+  };
+
+  e.prototype = {
+    init: function init() {
+      this.options.name = f + "_" + Math.floor(1e9 * Math.random()), this._defineElements(), this._defineGetters(), this._defineSetters(), this._handleWindowLoadAndResize(), this._detectViewport(), this.refresh({
+        firstLoad: !0
+      }), "scroll" === this.options.scrollProperty ? this._handleScrollEvent() : this._startAnimationLoop();
+    },
+    _defineElements: function _defineElements() {
+      this.element === c.body && (this.element = b), this.$scrollElement = a(this.element), this.$element = this.element === b ? a("body") : this.$scrollElement, this.$viewportElement = this.options.viewportElement !== d ? a(this.options.viewportElement) : this.$scrollElement[0] === b || "scroll" === this.options.scrollProperty ? this.$scrollElement : this.$scrollElement.parent();
+    },
+    _defineGetters: function _defineGetters() {
+      var a = this,
+          b = h[a.options.scrollProperty];
+      this._getScrollLeft = function () {
+        return b.getLeft(a.$scrollElement);
+      }, this._getScrollTop = function () {
+        return b.getTop(a.$scrollElement);
+      };
+    },
+    _defineSetters: function _defineSetters() {
+      var b = this,
+          c = h[b.options.scrollProperty],
+          d = i[b.options.positionProperty],
+          e = c.setLeft,
+          f = c.setTop;
+      this._setScrollLeft = "function" == typeof e ? function (a) {
+        e(b.$scrollElement, a);
+      } : a.noop, this._setScrollTop = "function" == typeof f ? function (a) {
+        f(b.$scrollElement, a);
+      } : a.noop, this._setPosition = d.setPosition || function (a, c, e, f, g) {
+        b.options.horizontalScrolling && d.setLeft(a, c, e), b.options.verticalScrolling && d.setTop(a, f, g);
+      };
+    },
+    _handleWindowLoadAndResize: function _handleWindowLoadAndResize() {
+      var c = this,
+          d = a(b);
+      c.options.responsive && d.bind("load." + this.name, function () {
+        c.refresh();
+      }), d.bind("resize." + this.name, function () {
+        c._detectViewport(), c.options.responsive && c.refresh();
+      });
+    },
+    refresh: function refresh(c) {
+      var d = this,
+          e = d._getScrollLeft(),
+          f = d._getScrollTop();
+
+      c && c.firstLoad || this._reset(), this._setScrollLeft(0), this._setScrollTop(0), this._setOffsets(), this._findParticles(), this._findBackgrounds(), c && c.firstLoad && /WebKit/.test(navigator.userAgent) && a(b).load(function () {
+        var a = d._getScrollLeft(),
+            b = d._getScrollTop();
+
+        d._setScrollLeft(a + 1), d._setScrollTop(b + 1), d._setScrollLeft(a), d._setScrollTop(b);
+      }), this._setScrollLeft(e), this._setScrollTop(f);
+    },
+    _detectViewport: function _detectViewport() {
+      var a = this.$viewportElement.offset(),
+          b = null !== a && a !== d;
+      this.viewportWidth = this.$viewportElement.width(), this.viewportHeight = this.$viewportElement.height(), this.viewportOffsetTop = b ? a.top : 0, this.viewportOffsetLeft = b ? a.left : 0;
+    },
+    _findParticles: function _findParticles() {
+      {
+        var b = this;
+        this._getScrollLeft(), this._getScrollTop();
+      }
+      if (this.particles !== d) for (var c = this.particles.length - 1; c >= 0; c--) {
+        this.particles[c].$element.data("stellar-elementIsActive", d);
+      }
+      this.particles = [], this.options.parallaxElements && this.$element.find("[data-stellar-ratio]").each(function () {
+        var c,
+            e,
+            f,
+            g,
+            h,
+            i,
+            j,
+            k,
+            l,
+            m = a(this),
+            n = 0,
+            o = 0,
+            p = 0,
+            q = 0;
+
+        if (m.data("stellar-elementIsActive")) {
+          if (m.data("stellar-elementIsActive") !== this) return;
+        } else m.data("stellar-elementIsActive", this);
+
+        b.options.showElement(m), m.data("stellar-startingLeft") ? (m.css("left", m.data("stellar-startingLeft")), m.css("top", m.data("stellar-startingTop"))) : (m.data("stellar-startingLeft", m.css("left")), m.data("stellar-startingTop", m.css("top"))), f = m.position().left, g = m.position().top, h = "auto" === m.css("margin-left") ? 0 : parseInt(m.css("margin-left"), 10), i = "auto" === m.css("margin-top") ? 0 : parseInt(m.css("margin-top"), 10), k = m.offset().left - h, l = m.offset().top - i, m.parents().each(function () {
+          var b = a(this);
+          return b.data("stellar-offset-parent") === !0 ? (n = p, o = q, j = b, !1) : (p += b.position().left, void (q += b.position().top));
+        }), c = m.data("stellar-horizontal-offset") !== d ? m.data("stellar-horizontal-offset") : j !== d && j.data("stellar-horizontal-offset") !== d ? j.data("stellar-horizontal-offset") : b.horizontalOffset, e = m.data("stellar-vertical-offset") !== d ? m.data("stellar-vertical-offset") : j !== d && j.data("stellar-vertical-offset") !== d ? j.data("stellar-vertical-offset") : b.verticalOffset, b.particles.push({
+          $element: m,
+          $offsetParent: j,
+          isFixed: "fixed" === m.css("position"),
+          horizontalOffset: c,
+          verticalOffset: e,
+          startingPositionLeft: f,
+          startingPositionTop: g,
+          startingOffsetLeft: k,
+          startingOffsetTop: l,
+          parentOffsetLeft: n,
+          parentOffsetTop: o,
+          stellarRatio: m.data("stellar-ratio") !== d ? m.data("stellar-ratio") : 1,
+          width: m.outerWidth(!0),
+          height: m.outerHeight(!0),
+          isHidden: !1
+        });
+      });
+    },
+    _findBackgrounds: function _findBackgrounds() {
+      var b,
+          c = this,
+          e = this._getScrollLeft(),
+          f = this._getScrollTop();
+
+      this.backgrounds = [], this.options.parallaxBackgrounds && (b = this.$element.find("[data-stellar-background-ratio]"), this.$element.data("stellar-background-ratio") && (b = b.add(this.$element)), b.each(function () {
+        var b,
+            g,
+            h,
+            i,
+            j,
+            k,
+            l,
+            o = a(this),
+            p = n(o),
+            q = 0,
+            r = 0,
+            s = 0,
+            t = 0;
+
+        if (o.data("stellar-backgroundIsActive")) {
+          if (o.data("stellar-backgroundIsActive") !== this) return;
+        } else o.data("stellar-backgroundIsActive", this);
+
+        o.data("stellar-backgroundStartingLeft") ? m(o, o.data("stellar-backgroundStartingLeft"), o.data("stellar-backgroundStartingTop")) : (o.data("stellar-backgroundStartingLeft", p[0]), o.data("stellar-backgroundStartingTop", p[1])), h = "auto" === o.css("margin-left") ? 0 : parseInt(o.css("margin-left"), 10), i = "auto" === o.css("margin-top") ? 0 : parseInt(o.css("margin-top"), 10), j = o.offset().left - h - e, k = o.offset().top - i - f, o.parents().each(function () {
+          var b = a(this);
+          return b.data("stellar-offset-parent") === !0 ? (q = s, r = t, l = b, !1) : (s += b.position().left, void (t += b.position().top));
+        }), b = o.data("stellar-horizontal-offset") !== d ? o.data("stellar-horizontal-offset") : l !== d && l.data("stellar-horizontal-offset") !== d ? l.data("stellar-horizontal-offset") : c.horizontalOffset, g = o.data("stellar-vertical-offset") !== d ? o.data("stellar-vertical-offset") : l !== d && l.data("stellar-vertical-offset") !== d ? l.data("stellar-vertical-offset") : c.verticalOffset, c.backgrounds.push({
+          $element: o,
+          $offsetParent: l,
+          isFixed: "fixed" === o.css("background-attachment"),
+          horizontalOffset: b,
+          verticalOffset: g,
+          startingValueLeft: p[0],
+          startingValueTop: p[1],
+          startingBackgroundPositionLeft: isNaN(parseInt(p[0], 10)) ? 0 : parseInt(p[0], 10),
+          startingBackgroundPositionTop: isNaN(parseInt(p[1], 10)) ? 0 : parseInt(p[1], 10),
+          startingPositionLeft: o.position().left,
+          startingPositionTop: o.position().top,
+          startingOffsetLeft: j,
+          startingOffsetTop: k,
+          parentOffsetLeft: q,
+          parentOffsetTop: r,
+          stellarRatio: o.data("stellar-background-ratio") === d ? 1 : o.data("stellar-background-ratio")
+        });
+      }));
+    },
+    _reset: function _reset() {
+      var a, b, c, d, e;
+
+      for (e = this.particles.length - 1; e >= 0; e--) {
+        a = this.particles[e], b = a.$element.data("stellar-startingLeft"), c = a.$element.data("stellar-startingTop"), this._setPosition(a.$element, b, b, c, c), this.options.showElement(a.$element), a.$element.data("stellar-startingLeft", null).data("stellar-elementIsActive", null).data("stellar-backgroundIsActive", null);
+      }
+
+      for (e = this.backgrounds.length - 1; e >= 0; e--) {
+        d = this.backgrounds[e], d.$element.data("stellar-backgroundStartingLeft", null).data("stellar-backgroundStartingTop", null), m(d.$element, d.startingValueLeft, d.startingValueTop);
+      }
+    },
+    destroy: function destroy() {
+      this._reset(), this.$scrollElement.unbind("resize." + this.name).unbind("scroll." + this.name), this._animationLoop = a.noop, a(b).unbind("load." + this.name).unbind("resize." + this.name);
+    },
+    _setOffsets: function _setOffsets() {
+      var c = this,
+          d = a(b);
+      d.unbind("resize.horizontal-" + this.name).unbind("resize.vertical-" + this.name), "function" == typeof this.options.horizontalOffset ? (this.horizontalOffset = this.options.horizontalOffset(), d.bind("resize.horizontal-" + this.name, function () {
+        c.horizontalOffset = c.options.horizontalOffset();
+      })) : this.horizontalOffset = this.options.horizontalOffset, "function" == typeof this.options.verticalOffset ? (this.verticalOffset = this.options.verticalOffset(), d.bind("resize.vertical-" + this.name, function () {
+        c.verticalOffset = c.options.verticalOffset();
+      })) : this.verticalOffset = this.options.verticalOffset;
+    },
+    _repositionElements: function _repositionElements() {
+      var a,
+          b,
+          c,
+          d,
+          e,
+          f,
+          g,
+          h,
+          i,
+          j,
+          k = this._getScrollLeft(),
+          l = this._getScrollTop(),
+          n = !0,
+          o = !0;
+
+      if (this.currentScrollLeft !== k || this.currentScrollTop !== l || this.currentWidth !== this.viewportWidth || this.currentHeight !== this.viewportHeight) {
+        for (this.currentScrollLeft = k, this.currentScrollTop = l, this.currentWidth = this.viewportWidth, this.currentHeight = this.viewportHeight, j = this.particles.length - 1; j >= 0; j--) {
+          a = this.particles[j], b = a.isFixed ? 1 : 0, this.options.horizontalScrolling ? (f = (k + a.horizontalOffset + this.viewportOffsetLeft + a.startingPositionLeft - a.startingOffsetLeft + a.parentOffsetLeft) * -(a.stellarRatio + b - 1) + a.startingPositionLeft, h = f - a.startingPositionLeft + a.startingOffsetLeft) : (f = a.startingPositionLeft, h = a.startingOffsetLeft), this.options.verticalScrolling ? (g = (l + a.verticalOffset + this.viewportOffsetTop + a.startingPositionTop - a.startingOffsetTop + a.parentOffsetTop) * -(a.stellarRatio + b - 1) + a.startingPositionTop, i = g - a.startingPositionTop + a.startingOffsetTop) : (g = a.startingPositionTop, i = a.startingOffsetTop), this.options.hideDistantElements && (o = !this.options.horizontalScrolling || h + a.width > (a.isFixed ? 0 : k) && h < (a.isFixed ? 0 : k) + this.viewportWidth + this.viewportOffsetLeft, n = !this.options.verticalScrolling || i + a.height > (a.isFixed ? 0 : l) && i < (a.isFixed ? 0 : l) + this.viewportHeight + this.viewportOffsetTop), o && n ? (a.isHidden && (this.options.showElement(a.$element), a.isHidden = !1), this._setPosition(a.$element, f, a.startingPositionLeft, g, a.startingPositionTop)) : a.isHidden || (this.options.hideElement(a.$element), a.isHidden = !0);
+        }
+
+        for (j = this.backgrounds.length - 1; j >= 0; j--) {
+          c = this.backgrounds[j], b = c.isFixed ? 0 : 1, d = this.options.horizontalScrolling ? (k + c.horizontalOffset - this.viewportOffsetLeft - c.startingOffsetLeft + c.parentOffsetLeft - c.startingBackgroundPositionLeft) * (b - c.stellarRatio) + "px" : c.startingValueLeft, e = this.options.verticalScrolling ? (l + c.verticalOffset - this.viewportOffsetTop - c.startingOffsetTop + c.parentOffsetTop - c.startingBackgroundPositionTop) * (b - c.stellarRatio) + "px" : c.startingValueTop, m(c.$element, d, e);
+        }
+      }
+    },
+    _handleScrollEvent: function _handleScrollEvent() {
+      var a = this,
+          b = !1,
+          c = function c() {
+        a._repositionElements(), b = !1;
+      },
+          d = function d() {
+        b || (o(c), b = !0);
+      };
+
+      this.$scrollElement.bind("scroll." + this.name, d), d();
+    },
+    _startAnimationLoop: function _startAnimationLoop() {
+      var a = this;
+      this._animationLoop = function () {
+        o(a._animationLoop), a._repositionElements();
+      }, this._animationLoop();
+    }
+  }, a.fn[f] = function (b) {
+    var c = arguments;
+    return b === d || "object" == _typeof(b) ? this.each(function () {
+      a.data(this, "plugin_" + f) || a.data(this, "plugin_" + f, new e(this, b));
+    }) : "string" == typeof b && "_" !== b[0] && "init" !== b ? this.each(function () {
+      var d = a.data(this, "plugin_" + f);
+      d instanceof e && "function" == typeof d[b] && d[b].apply(d, Array.prototype.slice.call(c, 1)), "destroy" === b && a.data(this, "plugin_" + f, null);
+    }) : void 0;
+  }, a[f] = function () {
+    var c = a(b);
+    return c.stellar.apply(c, Array.prototype.slice.call(arguments, 0));
+  }, a[f].scrollProperty = h, a[f].positionProperty = i, b.Stellar = e;
+}(jQuery, this, document);
+
+/***/ }),
+
+/***/ "./resources/js/jquery.timepicker.min.js":
+/*!***********************************************!*\
+  !*** ./resources/js/jquery.timepicker.min.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*!
+ * jquery-timepicker v1.11.11 - A jQuery timepicker plugin inspired by Google Calendar. It supports both mouse and keyboard navigation.
+ * Copyright (c) 2017 Jon Thornton - http://jonthornton.github.com/jquery-timepicker/
+ * License: MIT
+ */
+!function (a) {
+  "object" == ( false ? undefined : _typeof(exports)) && exports && "object" == ( false ? undefined : _typeof(module)) && module && module.exports === exports ? a(__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (a),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+}(function (a) {
+  function b(a) {
+    var b = a[0];
+    return b.offsetWidth > 0 && b.offsetHeight > 0;
+  }
+
+  function c(b) {
+    if (b.minTime && (b.minTime = t(b.minTime)), b.maxTime && (b.maxTime = t(b.maxTime)), b.durationTime && "function" != typeof b.durationTime && (b.durationTime = t(b.durationTime)), "now" == b.scrollDefault) b.scrollDefault = function () {
+      return b.roundingFunction(t(new Date()), b);
+    };else if (b.scrollDefault && "function" != typeof b.scrollDefault) {
+      var c = b.scrollDefault;
+
+      b.scrollDefault = function () {
+        return b.roundingFunction(t(c), b);
+      };
+    } else b.minTime && (b.scrollDefault = function () {
+      return b.roundingFunction(b.minTime, b);
+    });
+
+    if ("string" === a.type(b.timeFormat) && b.timeFormat.match(/[gh]/) && (b._twelveHourTime = !0), b.showOnFocus === !1 && -1 != b.showOn.indexOf("focus") && b.showOn.splice(b.showOn.indexOf("focus"), 1), b.disableTimeRanges.length > 0) {
+      for (var d in b.disableTimeRanges) {
+        b.disableTimeRanges[d] = [t(b.disableTimeRanges[d][0]), t(b.disableTimeRanges[d][1])];
+      }
+
+      b.disableTimeRanges = b.disableTimeRanges.sort(function (a, b) {
+        return a[0] - b[0];
+      });
+
+      for (var d = b.disableTimeRanges.length - 1; d > 0; d--) {
+        b.disableTimeRanges[d][0] <= b.disableTimeRanges[d - 1][1] && (b.disableTimeRanges[d - 1] = [Math.min(b.disableTimeRanges[d][0], b.disableTimeRanges[d - 1][0]), Math.max(b.disableTimeRanges[d][1], b.disableTimeRanges[d - 1][1])], b.disableTimeRanges.splice(d, 1));
+      }
+    }
+
+    return b;
+  }
+
+  function d(b) {
+    var c = b.data("timepicker-settings"),
+        d = b.data("timepicker-list");
+
+    if (d && d.length && (d.remove(), b.data("timepicker-list", !1)), c.useSelect) {
+      d = a("<select />", {
+        "class": "ui-timepicker-select"
+      });
+      var g = d;
+    } else {
+      d = a("<ul />", {
+        "class": "ui-timepicker-list"
+      });
+      var g = a("<div />", {
+        "class": "ui-timepicker-wrapper",
+        tabindex: -1
+      });
+      g.css({
+        display: "none",
+        position: "absolute"
+      }).append(d);
+    }
+
+    if (c.noneOption) if (c.noneOption === !0 && (c.noneOption = c.useSelect ? "Time..." : "None"), a.isArray(c.noneOption)) {
+      for (var i in c.noneOption) {
+        if (parseInt(i, 10) == i) {
+          var k = e(c.noneOption[i], c.useSelect);
+          d.append(k);
+        }
+      }
+    } else {
+      var k = e(c.noneOption, c.useSelect);
+      d.append(k);
+    }
+
+    if (c.className && g.addClass(c.className), (null !== c.minTime || null !== c.durationTime) && c.showDuration) {
+      "function" == typeof c.step ? "function" : c.step;
+      g.addClass("ui-timepicker-with-duration"), g.addClass("ui-timepicker-step-" + c.step);
+    }
+
+    var l = c.minTime;
+    "function" == typeof c.durationTime ? l = t(c.durationTime()) : null !== c.durationTime && (l = c.durationTime);
+    var n = null !== c.minTime ? c.minTime : 0,
+        o = null !== c.maxTime ? c.maxTime : n + v - 1;
+    n > o && (o += v), o === v - 1 && "string" === a.type(c.timeFormat) && c.show2400 && (o = v);
+    var p = c.disableTimeRanges,
+        w = 0,
+        x = p.length,
+        z = c.step;
+    "function" != typeof z && (z = function z() {
+      return c.step;
+    });
+
+    for (var i = n, A = 0; o >= i; A++, i += 60 * z(A)) {
+      var B = i,
+          C = s(B, c);
+
+      if (c.useSelect) {
+        var D = a("<option />", {
+          value: C
+        });
+        D.text(C);
+      } else {
+        var D = a("<li />");
+        D.addClass(v / 2 > B % v ? "ui-timepicker-am" : "ui-timepicker-pm"), D.data("time", u(B, c)), D.text(C);
+      }
+
+      if ((null !== c.minTime || null !== c.durationTime) && c.showDuration) {
+        var E = r(i - l, c.step);
+        if (c.useSelect) D.text(D.text() + " (" + E + ")");else {
+          var F = a("<span />", {
+            "class": "ui-timepicker-duration"
+          });
+          F.text(" (" + E + ")"), D.append(F);
+        }
+      }
+
+      x > w && (B >= p[w][1] && (w += 1), p[w] && B >= p[w][0] && B < p[w][1] && (c.useSelect ? D.prop("disabled", !0) : D.addClass("ui-timepicker-disabled"))), d.append(D);
+    }
+
+    if (g.data("timepicker-input", b), b.data("timepicker-list", g), c.useSelect) b.val() && d.val(f(t(b.val()), c)), d.on("focus", function () {
+      a(this).data("timepicker-input").trigger("showTimepicker");
+    }), d.on("blur", function () {
+      a(this).data("timepicker-input").trigger("hideTimepicker");
+    }), d.on("change", function () {
+      m(b, a(this).val(), "select");
+    }), m(b, d.val(), "initial"), b.hide().after(d);else {
+      var G = c.appendTo;
+      "string" == typeof G ? G = a(G) : "function" == typeof G && (G = G(b)), G.append(g), j(b, d), d.on("mousedown click", "li", function (c) {
+        b.off("focus.timepicker"), b.on("focus.timepicker-ie-hack", function () {
+          b.off("focus.timepicker-ie-hack"), b.on("focus.timepicker", y.show);
+        }), h(b) || b[0].focus(), d.find("li").removeClass("ui-timepicker-selected"), a(this).addClass("ui-timepicker-selected"), q(b) && (b.trigger("hideTimepicker"), d.on("mouseup.timepicker click.timepicker", "li", function (a) {
+          d.off("mouseup.timepicker click.timepicker"), g.hide();
+        }));
+      });
+    }
+  }
+
+  function e(b, c) {
+    var d, e, f;
+    return "object" == _typeof(b) ? (d = b.label, e = b.className, f = b.value) : "string" == typeof b ? d = b : a.error("Invalid noneOption value"), c ? a("<option />", {
+      value: f,
+      "class": e,
+      text: d
+    }) : a("<li />", {
+      "class": e,
+      text: d
+    }).data("time", String(f));
+  }
+
+  function f(a, b) {
+    return a = b.roundingFunction(a, b), null !== a ? s(a, b) : void 0;
+  }
+
+  function g(b) {
+    if (b.target != window) {
+      var c = a(b.target);
+      c.closest(".ui-timepicker-input").length || c.closest(".ui-timepicker-wrapper").length || (y.hide(), a(document).unbind(".ui-timepicker"), a(window).unbind(".ui-timepicker"));
+    }
+  }
+
+  function h(a) {
+    var b = a.data("timepicker-settings");
+    return (window.navigator.msMaxTouchPoints || "ontouchstart" in document) && b.disableTouchKeyboard;
+  }
+
+  function i(b, c, d) {
+    if (!d && 0 !== d) return !1;
+    var e = b.data("timepicker-settings"),
+        f = !1,
+        d = e.roundingFunction(d, e);
+    return c.find("li").each(function (b, c) {
+      var e = a(c);
+      if ("number" == typeof e.data("time")) return e.data("time") == d ? (f = e, !1) : void 0;
+    }), f;
+  }
+
+  function j(a, b) {
+    b.find("li").removeClass("ui-timepicker-selected");
+    var c = a.data("timepicker-settings"),
+        d = t(l(a), c);
+
+    if (null !== d) {
+      var e = i(a, b, d);
+
+      if (e) {
+        var f = e.offset().top - b.offset().top;
+        (f + e.outerHeight() > b.outerHeight() || 0 > f) && b.scrollTop(b.scrollTop() + e.position().top - e.outerHeight()), (c.forceRoundTime || e.data("time") === d) && e.addClass("ui-timepicker-selected");
+      }
+    }
+  }
+
+  function k(b, c) {
+    if ("timepicker" != c) {
+      var d = a(this);
+      if ("" === this.value) return void m(d, null, c);
+
+      if (!d.is(":focus") || b && "change" == b.type) {
+        var e = d.data("timepicker-settings"),
+            f = t(this.value, e);
+        if (null === f) return void d.trigger("timeFormatError");
+        var g = !1;
+
+        if (null !== e.minTime && null !== e.maxTime && (f < e.minTime || f > e.maxTime) && (g = !0), a.each(e.disableTimeRanges, function () {
+          return f >= this[0] && f < this[1] ? (g = !0, !1) : void 0;
+        }), e.forceRoundTime) {
+          var h = e.roundingFunction(f, e);
+          h != f && (f = h, c = null);
+        }
+
+        var i = s(f, e);
+        g ? (m(d, i, "error") || b && "change" == b.type) && d.trigger("timeRangeError") : m(d, i, c);
+      }
+    }
+  }
+
+  function l(a) {
+    return a.is("input") ? a.val() : a.data("ui-timepicker-value");
+  }
+
+  function m(a, b, c) {
+    if (a.is("input")) {
+      a.val(b);
+      var d = a.data("timepicker-settings");
+      d.useSelect && "select" != c && "initial" != c && a.data("timepicker-list").val(f(t(b), d));
+    }
+
+    return a.data("ui-timepicker-value") != b ? (a.data("ui-timepicker-value", b), "select" == c ? a.trigger("selectTime").trigger("changeTime").trigger("change", "timepicker") : -1 == ["error", "initial"].indexOf(c) && a.trigger("changeTime"), !0) : (a.trigger("selectTime"), !1);
+  }
+
+  function n(a) {
+    switch (a.keyCode) {
+      case 13:
+      case 9:
+        return;
+
+      default:
+        a.preventDefault();
+    }
+  }
+
+  function o(c) {
+    var d = a(this),
+        e = d.data("timepicker-list");
+
+    if (!e || !b(e)) {
+      if (40 != c.keyCode) return !0;
+      y.show.call(d.get(0)), e = d.data("timepicker-list"), h(d) || d.focus();
+    }
+
+    switch (c.keyCode) {
+      case 13:
+        return q(d) && (k.call(d.get(0), {
+          type: "change"
+        }), y.hide.apply(this)), c.preventDefault(), !1;
+
+      case 38:
+        var f = e.find(".ui-timepicker-selected");
+        return f.length ? f.is(":first-child") || (f.removeClass("ui-timepicker-selected"), f.prev().addClass("ui-timepicker-selected"), f.prev().position().top < f.outerHeight() && e.scrollTop(e.scrollTop() - f.outerHeight())) : (e.find("li").each(function (b, c) {
+          return a(c).position().top > 0 ? (f = a(c), !1) : void 0;
+        }), f.addClass("ui-timepicker-selected")), !1;
+
+      case 40:
+        return f = e.find(".ui-timepicker-selected"), 0 === f.length ? (e.find("li").each(function (b, c) {
+          return a(c).position().top > 0 ? (f = a(c), !1) : void 0;
+        }), f.addClass("ui-timepicker-selected")) : f.is(":last-child") || (f.removeClass("ui-timepicker-selected"), f.next().addClass("ui-timepicker-selected"), f.next().position().top + 2 * f.outerHeight() > e.outerHeight() && e.scrollTop(e.scrollTop() + f.outerHeight())), !1;
+
+      case 27:
+        e.find("li").removeClass("ui-timepicker-selected"), y.hide();
+        break;
+
+      case 9:
+        y.hide();
+        break;
+
+      default:
+        return !0;
+    }
+  }
+
+  function p(c) {
+    var d = a(this),
+        e = d.data("timepicker-list"),
+        f = d.data("timepicker-settings");
+    if (!e || !b(e) || f.disableTextInput) return !0;
+    if ("paste" === c.type || "cut" === c.type) return void setTimeout(function () {
+      f.typeaheadHighlight ? j(d, e) : e.hide();
+    }, 0);
+
+    switch (c.keyCode) {
+      case 96:
+      case 97:
+      case 98:
+      case 99:
+      case 100:
+      case 101:
+      case 102:
+      case 103:
+      case 104:
+      case 105:
+      case 48:
+      case 49:
+      case 50:
+      case 51:
+      case 52:
+      case 53:
+      case 54:
+      case 55:
+      case 56:
+      case 57:
+      case 65:
+      case 77:
+      case 80:
+      case 186:
+      case 8:
+      case 46:
+        f.typeaheadHighlight ? j(d, e) : e.hide();
+    }
+  }
+
+  function q(a) {
+    var b = a.data("timepicker-settings"),
+        c = a.data("timepicker-list"),
+        d = null,
+        e = c.find(".ui-timepicker-selected");
+    return e.hasClass("ui-timepicker-disabled") ? !1 : (e.length && (d = e.data("time")), null !== d && ("string" != typeof d && (d = s(d, b)), m(a, d, "select")), !0);
+  }
+
+  function r(a, b) {
+    a = Math.abs(a);
+    var c,
+        d,
+        e = Math.round(a / 60),
+        f = [];
+    return 60 > e ? f = [e, w.mins] : (c = Math.floor(e / 60), d = e % 60, 30 == b && 30 == d && (c += w.decimal + 5), f.push(c), f.push(1 == c ? w.hr : w.hrs), 30 != b && d && (f.push(d), f.push(w.mins))), f.join(" ");
+  }
+
+  function s(b, c) {
+    if ("number" != typeof b) return null;
+    var d = parseInt(b % 60),
+        e = parseInt(b / 60 % 60),
+        f = parseInt(b / 3600 % 24),
+        g = new Date(1970, 0, 2, f, e, d, 0);
+    if (isNaN(g.getTime())) return null;
+    if ("function" === a.type(c.timeFormat)) return c.timeFormat(g);
+
+    for (var h, i, j = "", k = 0; k < c.timeFormat.length; k++) {
+      switch (i = c.timeFormat.charAt(k)) {
+        case "a":
+          j += g.getHours() > 11 ? w.pm : w.am;
+          break;
+
+        case "A":
+          j += g.getHours() > 11 ? w.PM : w.AM;
+          break;
+
+        case "g":
+          h = g.getHours() % 12, j += 0 === h ? "12" : h;
+          break;
+
+        case "G":
+          h = g.getHours(), b === v && (h = c.show2400 ? 24 : 0), j += h;
+          break;
+
+        case "h":
+          h = g.getHours() % 12, 0 !== h && 10 > h && (h = "0" + h), j += 0 === h ? "12" : h;
+          break;
+
+        case "H":
+          h = g.getHours(), b === v && (h = c.show2400 ? 24 : 0), j += h > 9 ? h : "0" + h;
+          break;
+
+        case "i":
+          var e = g.getMinutes();
+          j += e > 9 ? e : "0" + e;
+          break;
+
+        case "s":
+          d = g.getSeconds(), j += d > 9 ? d : "0" + d;
+          break;
+
+        case "\\":
+          k++, j += c.timeFormat.charAt(k);
+          break;
+
+        default:
+          j += i;
+      }
+    }
+
+    return j;
+  }
+
+  function t(a, b) {
+    if ("" === a || null === a) return null;
+    if ("object" == _typeof(a)) return 3600 * a.getHours() + 60 * a.getMinutes() + a.getSeconds();
+    if ("string" != typeof a) return a;
+    a = a.toLowerCase().replace(/[\s\.]/g, ""), ("a" == a.slice(-1) || "p" == a.slice(-1)) && (a += "m");
+    var c = "(" + w.am.replace(".", "") + "|" + w.pm.replace(".", "") + "|" + w.AM.replace(".", "") + "|" + w.PM.replace(".", "") + ")?",
+        d = new RegExp("^" + c + "([0-9]?[0-9])\\W?([0-5][0-9])?\\W?([0-5][0-9])?" + c + "$"),
+        e = a.match(d);
+    if (!e) return null;
+    var f = parseInt(1 * e[2], 10),
+        g = e[1] || e[5],
+        h = f,
+        i = 1 * e[3] || 0,
+        j = 1 * e[4] || 0;
+
+    if (12 >= f && g) {
+      var k = g == w.pm || g == w.PM;
+      h = 12 == f ? k ? 12 : 0 : f + (k ? 12 : 0);
+    } else if (b) {
+      var l = 3600 * f + 60 * i + j;
+
+      if (l >= v + (b.show2400 ? 1 : 0)) {
+        if (b.wrapHours === !1) return null;
+        h = f % 24;
+      }
+    }
+
+    var m = 3600 * h + 60 * i + j;
+
+    if (12 > f && !g && b && b._twelveHourTime && b.scrollDefault) {
+      var n = m - b.scrollDefault();
+      0 > n && n >= v / -2 && (m = (m + v / 2) % v);
+    }
+
+    return m;
+  }
+
+  function u(a, b) {
+    return a == v && b.show2400 ? a : a % v;
+  }
+
+  var v = 86400,
+      w = {
+    am: "am",
+    pm: "pm",
+    AM: "AM",
+    PM: "PM",
+    decimal: ".",
+    mins: "mins",
+    hr: "hr",
+    hrs: "hrs"
+  },
+      x = {
+    appendTo: "body",
+    className: null,
+    closeOnWindowScroll: !1,
+    disableTextInput: !1,
+    disableTimeRanges: [],
+    disableTouchKeyboard: !1,
+    durationTime: null,
+    forceRoundTime: !1,
+    maxTime: null,
+    minTime: null,
+    noneOption: !1,
+    orientation: "l",
+    roundingFunction: function roundingFunction(a, b) {
+      if (null === a) return null;
+      if ("number" != typeof b.step) return a;
+      var c = a % (60 * b.step),
+          d = b.minTime || 0;
+      return c -= d % (60 * b.step), c >= 30 * b.step ? a += 60 * b.step - c : a -= c, u(a, b);
+    },
+    scrollDefault: null,
+    selectOnBlur: !1,
+    show2400: !1,
+    showDuration: !1,
+    showOn: ["click", "focus"],
+    showOnFocus: !0,
+    step: 30,
+    stopScrollPropagation: !1,
+    timeFormat: "g:ia",
+    typeaheadHighlight: !0,
+    useSelect: !1,
+    wrapHours: !0
+  },
+      y = {
+    init: function init(b) {
+      return this.each(function () {
+        var e = a(this),
+            f = [];
+
+        for (var g in x) {
+          e.data(g) && (f[g] = e.data(g));
+        }
+
+        var h = a.extend({}, x, b, f);
+        if (h.lang && (w = a.extend(w, h.lang)), h = c(h), e.data("timepicker-settings", h), e.addClass("ui-timepicker-input"), h.useSelect) d(e);else {
+          if (e.prop("autocomplete", "off"), h.showOn) for (var i in h.showOn) {
+            e.on(h.showOn[i] + ".timepicker", y.show);
+          }
+          e.on("change.timepicker", k), e.on("keydown.timepicker", o), e.on("keyup.timepicker", p), h.disableTextInput && e.on("keydown.timepicker", n), e.on("cut.timepicker", p), e.on("paste.timepicker", p), k.call(e.get(0), null, "initial");
+        }
+      });
+    },
+    show: function show(c) {
+      var e = a(this),
+          f = e.data("timepicker-settings");
+      if (c && c.preventDefault(), f.useSelect) return void e.data("timepicker-list").focus();
+      h(e) && e.blur();
+      var k = e.data("timepicker-list");
+
+      if (!e.prop("readonly") && (k && 0 !== k.length && "function" != typeof f.durationTime || (d(e), k = e.data("timepicker-list")), !b(k))) {
+        e.data("ui-timepicker-value", e.val()), j(e, k), y.hide(), k.show();
+        var m = {};
+        f.orientation.match(/r/) ? m.left = e.offset().left + e.outerWidth() - k.outerWidth() + parseInt(k.css("marginLeft").replace("px", ""), 10) : m.left = e.offset().left + parseInt(k.css("marginLeft").replace("px", ""), 10);
+        var n;
+        n = f.orientation.match(/t/) ? "t" : f.orientation.match(/b/) ? "b" : e.offset().top + e.outerHeight(!0) + k.outerHeight() > a(window).height() + a(window).scrollTop() ? "t" : "b", "t" == n ? (k.addClass("ui-timepicker-positioned-top"), m.top = e.offset().top - k.outerHeight() + parseInt(k.css("marginTop").replace("px", ""), 10)) : (k.removeClass("ui-timepicker-positioned-top"), m.top = e.offset().top + e.outerHeight() + parseInt(k.css("marginTop").replace("px", ""), 10)), k.offset(m);
+        var o = k.find(".ui-timepicker-selected");
+
+        if (!o.length) {
+          var p = t(l(e));
+          null !== p ? o = i(e, k, p) : f.scrollDefault && (o = i(e, k, f.scrollDefault()));
+        }
+
+        if ((!o.length || o.hasClass("ui-timepicker-disabled")) && (o = k.find("li:not(.ui-timepicker-disabled):first")), o && o.length) {
+          var q = k.scrollTop() + o.position().top - o.outerHeight();
+          k.scrollTop(q);
+        } else k.scrollTop(0);
+
+        return f.stopScrollPropagation && a(document).on("wheel.ui-timepicker", ".ui-timepicker-wrapper", function (b) {
+          b.preventDefault();
+          var c = a(this).scrollTop();
+          a(this).scrollTop(c + b.originalEvent.deltaY);
+        }), a(document).on("touchstart.ui-timepicker mousedown.ui-timepicker", g), a(window).on("resize.ui-timepicker", g), f.closeOnWindowScroll && a(document).on("scroll.ui-timepicker", g), e.trigger("showTimepicker"), this;
+      }
+    },
+    hide: function hide(c) {
+      var d = a(this),
+          e = d.data("timepicker-settings");
+      return e && e.useSelect && d.blur(), a(".ui-timepicker-wrapper").each(function () {
+        var c = a(this);
+
+        if (b(c)) {
+          var d = c.data("timepicker-input"),
+              e = d.data("timepicker-settings");
+          e && e.selectOnBlur && q(d), c.hide(), d.trigger("hideTimepicker");
+        }
+      }), this;
+    },
+    option: function option(b, e) {
+      return "string" == typeof b && "undefined" == typeof e ? a(this).data("timepicker-settings")[b] : this.each(function () {
+        var f = a(this),
+            g = f.data("timepicker-settings"),
+            h = f.data("timepicker-list");
+        "object" == _typeof(b) ? g = a.extend(g, b) : "string" == typeof b && (g[b] = e), g = c(g), f.data("timepicker-settings", g), k.call(f.get(0), {
+          type: "change"
+        }, "initial"), h && (h.remove(), f.data("timepicker-list", !1)), g.useSelect && d(f);
+      });
+    },
+    getSecondsFromMidnight: function getSecondsFromMidnight() {
+      return t(l(this));
+    },
+    getTime: function getTime(a) {
+      var b = this,
+          c = l(b);
+      if (!c) return null;
+      var d = t(c);
+      if (null === d) return null;
+      a || (a = new Date());
+      var e = new Date(a);
+      return e.setHours(d / 3600), e.setMinutes(d % 3600 / 60), e.setSeconds(d % 60), e.setMilliseconds(0), e;
+    },
+    isVisible: function isVisible() {
+      var a = this,
+          c = a.data("timepicker-list");
+      return !(!c || !b(c));
+    },
+    setTime: function setTime(a) {
+      var b = this,
+          c = b.data("timepicker-settings");
+      if (c.forceRoundTime) var d = f(t(a), c);else var d = s(t(a), c);
+      return a && null === d && c.noneOption && (d = a), b.val(d), k.call(b.get(0), {
+        type: "change"
+      }, "initial"), b.data("timepicker-list") && j(b, b.data("timepicker-list")), this;
+    },
+    remove: function remove() {
+      var a = this;
+
+      if (a.hasClass("ui-timepicker-input")) {
+        var b = a.data("timepicker-settings");
+        return a.removeAttr("autocomplete", "off"), a.removeClass("ui-timepicker-input"), a.removeData("timepicker-settings"), a.off(".timepicker"), a.data("timepicker-list") && a.data("timepicker-list").remove(), b.useSelect && a.show(), a.removeData("timepicker-list"), this;
+      }
+    }
+  };
+
+  a.fn.timepicker = function (b) {
+    return this.length ? y[b] ? this.hasClass("ui-timepicker-input") ? y[b].apply(this, Array.prototype.slice.call(arguments, 1)) : this : "object" != _typeof(b) && b ? void a.error("Method " + b + " does not exist on jQuery.timepicker") : y.init.apply(this, arguments) : this;
+  };
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./resources/js/jquery.waypoints.min.js":
+/*!**********************************************!*\
+  !*** ./resources/js/jquery.waypoints.min.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*!
+Waypoints - 4.0.0
+Copyright Â© 2011-2015 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+*/
+!function () {
+  "use strict";
+
+  function t(o) {
+    if (!o) throw new Error("No options passed to Waypoint constructor");
+    if (!o.element) throw new Error("No element option passed to Waypoint constructor");
+    if (!o.handler) throw new Error("No handler option passed to Waypoint constructor");
+    this.key = "waypoint-" + e, this.options = t.Adapter.extend({}, t.defaults, o), this.element = this.options.element, this.adapter = new t.Adapter(this.element), this.callback = o.handler, this.axis = this.options.horizontal ? "horizontal" : "vertical", this.enabled = this.options.enabled, this.triggerPoint = null, this.group = t.Group.findOrCreate({
+      name: this.options.group,
+      axis: this.axis
+    }), this.context = t.Context.findOrCreateByElement(this.options.context), t.offsetAliases[this.options.offset] && (this.options.offset = t.offsetAliases[this.options.offset]), this.group.add(this), this.context.add(this), i[this.key] = this, e += 1;
+  }
+
+  var e = 0,
+      i = {};
+  t.prototype.queueTrigger = function (t) {
+    this.group.queueTrigger(this, t);
+  }, t.prototype.trigger = function (t) {
+    this.enabled && this.callback && this.callback.apply(this, t);
+  }, t.prototype.destroy = function () {
+    this.context.remove(this), this.group.remove(this), delete i[this.key];
+  }, t.prototype.disable = function () {
+    return this.enabled = !1, this;
+  }, t.prototype.enable = function () {
+    return this.context.refresh(), this.enabled = !0, this;
+  }, t.prototype.next = function () {
+    return this.group.next(this);
+  }, t.prototype.previous = function () {
+    return this.group.previous(this);
+  }, t.invokeAll = function (t) {
+    var e = [];
+
+    for (var o in i) {
+      e.push(i[o]);
+    }
+
+    for (var n = 0, r = e.length; r > n; n++) {
+      e[n][t]();
+    }
+  }, t.destroyAll = function () {
+    t.invokeAll("destroy");
+  }, t.disableAll = function () {
+    t.invokeAll("disable");
+  }, t.enableAll = function () {
+    t.invokeAll("enable");
+  }, t.refreshAll = function () {
+    t.Context.refreshAll();
+  }, t.viewportHeight = function () {
+    return window.innerHeight || document.documentElement.clientHeight;
+  }, t.viewportWidth = function () {
+    return document.documentElement.clientWidth;
+  }, t.adapters = [], t.defaults = {
+    context: window,
+    continuous: !0,
+    enabled: !0,
+    group: "default",
+    horizontal: !1,
+    offset: 0
+  }, t.offsetAliases = {
+    "bottom-in-view": function bottomInView() {
+      return this.context.innerHeight() - this.adapter.outerHeight();
+    },
+    "right-in-view": function rightInView() {
+      return this.context.innerWidth() - this.adapter.outerWidth();
+    }
+  }, window.Waypoint = t;
+}(), function () {
+  "use strict";
+
+  function t(t) {
+    window.setTimeout(t, 1e3 / 60);
+  }
+
+  function e(t) {
+    this.element = t, this.Adapter = n.Adapter, this.adapter = new this.Adapter(t), this.key = "waypoint-context-" + i, this.didScroll = !1, this.didResize = !1, this.oldScroll = {
+      x: this.adapter.scrollLeft(),
+      y: this.adapter.scrollTop()
+    }, this.waypoints = {
+      vertical: {},
+      horizontal: {}
+    }, t.waypointContextKey = this.key, o[t.waypointContextKey] = this, i += 1, this.createThrottledScrollHandler(), this.createThrottledResizeHandler();
+  }
+
+  var i = 0,
+      o = {},
+      n = window.Waypoint,
+      r = window.onload;
+  e.prototype.add = function (t) {
+    var e = t.options.horizontal ? "horizontal" : "vertical";
+    this.waypoints[e][t.key] = t, this.refresh();
+  }, e.prototype.checkEmpty = function () {
+    var t = this.Adapter.isEmptyObject(this.waypoints.horizontal),
+        e = this.Adapter.isEmptyObject(this.waypoints.vertical);
+    t && e && (this.adapter.off(".waypoints"), delete o[this.key]);
+  }, e.prototype.createThrottledResizeHandler = function () {
+    function t() {
+      e.handleResize(), e.didResize = !1;
+    }
+
+    var e = this;
+    this.adapter.on("resize.waypoints", function () {
+      e.didResize || (e.didResize = !0, n.requestAnimationFrame(t));
+    });
+  }, e.prototype.createThrottledScrollHandler = function () {
+    function t() {
+      e.handleScroll(), e.didScroll = !1;
+    }
+
+    var e = this;
+    this.adapter.on("scroll.waypoints", function () {
+      (!e.didScroll || n.isTouch) && (e.didScroll = !0, n.requestAnimationFrame(t));
+    });
+  }, e.prototype.handleResize = function () {
+    n.Context.refreshAll();
+  }, e.prototype.handleScroll = function () {
+    var t = {},
+        e = {
+      horizontal: {
+        newScroll: this.adapter.scrollLeft(),
+        oldScroll: this.oldScroll.x,
+        forward: "right",
+        backward: "left"
+      },
+      vertical: {
+        newScroll: this.adapter.scrollTop(),
+        oldScroll: this.oldScroll.y,
+        forward: "down",
+        backward: "up"
+      }
+    };
+
+    for (var i in e) {
+      var o = e[i],
+          n = o.newScroll > o.oldScroll,
+          r = n ? o.forward : o.backward;
+
+      for (var s in this.waypoints[i]) {
+        var a = this.waypoints[i][s],
+            l = o.oldScroll < a.triggerPoint,
+            h = o.newScroll >= a.triggerPoint,
+            p = l && h,
+            u = !l && !h;
+        (p || u) && (a.queueTrigger(r), t[a.group.id] = a.group);
+      }
+    }
+
+    for (var c in t) {
+      t[c].flushTriggers();
+    }
+
+    this.oldScroll = {
+      x: e.horizontal.newScroll,
+      y: e.vertical.newScroll
+    };
+  }, e.prototype.innerHeight = function () {
+    return this.element == this.element.window ? n.viewportHeight() : this.adapter.innerHeight();
+  }, e.prototype.remove = function (t) {
+    delete this.waypoints[t.axis][t.key], this.checkEmpty();
+  }, e.prototype.innerWidth = function () {
+    return this.element == this.element.window ? n.viewportWidth() : this.adapter.innerWidth();
+  }, e.prototype.destroy = function () {
+    var t = [];
+
+    for (var e in this.waypoints) {
+      for (var i in this.waypoints[e]) {
+        t.push(this.waypoints[e][i]);
+      }
+    }
+
+    for (var o = 0, n = t.length; n > o; o++) {
+      t[o].destroy();
+    }
+  }, e.prototype.refresh = function () {
+    var t,
+        e = this.element == this.element.window,
+        i = e ? void 0 : this.adapter.offset(),
+        o = {};
+    this.handleScroll(), t = {
+      horizontal: {
+        contextOffset: e ? 0 : i.left,
+        contextScroll: e ? 0 : this.oldScroll.x,
+        contextDimension: this.innerWidth(),
+        oldScroll: this.oldScroll.x,
+        forward: "right",
+        backward: "left",
+        offsetProp: "left"
+      },
+      vertical: {
+        contextOffset: e ? 0 : i.top,
+        contextScroll: e ? 0 : this.oldScroll.y,
+        contextDimension: this.innerHeight(),
+        oldScroll: this.oldScroll.y,
+        forward: "down",
+        backward: "up",
+        offsetProp: "top"
+      }
+    };
+
+    for (var r in t) {
+      var s = t[r];
+
+      for (var a in this.waypoints[r]) {
+        var l,
+            h,
+            p,
+            u,
+            c,
+            d = this.waypoints[r][a],
+            f = d.options.offset,
+            w = d.triggerPoint,
+            y = 0,
+            g = null == w;
+        d.element !== d.element.window && (y = d.adapter.offset()[s.offsetProp]), "function" == typeof f ? f = f.apply(d) : "string" == typeof f && (f = parseFloat(f), d.options.offset.indexOf("%") > -1 && (f = Math.ceil(s.contextDimension * f / 100))), l = s.contextScroll - s.contextOffset, d.triggerPoint = y + l - f, h = w < s.oldScroll, p = d.triggerPoint >= s.oldScroll, u = h && p, c = !h && !p, !g && u ? (d.queueTrigger(s.backward), o[d.group.id] = d.group) : !g && c ? (d.queueTrigger(s.forward), o[d.group.id] = d.group) : g && s.oldScroll >= d.triggerPoint && (d.queueTrigger(s.forward), o[d.group.id] = d.group);
+      }
+    }
+
+    return n.requestAnimationFrame(function () {
+      for (var t in o) {
+        o[t].flushTriggers();
+      }
+    }), this;
+  }, e.findOrCreateByElement = function (t) {
+    return e.findByElement(t) || new e(t);
+  }, e.refreshAll = function () {
+    for (var t in o) {
+      o[t].refresh();
+    }
+  }, e.findByElement = function (t) {
+    return o[t.waypointContextKey];
+  }, window.onload = function () {
+    r && r(), e.refreshAll();
+  }, n.requestAnimationFrame = function (e) {
+    var i = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || t;
+    i.call(window, e);
+  }, n.Context = e;
+}(), function () {
+  "use strict";
+
+  function t(t, e) {
+    return t.triggerPoint - e.triggerPoint;
+  }
+
+  function e(t, e) {
+    return e.triggerPoint - t.triggerPoint;
+  }
+
+  function i(t) {
+    this.name = t.name, this.axis = t.axis, this.id = this.name + "-" + this.axis, this.waypoints = [], this.clearTriggerQueues(), o[this.axis][this.name] = this;
+  }
+
+  var o = {
+    vertical: {},
+    horizontal: {}
+  },
+      n = window.Waypoint;
+  i.prototype.add = function (t) {
+    this.waypoints.push(t);
+  }, i.prototype.clearTriggerQueues = function () {
+    this.triggerQueues = {
+      up: [],
+      down: [],
+      left: [],
+      right: []
+    };
+  }, i.prototype.flushTriggers = function () {
+    for (var i in this.triggerQueues) {
+      var o = this.triggerQueues[i],
+          n = "up" === i || "left" === i;
+      o.sort(n ? e : t);
+
+      for (var r = 0, s = o.length; s > r; r += 1) {
+        var a = o[r];
+        (a.options.continuous || r === o.length - 1) && a.trigger([i]);
+      }
+    }
+
+    this.clearTriggerQueues();
+  }, i.prototype.next = function (e) {
+    this.waypoints.sort(t);
+    var i = n.Adapter.inArray(e, this.waypoints),
+        o = i === this.waypoints.length - 1;
+    return o ? null : this.waypoints[i + 1];
+  }, i.prototype.previous = function (e) {
+    this.waypoints.sort(t);
+    var i = n.Adapter.inArray(e, this.waypoints);
+    return i ? this.waypoints[i - 1] : null;
+  }, i.prototype.queueTrigger = function (t, e) {
+    this.triggerQueues[e].push(t);
+  }, i.prototype.remove = function (t) {
+    var e = n.Adapter.inArray(t, this.waypoints);
+    e > -1 && this.waypoints.splice(e, 1);
+  }, i.prototype.first = function () {
+    return this.waypoints[0];
+  }, i.prototype.last = function () {
+    return this.waypoints[this.waypoints.length - 1];
+  }, i.findOrCreate = function (t) {
+    return o[t.axis][t.name] || new i(t);
+  }, n.Group = i;
+}(), function () {
+  "use strict";
+
+  function t(t) {
+    this.$element = e(t);
+  }
+
+  var e = window.jQuery,
+      i = window.Waypoint;
+  e.each(["innerHeight", "innerWidth", "off", "offset", "on", "outerHeight", "outerWidth", "scrollLeft", "scrollTop"], function (e, i) {
+    t.prototype[i] = function () {
+      var t = Array.prototype.slice.call(arguments);
+      return this.$element[i].apply(this.$element, t);
+    };
+  }), e.each(["extend", "inArray", "isEmptyObject"], function (i, o) {
+    t[o] = e[o];
+  }), i.adapters.push({
+    name: "jquery",
+    Adapter: t
+  }), i.Adapter = t;
+}(), function () {
+  "use strict";
+
+  function t(t) {
+    return function () {
+      var i = [],
+          o = arguments[0];
+      return t.isFunction(arguments[0]) && (o = t.extend({}, arguments[1]), o.handler = arguments[0]), this.each(function () {
+        var n = t.extend({}, o, {
+          element: this
+        });
+        "string" == typeof n.context && (n.context = t(this).closest(n.context)[0]), i.push(new e(n));
+      }), i;
+    };
+  }
+
+  var e = window.Waypoint;
+  window.jQuery && (window.jQuery.fn.waypoint = t(window.jQuery)), window.Zepto && (window.Zepto.fn.waypoint = t(window.Zepto));
+}();
+
+/***/ }),
+
+/***/ "./resources/js/owl.carousel.min.js":
+/*!******************************************!*\
+  !*** ./resources/js/owl.carousel.min.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ * Owl Carousel v2.3.0
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ */
+!function (a, b, c, d) {
+  function e(b, c) {
+    this.settings = null, this.options = a.extend({}, e.Defaults, c), this.$element = a(b), this._handlers = {}, this._plugins = {}, this._supress = {}, this._current = null, this._speed = null, this._coordinates = [], this._breakpoint = null, this._width = null, this._items = [], this._clones = [], this._mergers = [], this._widths = [], this._invalidated = {}, this._pipe = [], this._drag = {
+      time: null,
+      target: null,
+      pointer: null,
+      stage: {
+        start: null,
+        current: null
+      },
+      direction: null
+    }, this._states = {
+      current: {},
+      tags: {
+        initializing: ["busy"],
+        animating: ["busy"],
+        dragging: ["interacting"]
+      }
+    }, a.each(["onResize", "onThrottledResize"], a.proxy(function (b, c) {
+      this._handlers[c] = a.proxy(this[c], this);
+    }, this)), a.each(e.Plugins, a.proxy(function (a, b) {
+      this._plugins[a.charAt(0).toLowerCase() + a.slice(1)] = new b(this);
+    }, this)), a.each(e.Workers, a.proxy(function (b, c) {
+      this._pipe.push({
+        filter: c.filter,
+        run: a.proxy(c.run, this)
+      });
+    }, this)), this.setup(), this.initialize();
+  }
+
+  e.Defaults = {
+    items: 3,
+    loop: !1,
+    center: !1,
+    rewind: !1,
+    mouseDrag: !0,
+    touchDrag: !0,
+    pullDrag: !0,
+    freeDrag: !1,
+    margin: 0,
+    stagePadding: 0,
+    merge: !1,
+    mergeFit: !0,
+    autoWidth: !1,
+    startPosition: 0,
+    rtl: !1,
+    smartSpeed: 250,
+    fluidSpeed: !1,
+    dragEndSpeed: !1,
+    responsive: {},
+    responsiveRefreshRate: 200,
+    responsiveBaseElement: b,
+    fallbackEasing: "swing",
+    info: !1,
+    nestedItemSelector: !1,
+    itemElement: "div",
+    stageElement: "div",
+    refreshClass: "owl-refresh",
+    loadedClass: "owl-loaded",
+    loadingClass: "owl-loading",
+    rtlClass: "owl-rtl",
+    responsiveClass: "owl-responsive",
+    dragClass: "owl-drag",
+    itemClass: "owl-item",
+    stageClass: "owl-stage",
+    stageOuterClass: "owl-stage-outer",
+    grabClass: "owl-grab"
+  }, e.Width = {
+    Default: "default",
+    Inner: "inner",
+    Outer: "outer"
+  }, e.Type = {
+    Event: "event",
+    State: "state"
+  }, e.Plugins = {}, e.Workers = [{
+    filter: ["width", "settings"],
+    run: function run() {
+      this._width = this.$element.width();
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run(a) {
+      a.current = this._items && this._items[this.relative(this._current)];
+    }
+  }, {
+    filter: ["items", "settings"],
+    run: function run() {
+      this.$stage.children(".cloned").remove();
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run(a) {
+      var b = this.settings.margin || "",
+          c = !this.settings.autoWidth,
+          d = this.settings.rtl,
+          e = {
+        width: "auto",
+        "margin-left": d ? b : "",
+        "margin-right": d ? "" : b
+      };
+      !c && this.$stage.children().css(e), a.css = e;
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run(a) {
+      var b = (this.width() / this.settings.items).toFixed(3) - this.settings.margin,
+          c = null,
+          d = this._items.length,
+          e = !this.settings.autoWidth,
+          f = [];
+
+      for (a.items = {
+        merge: !1,
+        width: b
+      }; d--;) {
+        c = this._mergers[d], c = this.settings.mergeFit && Math.min(c, this.settings.items) || c, a.items.merge = c > 1 || a.items.merge, f[d] = e ? b * c : this._items[d].width();
+      }
+
+      this._widths = f;
+    }
+  }, {
+    filter: ["items", "settings"],
+    run: function run() {
+      var b = [],
+          c = this._items,
+          d = this.settings,
+          e = Math.max(2 * d.items, 4),
+          f = 2 * Math.ceil(c.length / 2),
+          g = d.loop && c.length ? d.rewind ? e : Math.max(e, f) : 0,
+          h = "",
+          i = "";
+
+      for (g /= 2; g > 0;) {
+        b.push(this.normalize(b.length / 2, !0)), h += c[b[b.length - 1]][0].outerHTML, b.push(this.normalize(c.length - 1 - (b.length - 1) / 2, !0)), i = c[b[b.length - 1]][0].outerHTML + i, g -= 1;
+      }
+
+      this._clones = b, a(h).addClass("cloned").appendTo(this.$stage), a(i).addClass("cloned").prependTo(this.$stage);
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run() {
+      for (var a = this.settings.rtl ? 1 : -1, b = this._clones.length + this._items.length, c = -1, d = 0, e = 0, f = []; ++c < b;) {
+        d = f[c - 1] || 0, e = this._widths[this.relative(c)] + this.settings.margin, f.push(d + e * a);
+      }
+
+      this._coordinates = f;
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run() {
+      var a = this.settings.stagePadding,
+          b = this._coordinates,
+          c = {
+        width: Math.ceil(Math.abs(b[b.length - 1])) + 2 * a,
+        "padding-left": a || "",
+        "padding-right": a || ""
+      };
+      this.$stage.css(c);
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run(a) {
+      var b = this._coordinates.length,
+          c = !this.settings.autoWidth,
+          d = this.$stage.children();
+      if (c && a.items.merge) for (; b--;) {
+        a.css.width = this._widths[this.relative(b)], d.eq(b).css(a.css);
+      } else c && (a.css.width = a.items.width, d.css(a.css));
+    }
+  }, {
+    filter: ["items"],
+    run: function run() {
+      this._coordinates.length < 1 && this.$stage.removeAttr("style");
+    }
+  }, {
+    filter: ["width", "items", "settings"],
+    run: function run(a) {
+      a.current = a.current ? this.$stage.children().index(a.current) : 0, a.current = Math.max(this.minimum(), Math.min(this.maximum(), a.current)), this.reset(a.current);
+    }
+  }, {
+    filter: ["position"],
+    run: function run() {
+      this.animate(this.coordinates(this._current));
+    }
+  }, {
+    filter: ["width", "position", "items", "settings"],
+    run: function run() {
+      var a,
+          b,
+          c,
+          d,
+          e = this.settings.rtl ? 1 : -1,
+          f = 2 * this.settings.stagePadding,
+          g = this.coordinates(this.current()) + f,
+          h = g + this.width() * e,
+          i = [];
+
+      for (c = 0, d = this._coordinates.length; d > c; c++) {
+        a = this._coordinates[c - 1] || 0, b = Math.abs(this._coordinates[c]) + f * e, (this.op(a, "<=", g) && this.op(a, ">", h) || this.op(b, "<", g) && this.op(b, ">", h)) && i.push(c);
+      }
+
+      this.$stage.children(".active").removeClass("active"), this.$stage.children(":eq(" + i.join("), :eq(") + ")").addClass("active"), this.$stage.children(".center").removeClass("center"), this.settings.center && this.$stage.children().eq(this.current()).addClass("center");
+    }
+  }], e.prototype.initialize = function () {
+    if (this.enter("initializing"), this.trigger("initialize"), this.$element.toggleClass(this.settings.rtlClass, this.settings.rtl), this.settings.autoWidth && !this.is("pre-loading")) {
+      var b, c, e;
+      b = this.$element.find("img"), c = this.settings.nestedItemSelector ? "." + this.settings.nestedItemSelector : d, e = this.$element.children(c).width(), b.length && 0 >= e && this.preloadAutoWidthImages(b);
+    }
+
+    this.$element.addClass(this.options.loadingClass), this.$stage = a("<" + this.settings.stageElement + ' class="' + this.settings.stageClass + '"/>').wrap('<div class="' + this.settings.stageOuterClass + '"/>'), this.$element.append(this.$stage.parent()), this.replace(this.$element.children().not(this.$stage.parent())), this.$element.is(":visible") ? this.refresh() : this.invalidate("width"), this.$element.removeClass(this.options.loadingClass).addClass(this.options.loadedClass), this.registerEventHandlers(), this.leave("initializing"), this.trigger("initialized");
+  }, e.prototype.setup = function () {
+    var b = this.viewport(),
+        c = this.options.responsive,
+        d = -1,
+        e = null;
+    c ? (a.each(c, function (a) {
+      b >= a && a > d && (d = Number(a));
+    }), e = a.extend({}, this.options, c[d]), "function" == typeof e.stagePadding && (e.stagePadding = e.stagePadding()), delete e.responsive, e.responsiveClass && this.$element.attr("class", this.$element.attr("class").replace(new RegExp("(" + this.options.responsiveClass + "-)\\S+\\s", "g"), "$1" + d))) : e = a.extend({}, this.options), this.trigger("change", {
+      property: {
+        name: "settings",
+        value: e
+      }
+    }), this._breakpoint = d, this.settings = e, this.invalidate("settings"), this.trigger("changed", {
+      property: {
+        name: "settings",
+        value: this.settings
+      }
+    });
+  }, e.prototype.optionsLogic = function () {
+    this.settings.autoWidth && (this.settings.stagePadding = !1, this.settings.merge = !1);
+  }, e.prototype.prepare = function (b) {
+    var c = this.trigger("prepare", {
+      content: b
+    });
+    return c.data || (c.data = a("<" + this.settings.itemElement + "/>").addClass(this.options.itemClass).append(b)), this.trigger("prepared", {
+      content: c.data
+    }), c.data;
+  }, e.prototype.update = function () {
+    for (var b = 0, c = this._pipe.length, d = a.proxy(function (a) {
+      return this[a];
+    }, this._invalidated), e = {}; c > b;) {
+      (this._invalidated.all || a.grep(this._pipe[b].filter, d).length > 0) && this._pipe[b].run(e), b++;
+    }
+
+    this._invalidated = {}, !this.is("valid") && this.enter("valid");
+  }, e.prototype.width = function (a) {
+    switch (a = a || e.Width.Default) {
+      case e.Width.Inner:
+      case e.Width.Outer:
+        return this._width;
+
+      default:
+        return this._width - 2 * this.settings.stagePadding + this.settings.margin;
+    }
+  }, e.prototype.refresh = function () {
+    this.enter("refreshing"), this.trigger("refresh"), this.setup(), this.optionsLogic(), this.$element.addClass(this.options.refreshClass), this.update(), this.$element.removeClass(this.options.refreshClass), this.leave("refreshing"), this.trigger("refreshed");
+  }, e.prototype.onThrottledResize = function () {
+    b.clearTimeout(this.resizeTimer), this.resizeTimer = b.setTimeout(this._handlers.onResize, this.settings.responsiveRefreshRate);
+  }, e.prototype.onResize = function () {
+    return this._items.length ? this._width === this.$element.width() ? !1 : this.$element.is(":visible") ? (this.enter("resizing"), this.trigger("resize").isDefaultPrevented() ? (this.leave("resizing"), !1) : (this.invalidate("width"), this.refresh(), this.leave("resizing"), void this.trigger("resized"))) : !1 : !1;
+  }, e.prototype.registerEventHandlers = function () {
+    a.support.transition && this.$stage.on(a.support.transition.end + ".owl.core", a.proxy(this.onTransitionEnd, this)), this.settings.responsive !== !1 && this.on(b, "resize", this._handlers.onThrottledResize), this.settings.mouseDrag && (this.$element.addClass(this.options.dragClass), this.$stage.on("mousedown.owl.core", a.proxy(this.onDragStart, this)), this.$stage.on("dragstart.owl.core selectstart.owl.core", function () {
+      return !1;
+    })), this.settings.touchDrag && (this.$stage.on("touchstart.owl.core", a.proxy(this.onDragStart, this)), this.$stage.on("touchcancel.owl.core", a.proxy(this.onDragEnd, this)));
+  }, e.prototype.onDragStart = function (b) {
+    var d = null;
+    3 !== b.which && (a.support.transform ? (d = this.$stage.css("transform").replace(/.*\(|\)| /g, "").split(","), d = {
+      x: d[16 === d.length ? 12 : 4],
+      y: d[16 === d.length ? 13 : 5]
+    }) : (d = this.$stage.position(), d = {
+      x: this.settings.rtl ? d.left + this.$stage.width() - this.width() + this.settings.margin : d.left,
+      y: d.top
+    }), this.is("animating") && (a.support.transform ? this.animate(d.x) : this.$stage.stop(), this.invalidate("position")), this.$element.toggleClass(this.options.grabClass, "mousedown" === b.type), this.speed(0), this._drag.time = new Date().getTime(), this._drag.target = a(b.target), this._drag.stage.start = d, this._drag.stage.current = d, this._drag.pointer = this.pointer(b), a(c).on("mouseup.owl.core touchend.owl.core", a.proxy(this.onDragEnd, this)), a(c).one("mousemove.owl.core touchmove.owl.core", a.proxy(function (b) {
+      var d = this.difference(this._drag.pointer, this.pointer(b));
+      a(c).on("mousemove.owl.core touchmove.owl.core", a.proxy(this.onDragMove, this)), Math.abs(d.x) < Math.abs(d.y) && this.is("valid") || (b.preventDefault(), this.enter("dragging"), this.trigger("drag"));
+    }, this)));
+  }, e.prototype.onDragMove = function (a) {
+    var b = null,
+        c = null,
+        d = null,
+        e = this.difference(this._drag.pointer, this.pointer(a)),
+        f = this.difference(this._drag.stage.start, e);
+    this.is("dragging") && (a.preventDefault(), this.settings.loop ? (b = this.coordinates(this.minimum()), c = this.coordinates(this.maximum() + 1) - b, f.x = ((f.x - b) % c + c) % c + b) : (b = this.settings.rtl ? this.coordinates(this.maximum()) : this.coordinates(this.minimum()), c = this.settings.rtl ? this.coordinates(this.minimum()) : this.coordinates(this.maximum()), d = this.settings.pullDrag ? -1 * e.x / 5 : 0, f.x = Math.max(Math.min(f.x, b + d), c + d)), this._drag.stage.current = f, this.animate(f.x));
+  }, e.prototype.onDragEnd = function (b) {
+    var d = this.difference(this._drag.pointer, this.pointer(b)),
+        e = this._drag.stage.current,
+        f = d.x > 0 ^ this.settings.rtl ? "left" : "right";
+    a(c).off(".owl.core"), this.$element.removeClass(this.options.grabClass), (0 !== d.x && this.is("dragging") || !this.is("valid")) && (this.speed(this.settings.dragEndSpeed || this.settings.smartSpeed), this.current(this.closest(e.x, 0 !== d.x ? f : this._drag.direction)), this.invalidate("position"), this.update(), this._drag.direction = f, (Math.abs(d.x) > 3 || new Date().getTime() - this._drag.time > 300) && this._drag.target.one("click.owl.core", function () {
+      return !1;
+    })), this.is("dragging") && (this.leave("dragging"), this.trigger("dragged"));
+  }, e.prototype.closest = function (b, c) {
+    var d = -1,
+        e = 30,
+        f = this.width(),
+        g = this.coordinates();
+    return this.settings.freeDrag || a.each(g, a.proxy(function (a, h) {
+      return "left" === c && b > h - e && h + e > b ? d = a : "right" === c && b > h - f - e && h - f + e > b ? d = a + 1 : this.op(b, "<", h) && this.op(b, ">", g[a + 1] || h - f) && (d = "left" === c ? a + 1 : a), -1 === d;
+    }, this)), this.settings.loop || (this.op(b, ">", g[this.minimum()]) ? d = b = this.minimum() : this.op(b, "<", g[this.maximum()]) && (d = b = this.maximum())), d;
+  }, e.prototype.animate = function (b) {
+    var c = this.speed() > 0;
+    this.is("animating") && this.onTransitionEnd(), c && (this.enter("animating"), this.trigger("translate")), a.support.transform3d && a.support.transition ? this.$stage.css({
+      transform: "translate3d(" + b + "px,0px,0px)",
+      transition: this.speed() / 1e3 + "s"
+    }) : c ? this.$stage.animate({
+      left: b + "px"
+    }, this.speed(), this.settings.fallbackEasing, a.proxy(this.onTransitionEnd, this)) : this.$stage.css({
+      left: b + "px"
+    });
+  }, e.prototype.is = function (a) {
+    return this._states.current[a] && this._states.current[a] > 0;
+  }, e.prototype.current = function (a) {
+    if (a === d) return this._current;
+    if (0 === this._items.length) return d;
+
+    if (a = this.normalize(a), this._current !== a) {
+      var b = this.trigger("change", {
+        property: {
+          name: "position",
+          value: a
+        }
+      });
+      b.data !== d && (a = this.normalize(b.data)), this._current = a, this.invalidate("position"), this.trigger("changed", {
+        property: {
+          name: "position",
+          value: this._current
+        }
+      });
+    }
+
+    return this._current;
+  }, e.prototype.invalidate = function (b) {
+    return "string" === a.type(b) && (this._invalidated[b] = !0, this.is("valid") && this.leave("valid")), a.map(this._invalidated, function (a, b) {
+      return b;
+    });
+  }, e.prototype.reset = function (a) {
+    a = this.normalize(a), a !== d && (this._speed = 0, this._current = a, this.suppress(["translate", "translated"]), this.animate(this.coordinates(a)), this.release(["translate", "translated"]));
+  }, e.prototype.normalize = function (a, b) {
+    var c = this._items.length,
+        e = b ? 0 : this._clones.length;
+    return !this.isNumeric(a) || 1 > c ? a = d : (0 > a || a >= c + e) && (a = ((a - e / 2) % c + c) % c + e / 2), a;
+  }, e.prototype.relative = function (a) {
+    return a -= this._clones.length / 2, this.normalize(a, !0);
+  }, e.prototype.maximum = function (a) {
+    var b,
+        c,
+        d,
+        e = this.settings,
+        f = this._coordinates.length;
+    if (e.loop) f = this._clones.length / 2 + this._items.length - 1;else if (e.autoWidth || e.merge) {
+      if (b = this._items.length) for (c = this._items[--b].width(), d = this.$element.width(); b-- && (c += this._items[b].width() + this.settings.margin, !(c > d));) {
+        ;
+      }
+      f = b + 1;
+    } else f = e.center ? this._items.length - 1 : this._items.length - e.items;
+    return a && (f -= this._clones.length / 2), Math.max(f, 0);
+  }, e.prototype.minimum = function (a) {
+    return a ? 0 : this._clones.length / 2;
+  }, e.prototype.items = function (a) {
+    return a === d ? this._items.slice() : (a = this.normalize(a, !0), this._items[a]);
+  }, e.prototype.mergers = function (a) {
+    return a === d ? this._mergers.slice() : (a = this.normalize(a, !0), this._mergers[a]);
+  }, e.prototype.clones = function (b) {
+    var c = this._clones.length / 2,
+        e = c + this._items.length,
+        f = function f(a) {
+      return a % 2 === 0 ? e + a / 2 : c - (a + 1) / 2;
+    };
+
+    return b === d ? a.map(this._clones, function (a, b) {
+      return f(b);
+    }) : a.map(this._clones, function (a, c) {
+      return a === b ? f(c) : null;
+    });
+  }, e.prototype.speed = function (a) {
+    return a !== d && (this._speed = a), this._speed;
+  }, e.prototype.coordinates = function (b) {
+    var c,
+        e = 1,
+        f = b - 1;
+    return b === d ? a.map(this._coordinates, a.proxy(function (a, b) {
+      return this.coordinates(b);
+    }, this)) : (this.settings.center ? (this.settings.rtl && (e = -1, f = b + 1), c = this._coordinates[b], c += (this.width() - c + (this._coordinates[f] || 0)) / 2 * e) : c = this._coordinates[f] || 0, c = Math.ceil(c));
+  }, e.prototype.duration = function (a, b, c) {
+    return 0 === c ? 0 : Math.min(Math.max(Math.abs(b - a), 1), 6) * Math.abs(c || this.settings.smartSpeed);
+  }, e.prototype.to = function (a, b) {
+    var c = this.current(),
+        d = null,
+        e = a - this.relative(c),
+        f = (e > 0) - (0 > e),
+        g = this._items.length,
+        h = this.minimum(),
+        i = this.maximum();
+    this.settings.loop ? (!this.settings.rewind && Math.abs(e) > g / 2 && (e += -1 * f * g), a = c + e, d = ((a - h) % g + g) % g + h, d !== a && i >= d - e && d - e > 0 && (c = d - e, a = d, this.reset(c))) : this.settings.rewind ? (i += 1, a = (a % i + i) % i) : a = Math.max(h, Math.min(i, a)), this.speed(this.duration(c, a, b)), this.current(a), this.$element.is(":visible") && this.update();
+  }, e.prototype.next = function (a) {
+    a = a || !1, this.to(this.relative(this.current()) + 1, a);
+  }, e.prototype.prev = function (a) {
+    a = a || !1, this.to(this.relative(this.current()) - 1, a);
+  }, e.prototype.onTransitionEnd = function (a) {
+    return a !== d && (a.stopPropagation(), (a.target || a.srcElement || a.originalTarget) !== this.$stage.get(0)) ? !1 : (this.leave("animating"), void this.trigger("translated"));
+  }, e.prototype.viewport = function () {
+    var d;
+    return this.options.responsiveBaseElement !== b ? d = a(this.options.responsiveBaseElement).width() : b.innerWidth ? d = b.innerWidth : c.documentElement && c.documentElement.clientWidth ? d = c.documentElement.clientWidth : console.warn("Can not detect viewport width."), d;
+  }, e.prototype.replace = function (b) {
+    this.$stage.empty(), this._items = [], b && (b = b instanceof jQuery ? b : a(b)), this.settings.nestedItemSelector && (b = b.find("." + this.settings.nestedItemSelector)), b.filter(function () {
+      return 1 === this.nodeType;
+    }).each(a.proxy(function (a, b) {
+      b = this.prepare(b), this.$stage.append(b), this._items.push(b), this._mergers.push(1 * b.find("[data-merge]").addBack("[data-merge]").attr("data-merge") || 1);
+    }, this)), this.reset(this.isNumeric(this.settings.startPosition) ? this.settings.startPosition : 0), this.invalidate("items");
+  }, e.prototype.add = function (b, c) {
+    var e = this.relative(this._current);
+    c = c === d ? this._items.length : this.normalize(c, !0), b = b instanceof jQuery ? b : a(b), this.trigger("add", {
+      content: b,
+      position: c
+    }), b = this.prepare(b), 0 === this._items.length || c === this._items.length ? (0 === this._items.length && this.$stage.append(b), 0 !== this._items.length && this._items[c - 1].after(b), this._items.push(b), this._mergers.push(1 * b.find("[data-merge]").addBack("[data-merge]").attr("data-merge") || 1)) : (this._items[c].before(b), this._items.splice(c, 0, b), this._mergers.splice(c, 0, 1 * b.find("[data-merge]").addBack("[data-merge]").attr("data-merge") || 1)), this._items[e] && this.reset(this._items[e].index()), this.invalidate("items"), this.trigger("added", {
+      content: b,
+      position: c
+    });
+  }, e.prototype.remove = function (a) {
+    a = this.normalize(a, !0), a !== d && (this.trigger("remove", {
+      content: this._items[a],
+      position: a
+    }), this._items[a].remove(), this._items.splice(a, 1), this._mergers.splice(a, 1), this.invalidate("items"), this.trigger("removed", {
+      content: null,
+      position: a
+    }));
+  }, e.prototype.preloadAutoWidthImages = function (b) {
+    b.each(a.proxy(function (b, c) {
+      this.enter("pre-loading"), c = a(c), a(new Image()).one("load", a.proxy(function (a) {
+        c.attr("src", a.target.src), c.css("opacity", 1), this.leave("pre-loading"), !this.is("pre-loading") && !this.is("initializing") && this.refresh();
+      }, this)).attr("src", c.attr("src") || c.attr("data-src") || c.attr("data-src-retina"));
+    }, this));
+  }, e.prototype.destroy = function () {
+    this.$element.off(".owl.core"), this.$stage.off(".owl.core"), a(c).off(".owl.core"), this.settings.responsive !== !1 && (b.clearTimeout(this.resizeTimer), this.off(b, "resize", this._handlers.onThrottledResize));
+
+    for (var d in this._plugins) {
+      this._plugins[d].destroy();
+    }
+
+    this.$stage.children(".cloned").remove(), this.$stage.unwrap(), this.$stage.children().contents().unwrap(), this.$stage.children().unwrap(), this.$stage.remove(), this.$element.removeClass(this.options.refreshClass).removeClass(this.options.loadingClass).removeClass(this.options.loadedClass).removeClass(this.options.rtlClass).removeClass(this.options.dragClass).removeClass(this.options.grabClass).attr("class", this.$element.attr("class").replace(new RegExp(this.options.responsiveClass + "-\\S+\\s", "g"), "")).removeData("owl.carousel");
+  }, e.prototype.op = function (a, b, c) {
+    var d = this.settings.rtl;
+
+    switch (b) {
+      case "<":
+        return d ? a > c : c > a;
+
+      case ">":
+        return d ? c > a : a > c;
+
+      case ">=":
+        return d ? c >= a : a >= c;
+
+      case "<=":
+        return d ? a >= c : c >= a;
+    }
+  }, e.prototype.on = function (a, b, c, d) {
+    a.addEventListener ? a.addEventListener(b, c, d) : a.attachEvent && a.attachEvent("on" + b, c);
+  }, e.prototype.off = function (a, b, c, d) {
+    a.removeEventListener ? a.removeEventListener(b, c, d) : a.detachEvent && a.detachEvent("on" + b, c);
+  }, e.prototype.trigger = function (b, c, d, f, g) {
+    var h = {
+      item: {
+        count: this._items.length,
+        index: this.current()
+      }
+    },
+        i = a.camelCase(a.grep(["on", b, d], function (a) {
+      return a;
+    }).join("-").toLowerCase()),
+        j = a.Event([b, "owl", d || "carousel"].join(".").toLowerCase(), a.extend({
+      relatedTarget: this
+    }, h, c));
+    return this._supress[b] || (a.each(this._plugins, function (a, b) {
+      b.onTrigger && b.onTrigger(j);
+    }), this.register({
+      type: e.Type.Event,
+      name: b
+    }), this.$element.trigger(j), this.settings && "function" == typeof this.settings[i] && this.settings[i].call(this, j)), j;
+  }, e.prototype.enter = function (b) {
+    a.each([b].concat(this._states.tags[b] || []), a.proxy(function (a, b) {
+      this._states.current[b] === d && (this._states.current[b] = 0), this._states.current[b]++;
+    }, this));
+  }, e.prototype.leave = function (b) {
+    a.each([b].concat(this._states.tags[b] || []), a.proxy(function (a, b) {
+      this._states.current[b]--;
+    }, this));
+  }, e.prototype.register = function (b) {
+    if (b.type === e.Type.Event) {
+      if (a.event.special[b.name] || (a.event.special[b.name] = {}), !a.event.special[b.name].owl) {
+        var c = a.event.special[b.name]._default;
+        a.event.special[b.name]._default = function (a) {
+          return !c || !c.apply || a.namespace && -1 !== a.namespace.indexOf("owl") ? a.namespace && a.namespace.indexOf("owl") > -1 : c.apply(this, arguments);
+        }, a.event.special[b.name].owl = !0;
+      }
+    } else b.type === e.Type.State && (this._states.tags[b.name] ? this._states.tags[b.name] = this._states.tags[b.name].concat(b.tags) : this._states.tags[b.name] = b.tags, this._states.tags[b.name] = a.grep(this._states.tags[b.name], a.proxy(function (c, d) {
+      return a.inArray(c, this._states.tags[b.name]) === d;
+    }, this)));
+  }, e.prototype.suppress = function (b) {
+    a.each(b, a.proxy(function (a, b) {
+      this._supress[b] = !0;
+    }, this));
+  }, e.prototype.release = function (b) {
+    a.each(b, a.proxy(function (a, b) {
+      delete this._supress[b];
+    }, this));
+  }, e.prototype.pointer = function (a) {
+    var c = {
+      x: null,
+      y: null
+    };
+    return a = a.originalEvent || a || b.event, a = a.touches && a.touches.length ? a.touches[0] : a.changedTouches && a.changedTouches.length ? a.changedTouches[0] : a, a.pageX ? (c.x = a.pageX, c.y = a.pageY) : (c.x = a.clientX, c.y = a.clientY), c;
+  }, e.prototype.isNumeric = function (a) {
+    return !isNaN(parseFloat(a));
+  }, e.prototype.difference = function (a, b) {
+    return {
+      x: a.x - b.x,
+      y: a.y - b.y
+    };
+  }, a.fn.owlCarousel = function (b) {
+    var c = Array.prototype.slice.call(arguments, 1);
+    return this.each(function () {
+      var d = a(this),
+          f = d.data("owl.carousel");
+      f || (f = new e(this, "object" == _typeof(b) && b), d.data("owl.carousel", f), a.each(["next", "prev", "to", "destroy", "refresh", "replace", "add", "remove"], function (b, c) {
+        f.register({
+          type: e.Type.Event,
+          name: c
+        }), f.$element.on(c + ".owl.carousel.core", a.proxy(function (a) {
+          a.namespace && a.relatedTarget !== this && (this.suppress([c]), f[c].apply(this, [].slice.call(arguments, 1)), this.release([c]));
+        }, f));
+      })), "string" == typeof b && "_" !== b.charAt(0) && f[b].apply(f, c);
+    });
+  }, a.fn.owlCarousel.Constructor = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  var e = function e(b) {
+    this._core = b, this._interval = null, this._visible = null, this._handlers = {
+      "initialized.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.autoRefresh && this.watch();
+      }, this)
+    }, this._core.options = a.extend({}, e.Defaults, this._core.options), this._core.$element.on(this._handlers);
+  };
+
+  e.Defaults = {
+    autoRefresh: !0,
+    autoRefreshInterval: 500
+  }, e.prototype.watch = function () {
+    this._interval || (this._visible = this._core.$element.is(":visible"), this._interval = b.setInterval(a.proxy(this.refresh, this), this._core.settings.autoRefreshInterval));
+  }, e.prototype.refresh = function () {
+    this._core.$element.is(":visible") !== this._visible && (this._visible = !this._visible, this._core.$element.toggleClass("owl-hidden", !this._visible), this._visible && this._core.invalidate("width") && this._core.refresh());
+  }, e.prototype.destroy = function () {
+    var a, c;
+    b.clearInterval(this._interval);
+
+    for (a in this._handlers) {
+      this._core.$element.off(a, this._handlers[a]);
+    }
+
+    for (c in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[c] && (this[c] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.AutoRefresh = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  var e = function e(b) {
+    this._core = b, this._loaded = [], this._handlers = {
+      "initialized.owl.carousel change.owl.carousel resized.owl.carousel": a.proxy(function (b) {
+        if (b.namespace && this._core.settings && this._core.settings.lazyLoad && (b.property && "position" == b.property.name || "initialized" == b.type)) for (var c = this._core.settings, e = c.center && Math.ceil(c.items / 2) || c.items, f = c.center && -1 * e || 0, g = (b.property && b.property.value !== d ? b.property.value : this._core.current()) + f, h = this._core.clones().length, i = a.proxy(function (a, b) {
+          this.load(b);
+        }, this); f++ < e;) {
+          this.load(h / 2 + this._core.relative(g)), h && a.each(this._core.clones(this._core.relative(g)), i), g++;
+        }
+      }, this)
+    }, this._core.options = a.extend({}, e.Defaults, this._core.options), this._core.$element.on(this._handlers);
+  };
+
+  e.Defaults = {
+    lazyLoad: !1
+  }, e.prototype.load = function (c) {
+    var d = this._core.$stage.children().eq(c),
+        e = d && d.find(".owl-lazy");
+
+    !e || a.inArray(d.get(0), this._loaded) > -1 || (e.each(a.proxy(function (c, d) {
+      var e,
+          f = a(d),
+          g = b.devicePixelRatio > 1 && f.attr("data-src-retina") || f.attr("data-src");
+      this._core.trigger("load", {
+        element: f,
+        url: g
+      }, "lazy"), f.is("img") ? f.one("load.owl.lazy", a.proxy(function () {
+        f.css("opacity", 1), this._core.trigger("loaded", {
+          element: f,
+          url: g
+        }, "lazy");
+      }, this)).attr("src", g) : (e = new Image(), e.onload = a.proxy(function () {
+        f.css({
+          "background-image": 'url("' + g + '")',
+          opacity: "1"
+        }), this._core.trigger("loaded", {
+          element: f,
+          url: g
+        }, "lazy");
+      }, this), e.src = g);
+    }, this)), this._loaded.push(d.get(0)));
+  }, e.prototype.destroy = function () {
+    var a, b;
+
+    for (a in this.handlers) {
+      this._core.$element.off(a, this.handlers[a]);
+    }
+
+    for (b in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[b] && (this[b] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.Lazy = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  var e = function e(b) {
+    this._core = b, this._handlers = {
+      "initialized.owl.carousel refreshed.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.autoHeight && this.update();
+      }, this),
+      "changed.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.autoHeight && "position" == a.property.name && this.update();
+      }, this),
+      "loaded.owl.lazy": a.proxy(function (a) {
+        a.namespace && this._core.settings.autoHeight && a.element.closest("." + this._core.settings.itemClass).index() === this._core.current() && this.update();
+      }, this)
+    }, this._core.options = a.extend({}, e.Defaults, this._core.options), this._core.$element.on(this._handlers);
+  };
+
+  e.Defaults = {
+    autoHeight: !1,
+    autoHeightClass: "owl-height"
+  }, e.prototype.update = function () {
+    var b = this._core._current,
+        c = b + this._core.settings.items,
+        d = this._core.$stage.children().toArray().slice(b, c),
+        e = [],
+        f = 0;
+
+    a.each(d, function (b, c) {
+      e.push(a(c).height());
+    }), f = Math.max.apply(null, e), this._core.$stage.parent().height(f).addClass(this._core.settings.autoHeightClass);
+  }, e.prototype.destroy = function () {
+    var a, b;
+
+    for (a in this._handlers) {
+      this._core.$element.off(a, this._handlers[a]);
+    }
+
+    for (b in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[b] && (this[b] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.AutoHeight = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  var e = function e(b) {
+    this._core = b, this._videos = {}, this._playing = null, this._handlers = {
+      "initialized.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.register({
+          type: "state",
+          name: "playing",
+          tags: ["interacting"]
+        });
+      }, this),
+      "resize.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.video && this.isInFullScreen() && a.preventDefault();
+      }, this),
+      "refreshed.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.is("resizing") && this._core.$stage.find(".cloned .owl-video-frame").remove();
+      }, this),
+      "changed.owl.carousel": a.proxy(function (a) {
+        a.namespace && "position" === a.property.name && this._playing && this.stop();
+      }, this),
+      "prepared.owl.carousel": a.proxy(function (b) {
+        if (b.namespace) {
+          var c = a(b.content).find(".owl-video");
+          c.length && (c.css("display", "none"), this.fetch(c, a(b.content)));
+        }
+      }, this)
+    }, this._core.options = a.extend({}, e.Defaults, this._core.options), this._core.$element.on(this._handlers), this._core.$element.on("click.owl.video", ".owl-video-play-icon", a.proxy(function (a) {
+      this.play(a);
+    }, this));
+  };
+
+  e.Defaults = {
+    video: !1,
+    videoHeight: !1,
+    videoWidth: !1
+  }, e.prototype.fetch = function (a, b) {
+    var c = function () {
+      return a.attr("data-vimeo-id") ? "vimeo" : a.attr("data-vzaar-id") ? "vzaar" : "youtube";
+    }(),
+        d = a.attr("data-vimeo-id") || a.attr("data-youtube-id") || a.attr("data-vzaar-id"),
+        e = a.attr("data-width") || this._core.settings.videoWidth,
+        f = a.attr("data-height") || this._core.settings.videoHeight,
+        g = a.attr("href");
+
+    if (!g) throw new Error("Missing video URL.");
+    if (d = g.match(/(http:|https:|)\/\/(player.|www.|app.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com)|vzaar\.com)\/(video\/|videos\/|embed\/|channels\/.+\/|groups\/.+\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/), d[3].indexOf("youtu") > -1) c = "youtube";else if (d[3].indexOf("vimeo") > -1) c = "vimeo";else {
+      if (!(d[3].indexOf("vzaar") > -1)) throw new Error("Video URL not supported.");
+      c = "vzaar";
+    }
+    d = d[6], this._videos[g] = {
+      type: c,
+      id: d,
+      width: e,
+      height: f
+    }, b.attr("data-video", g), this.thumbnail(a, this._videos[g]);
+  }, e.prototype.thumbnail = function (b, c) {
+    var d,
+        e,
+        f,
+        g = c.width && c.height ? 'style="width:' + c.width + "px;height:" + c.height + 'px;"' : "",
+        h = b.find("img"),
+        i = "src",
+        j = "",
+        k = this._core.settings,
+        l = function l(a) {
+      e = '<div class="owl-video-play-icon"></div>', d = k.lazyLoad ? '<div class="owl-video-tn ' + j + '" ' + i + '="' + a + '"></div>' : '<div class="owl-video-tn" style="opacity:1;background-image:url(' + a + ')"></div>', b.after(d), b.after(e);
+    };
+
+    return b.wrap('<div class="owl-video-wrapper"' + g + "></div>"), this._core.settings.lazyLoad && (i = "data-src", j = "owl-lazy"), h.length ? (l(h.attr(i)), h.remove(), !1) : void ("youtube" === c.type ? (f = "//img.youtube.com/vi/" + c.id + "/hqdefault.jpg", l(f)) : "vimeo" === c.type ? a.ajax({
+      type: "GET",
+      url: "//vimeo.com/api/v2/video/" + c.id + ".json",
+      jsonp: "callback",
+      dataType: "jsonp",
+      success: function success(a) {
+        f = a[0].thumbnail_large, l(f);
+      }
+    }) : "vzaar" === c.type && a.ajax({
+      type: "GET",
+      url: "//vzaar.com/api/videos/" + c.id + ".json",
+      jsonp: "callback",
+      dataType: "jsonp",
+      success: function success(a) {
+        f = a.framegrab_url, l(f);
+      }
+    }));
+  }, e.prototype.stop = function () {
+    this._core.trigger("stop", null, "video"), this._playing.find(".owl-video-frame").remove(), this._playing.removeClass("owl-video-playing"), this._playing = null, this._core.leave("playing"), this._core.trigger("stopped", null, "video");
+  }, e.prototype.play = function (b) {
+    var c,
+        d = a(b.target),
+        e = d.closest("." + this._core.settings.itemClass),
+        f = this._videos[e.attr("data-video")],
+        g = f.width || "100%",
+        h = f.height || this._core.$stage.height();
+
+    this._playing || (this._core.enter("playing"), this._core.trigger("play", null, "video"), e = this._core.items(this._core.relative(e.index())), this._core.reset(e.index()), "youtube" === f.type ? c = '<iframe width="' + g + '" height="' + h + '" src="//www.youtube.com/embed/' + f.id + "?autoplay=1&rel=0&v=" + f.id + '" frameborder="0" allowfullscreen></iframe>' : "vimeo" === f.type ? c = '<iframe src="//player.vimeo.com/video/' + f.id + '?autoplay=1" width="' + g + '" height="' + h + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' : "vzaar" === f.type && (c = '<iframe frameborder="0"height="' + h + '"width="' + g + '" allowfullscreen mozallowfullscreen webkitAllowFullScreen src="//view.vzaar.com/' + f.id + '/player?autoplay=true"></iframe>'), a('<div class="owl-video-frame">' + c + "</div>").insertAfter(e.find(".owl-video")), this._playing = e.addClass("owl-video-playing"));
+  }, e.prototype.isInFullScreen = function () {
+    var b = c.fullscreenElement || c.mozFullScreenElement || c.webkitFullscreenElement;
+    return b && a(b).parent().hasClass("owl-video-frame");
+  }, e.prototype.destroy = function () {
+    var a, b;
+
+    this._core.$element.off("click.owl.video");
+
+    for (a in this._handlers) {
+      this._core.$element.off(a, this._handlers[a]);
+    }
+
+    for (b in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[b] && (this[b] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.Video = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  var e = function e(b) {
+    this.core = b, this.core.options = a.extend({}, e.Defaults, this.core.options), this.swapping = !0, this.previous = d, this.next = d, this.handlers = {
+      "change.owl.carousel": a.proxy(function (a) {
+        a.namespace && "position" == a.property.name && (this.previous = this.core.current(), this.next = a.property.value);
+      }, this),
+      "drag.owl.carousel dragged.owl.carousel translated.owl.carousel": a.proxy(function (a) {
+        a.namespace && (this.swapping = "translated" == a.type);
+      }, this),
+      "translate.owl.carousel": a.proxy(function (a) {
+        a.namespace && this.swapping && (this.core.options.animateOut || this.core.options.animateIn) && this.swap();
+      }, this)
+    }, this.core.$element.on(this.handlers);
+  };
+
+  e.Defaults = {
+    animateOut: !1,
+    animateIn: !1
+  }, e.prototype.swap = function () {
+    if (1 === this.core.settings.items && a.support.animation && a.support.transition) {
+      this.core.speed(0);
+      var b,
+          c = a.proxy(this.clear, this),
+          d = this.core.$stage.children().eq(this.previous),
+          e = this.core.$stage.children().eq(this.next),
+          f = this.core.settings.animateIn,
+          g = this.core.settings.animateOut;
+      this.core.current() !== this.previous && (g && (b = this.core.coordinates(this.previous) - this.core.coordinates(this.next), d.one(a.support.animation.end, c).css({
+        left: b + "px"
+      }).addClass("animated owl-animated-out").addClass(g)), f && e.one(a.support.animation.end, c).addClass("animated owl-animated-in").addClass(f));
+    }
+  }, e.prototype.clear = function (b) {
+    a(b.target).css({
+      left: ""
+    }).removeClass("animated owl-animated-out owl-animated-in").removeClass(this.core.settings.animateIn).removeClass(this.core.settings.animateOut), this.core.onTransitionEnd();
+  }, e.prototype.destroy = function () {
+    var a, b;
+
+    for (a in this.handlers) {
+      this.core.$element.off(a, this.handlers[a]);
+    }
+
+    for (b in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[b] && (this[b] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.Animate = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  var e = function e(b) {
+    this._core = b, this._call = null, this._time = 0, this._timeout = 0, this._paused = !0, this._handlers = {
+      "changed.owl.carousel": a.proxy(function (a) {
+        a.namespace && "settings" === a.property.name ? this._core.settings.autoplay ? this.play() : this.stop() : a.namespace && "position" === a.property.name && this._paused && (this._time = 0);
+      }, this),
+      "initialized.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.autoplay && this.play();
+      }, this),
+      "play.owl.autoplay": a.proxy(function (a, b, c) {
+        a.namespace && this.play(b, c);
+      }, this),
+      "stop.owl.autoplay": a.proxy(function (a) {
+        a.namespace && this.stop();
+      }, this),
+      "mouseover.owl.autoplay": a.proxy(function () {
+        this._core.settings.autoplayHoverPause && this._core.is("rotating") && this.pause();
+      }, this),
+      "mouseleave.owl.autoplay": a.proxy(function () {
+        this._core.settings.autoplayHoverPause && this._core.is("rotating") && this.play();
+      }, this),
+      "touchstart.owl.core": a.proxy(function () {
+        this._core.settings.autoplayHoverPause && this._core.is("rotating") && this.pause();
+      }, this),
+      "touchend.owl.core": a.proxy(function () {
+        this._core.settings.autoplayHoverPause && this.play();
+      }, this)
+    }, this._core.$element.on(this._handlers), this._core.options = a.extend({}, e.Defaults, this._core.options);
+  };
+
+  e.Defaults = {
+    autoplay: !1,
+    autoplayTimeout: 5e3,
+    autoplayHoverPause: !1,
+    autoplaySpeed: !1
+  }, e.prototype._next = function (d) {
+    this._call = b.setTimeout(a.proxy(this._next, this, d), this._timeout * (Math.round(this.read() / this._timeout) + 1) - this.read()), this._core.is("busy") || this._core.is("interacting") || c.hidden || this._core.next(d || this._core.settings.autoplaySpeed);
+  }, e.prototype.read = function () {
+    return new Date().getTime() - this._time;
+  }, e.prototype.play = function (c, d) {
+    var e;
+    this._core.is("rotating") || this._core.enter("rotating"), c = c || this._core.settings.autoplayTimeout, e = Math.min(this._time % (this._timeout || c), c), this._paused ? (this._time = this.read(), this._paused = !1) : b.clearTimeout(this._call), this._time += this.read() % c - e, this._timeout = c, this._call = b.setTimeout(a.proxy(this._next, this, d), c - e);
+  }, e.prototype.stop = function () {
+    this._core.is("rotating") && (this._time = 0, this._paused = !0, b.clearTimeout(this._call), this._core.leave("rotating"));
+  }, e.prototype.pause = function () {
+    this._core.is("rotating") && !this._paused && (this._time = this.read(), this._paused = !0, b.clearTimeout(this._call));
+  }, e.prototype.destroy = function () {
+    var a, b;
+    this.stop();
+
+    for (a in this._handlers) {
+      this._core.$element.off(a, this._handlers[a]);
+    }
+
+    for (b in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[b] && (this[b] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.autoplay = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  "use strict";
+
+  var e = function e(b) {
+    this._core = b, this._initialized = !1, this._pages = [], this._controls = {}, this._templates = [], this.$element = this._core.$element, this._overrides = {
+      next: this._core.next,
+      prev: this._core.prev,
+      to: this._core.to
+    }, this._handlers = {
+      "prepared.owl.carousel": a.proxy(function (b) {
+        b.namespace && this._core.settings.dotsData && this._templates.push('<div class="' + this._core.settings.dotClass + '">' + a(b.content).find("[data-dot]").addBack("[data-dot]").attr("data-dot") + "</div>");
+      }, this),
+      "added.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.dotsData && this._templates.splice(a.position, 0, this._templates.pop());
+      }, this),
+      "remove.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._core.settings.dotsData && this._templates.splice(a.position, 1);
+      }, this),
+      "changed.owl.carousel": a.proxy(function (a) {
+        a.namespace && "position" == a.property.name && this.draw();
+      }, this),
+      "initialized.owl.carousel": a.proxy(function (a) {
+        a.namespace && !this._initialized && (this._core.trigger("initialize", null, "navigation"), this.initialize(), this.update(), this.draw(), this._initialized = !0, this._core.trigger("initialized", null, "navigation"));
+      }, this),
+      "refreshed.owl.carousel": a.proxy(function (a) {
+        a.namespace && this._initialized && (this._core.trigger("refresh", null, "navigation"), this.update(), this.draw(), this._core.trigger("refreshed", null, "navigation"));
+      }, this)
+    }, this._core.options = a.extend({}, e.Defaults, this._core.options), this.$element.on(this._handlers);
+  };
+
+  e.Defaults = {
+    nav: !1,
+    navText: ['<span aria-label="prev">&#x2039;</span>', '<span aria-label="next">&#x203a;</span>'],
+    navSpeed: !1,
+    navElement: 'button role="presentation"',
+    navContainer: !1,
+    navContainerClass: "owl-nav",
+    navClass: ["owl-prev", "owl-next"],
+    slideBy: 1,
+    dotClass: "owl-dot",
+    dotsClass: "owl-dots",
+    dots: !0,
+    dotsEach: !1,
+    dotsData: !1,
+    dotsSpeed: !1,
+    dotsContainer: !1
+  }, e.prototype.initialize = function () {
+    var b,
+        c = this._core.settings;
+    this._controls.$relative = (c.navContainer ? a(c.navContainer) : a("<div>").addClass(c.navContainerClass).appendTo(this.$element)).addClass("disabled"), this._controls.$previous = a("<" + c.navElement + ">").addClass(c.navClass[0]).html(c.navText[0]).prependTo(this._controls.$relative).on("click", a.proxy(function (a) {
+      this.prev(c.navSpeed);
+    }, this)), this._controls.$next = a("<" + c.navElement + ">").addClass(c.navClass[1]).html(c.navText[1]).appendTo(this._controls.$relative).on("click", a.proxy(function (a) {
+      this.next(c.navSpeed);
+    }, this)), c.dotsData || (this._templates = [a("<button>").addClass(c.dotClass).append(a("<span>")).prop("outerHTML")]), this._controls.$absolute = (c.dotsContainer ? a(c.dotsContainer) : a("<div>").addClass(c.dotsClass).appendTo(this.$element)).addClass("disabled"), this._controls.$absolute.on("click", "button", a.proxy(function (b) {
+      var d = a(b.target).parent().is(this._controls.$absolute) ? a(b.target).index() : a(b.target).parent().index();
+      b.preventDefault(), this.to(d, c.dotsSpeed);
+    }, this));
+
+    for (b in this._overrides) {
+      this._core[b] = a.proxy(this[b], this);
+    }
+  }, e.prototype.destroy = function () {
+    var a, b, c, d;
+
+    for (a in this._handlers) {
+      this.$element.off(a, this._handlers[a]);
+    }
+
+    for (b in this._controls) {
+      "$relative" === b && settings.navContainer ? this._controls[b].html("") : this._controls[b].remove();
+    }
+
+    for (d in this.overides) {
+      this._core[d] = this._overrides[d];
+    }
+
+    for (c in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[c] && (this[c] = null);
+    }
+  }, e.prototype.update = function () {
+    var a,
+        b,
+        c,
+        d = this._core.clones().length / 2,
+        e = d + this._core.items().length,
+        f = this._core.maximum(!0),
+        g = this._core.settings,
+        h = g.center || g.autoWidth || g.dotsData ? 1 : g.dotsEach || g.items;
+
+    if ("page" !== g.slideBy && (g.slideBy = Math.min(g.slideBy, g.items)), g.dots || "page" == g.slideBy) for (this._pages = [], a = d, b = 0, c = 0; e > a; a++) {
+      if (b >= h || 0 === b) {
+        if (this._pages.push({
+          start: Math.min(f, a - d),
+          end: a - d + h - 1
+        }), Math.min(f, a - d) === f) break;
+        b = 0, ++c;
+      }
+
+      b += this._core.mergers(this._core.relative(a));
+    }
+  }, e.prototype.draw = function () {
+    var b,
+        c = this._core.settings,
+        d = this._core.items().length <= c.items,
+        e = this._core.relative(this._core.current()),
+        f = c.loop || c.rewind;
+
+    this._controls.$relative.toggleClass("disabled", !c.nav || d), c.nav && (this._controls.$previous.toggleClass("disabled", !f && e <= this._core.minimum(!0)), this._controls.$next.toggleClass("disabled", !f && e >= this._core.maximum(!0))), this._controls.$absolute.toggleClass("disabled", !c.dots || d), c.dots && (b = this._pages.length - this._controls.$absolute.children().length, c.dotsData && 0 !== b ? this._controls.$absolute.html(this._templates.join("")) : b > 0 ? this._controls.$absolute.append(new Array(b + 1).join(this._templates[0])) : 0 > b && this._controls.$absolute.children().slice(b).remove(), this._controls.$absolute.find(".active").removeClass("active"), this._controls.$absolute.children().eq(a.inArray(this.current(), this._pages)).addClass("active"));
+  }, e.prototype.onTrigger = function (b) {
+    var c = this._core.settings;
+    b.page = {
+      index: a.inArray(this.current(), this._pages),
+      count: this._pages.length,
+      size: c && (c.center || c.autoWidth || c.dotsData ? 1 : c.dotsEach || c.items)
+    };
+  }, e.prototype.current = function () {
+    var b = this._core.relative(this._core.current());
+
+    return a.grep(this._pages, a.proxy(function (a, c) {
+      return a.start <= b && a.end >= b;
+    }, this)).pop();
+  }, e.prototype.getPosition = function (b) {
+    var c,
+        d,
+        e = this._core.settings;
+    return "page" == e.slideBy ? (c = a.inArray(this.current(), this._pages), d = this._pages.length, b ? ++c : --c, c = this._pages[(c % d + d) % d].start) : (c = this._core.relative(this._core.current()), d = this._core.items().length, b ? c += e.slideBy : c -= e.slideBy), c;
+  }, e.prototype.next = function (b) {
+    a.proxy(this._overrides.to, this._core)(this.getPosition(!0), b);
+  }, e.prototype.prev = function (b) {
+    a.proxy(this._overrides.to, this._core)(this.getPosition(!1), b);
+  }, e.prototype.to = function (b, c, d) {
+    var e;
+    !d && this._pages.length ? (e = this._pages.length, a.proxy(this._overrides.to, this._core)(this._pages[(b % e + e) % e].start, c)) : a.proxy(this._overrides.to, this._core)(b, c);
+  }, a.fn.owlCarousel.Constructor.Plugins.Navigation = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  "use strict";
+
+  var e = function e(c) {
+    this._core = c, this._hashes = {}, this.$element = this._core.$element, this._handlers = {
+      "initialized.owl.carousel": a.proxy(function (c) {
+        c.namespace && "URLHash" === this._core.settings.startPosition && a(b).trigger("hashchange.owl.navigation");
+      }, this),
+      "prepared.owl.carousel": a.proxy(function (b) {
+        if (b.namespace) {
+          var c = a(b.content).find("[data-hash]").addBack("[data-hash]").attr("data-hash");
+          if (!c) return;
+          this._hashes[c] = b.content;
+        }
+      }, this),
+      "changed.owl.carousel": a.proxy(function (c) {
+        if (c.namespace && "position" === c.property.name) {
+          var d = this._core.items(this._core.relative(this._core.current())),
+              e = a.map(this._hashes, function (a, b) {
+            return a === d ? b : null;
+          }).join();
+
+          if (!e || b.location.hash.slice(1) === e) return;
+          b.location.hash = e;
+        }
+      }, this)
+    }, this._core.options = a.extend({}, e.Defaults, this._core.options), this.$element.on(this._handlers), a(b).on("hashchange.owl.navigation", a.proxy(function (a) {
+      var c = b.location.hash.substring(1),
+          e = this._core.$stage.children(),
+          f = this._hashes[c] && e.index(this._hashes[c]);
+
+      f !== d && f !== this._core.current() && this._core.to(this._core.relative(f), !1, !0);
+    }, this));
+  };
+
+  e.Defaults = {
+    URLhashListener: !1
+  }, e.prototype.destroy = function () {
+    var c, d;
+    a(b).off("hashchange.owl.navigation");
+
+    for (c in this._handlers) {
+      this._core.$element.off(c, this._handlers[c]);
+    }
+
+    for (d in Object.getOwnPropertyNames(this)) {
+      "function" != typeof this[d] && (this[d] = null);
+    }
+  }, a.fn.owlCarousel.Constructor.Plugins.Hash = e;
+}(window.Zepto || window.jQuery, window, document), function (a, b, c, d) {
+  function e(b, c) {
+    var e = !1,
+        f = b.charAt(0).toUpperCase() + b.slice(1);
+    return a.each((b + " " + h.join(f + " ") + f).split(" "), function (a, b) {
+      return g[b] !== d ? (e = c ? b : !0, !1) : void 0;
+    }), e;
+  }
+
+  function f(a) {
+    return e(a, !0);
+  }
+
+  var g = a("<support>").get(0).style,
+      h = "Webkit Moz O ms".split(" "),
+      i = {
+    transition: {
+      end: {
+        WebkitTransition: "webkitTransitionEnd",
+        MozTransition: "transitionend",
+        OTransition: "oTransitionEnd",
+        transition: "transitionend"
+      }
+    },
+    animation: {
+      end: {
+        WebkitAnimation: "webkitAnimationEnd",
+        MozAnimation: "animationend",
+        OAnimation: "oAnimationEnd",
+        animation: "animationend"
+      }
+    }
+  },
+      j = {
+    csstransforms: function csstransforms() {
+      return !!e("transform");
+    },
+    csstransforms3d: function csstransforms3d() {
+      return !!e("perspective");
+    },
+    csstransitions: function csstransitions() {
+      return !!e("transition");
+    },
+    cssanimations: function cssanimations() {
+      return !!e("animation");
+    }
+  };
+  j.csstransitions() && (a.support.transition = new String(f("transition")), a.support.transition.end = i.transition.end[a.support.transition]), j.cssanimations() && (a.support.animation = new String(f("animation")), a.support.animation.end = i.animation.end[a.support.animation]), j.csstransforms() && (a.support.transform = new String(f("transform")), a.support.transform3d = j.csstransforms3d());
+}(window.Zepto || window.jQuery, window, document);
+
+/***/ }),
+
+/***/ "./resources/js/range.js":
+/*!*******************************!*\
+  !*** ./resources/js/range.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var parent = document.querySelector(".range-slider");
+  if (!parent) return;
+  var rangeS = parent.querySelectorAll("input[type=range]"),
+      numberS = parent.querySelectorAll("input[type=number]");
+  rangeS.forEach(function (el) {
+    el.oninput = function () {
+      var slide1 = parseFloat(rangeS[0].value),
+          slide2 = parseFloat(rangeS[1].value);
+
+      if (slide1 > slide2) {
+        var _ref = [slide2, slide1];
+        slide1 = _ref[0];
+        slide2 = _ref[1];
+      }
+
+      numberS[0].value = slide1;
+      numberS[1].value = slide2;
+    };
+  });
+  numberS.forEach(function (el) {
+    el.oninput = function () {
+      var number1 = parseFloat(numberS[0].value),
+          number2 = parseFloat(numberS[1].value);
+
+      if (number1 > number2) {
+        var tmp = number1;
+        numberS[0].value = number2;
+        numberS[1].value = tmp;
+      }
+
+      rangeS[0].value = number1;
+      rangeS[1].value = number2;
+    };
+  });
+})();
+
+/***/ }),
+
+/***/ "./resources/js/scrollax.min.js":
+/*!**************************************!*\
+  !*** ./resources/js/scrollax.min.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ *  _______ _______  ______  _____                _______ _     _
+ *  |______ |       |_____/ |     | |      |      |_____|  \___/ 
+ *  ______| |_____  |    \_ |_____| |_____ |_____ |     | _/   \_
+ *
+ *  Parallax Scrolling Library
+ *  http://iprodev.github.io/Scrollax.js
+ *
+ *  @version:  1.0.0
+ *  @released: July 21, 2015
+ *
+ *  @author:   iProDev (Hemn Chawroka)
+ *             http://iprodev.com/
+ *
+ *  Licensed under the MIT license.
+ *  http://opensource.org/licenses/MIT
+ * 
+ */
+(function (e) {
+   true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (e),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
+})(function (e) {
+  function W(a) {
+    if (console && console.warn) console.warn("Scrollax: " + a);else throw "Scrollax: " + a;
+  }
+
+  function ka(a) {
+    var g = !!("pageYOffset" in a);
+    return {
+      width: g ? window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth : a.offsetWidth,
+      height: g ? window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight : a.offsetHeight,
+      left: a[g ? "pageXOffset" : "scrollLeft"],
+      top: a[g ? "pageYOffset" : "scrollTop"]
+    };
+  }
+
+  function X(a) {
+    return (a = a.data("scrollax")) && eval("({" + a + "})") || {};
+  }
+
+  function Y(a) {
+    var g, c;
+    return !!(a && "object" === _typeof(a) && "object" === _typeof(a.window) && a.window == a && a.setTimeout && a.alert && (g = a.document) && "object" === _typeof(g) && (c = g.defaultView || g.parentWindow) && "object" === _typeof(c) && c == a);
+  }
+
+  var v = Array.prototype,
+      C = v.push,
+      Z = v.splice,
+      aa = Object.prototype.hasOwnProperty,
+      la = /[-+]?\d+(\.\d+)?/g,
+      ma = "translateX translateY rotate rotateX rotateY rotateZ skewX skewY scaleX scaleY".split(" "),
+      ba = e(window),
+      ca = e(document.body),
+      da,
+      ea,
+      _L,
+      M,
+      N,
+      q = function q(a, g, c) {
+    function k() {
+      O = fa ? ca.find(ga) : P.find(ga);
+      x.length = 0;
+      r = !!t.horizontal;
+      O.each(na);
+      d();
+      t.performanceTrick && (F = fa ? ca : P);
+      u("load");
+      return f;
+    }
+
+    function l() {
+      G && (G = clearTimeout(G));
+      G = setTimeout(function () {
+        f.reload();
+      });
+    }
+
+    function d() {
+      var ha = x.length;
+      t.performanceTrick && F && (clearTimeout(ia), Q || (F.addClass("scrollax-performance"), Q = !0), ia = setTimeout(function () {
+        F.removeClass("scrollax-performance");
+        Q = !1;
+      }, 100));
+
+      if (ha) {
+        H = ka(a);
+
+        for (var c = 0; c < ha; c++) {
+          I = x[c], y = _L(I.element, a), 0 > y[r ? "right" : "bottom"] || y[r ? "left" : "top"] > H[r ? "width" : "height"] || (ja = I.options, R = ja.offset || t.offset || 0, J = y[r ? "right" : "bottom"], z = y[r ? "width" : "height"], A = (z - J + R) / z, 0 > A && (J = y[r ? "left" : "top"], z = H[r ? "width" : "height"], A = -1 + (z - J + R) / z), 1 < A || -1 > A || b(I, A, r));
+        }
+
+        u("scroll", H);
+      }
+    }
+
+    function b(a, b) {
+      S = a.parallaxElements;
+      var c = S.length;
+      if (c) for (var f = 0; f < c; f++) {
+        T = S[f];
+        var g = oa = T.element,
+            d = b;
+        U = T.properties || (r ? {
+          translateX: "100%"
+        } : {
+          translateY: "100%"
+        });
+        D = "";
+
+        for (B in U) {
+          n = U[B];
+          if ("number" === typeof n) n *= d;else if ("string" === typeof n) for (K = n.match(la), m = 0, E = K.length; m < E; m++) {
+            n = n.replace(K[m], parseFloat(K[m] * d));
+          }
+          if (-1 !== e.inArray(B, ma)) D += B + "(" + n + ")";else {
+            var k = g.style,
+                l = B,
+                h;
+            "opacity" === B ? (h = 0 > d ? 1 + n : 1 - n, h = 0 > h ? 0 : 1 < h ? 1 : h) : h = n;
+            k[l] = h;
+          }
+        }
+
+        D && (g.style[da] = ea + D);
+      }
+    }
+
+    function pa(a) {
+      return "undefined" !== typeof a ? "number" !== typeof a && "string" !== typeof a || "" === a || isNaN(a) ? O.index(a) : 0 <= a && a < x.length ? a : -1 : -1;
+    }
+
+    function u(a, b) {
+      if (h[a]) {
+        E = h[a].length;
+
+        for (m = V.length = 0; m < E; m++) {
+          C.call(V, h[a][m]);
+        }
+
+        for (m = 0; m < E; m++) {
+          V[m].call(f, a, b);
+        }
+      }
+    }
+
+    function p(a, b) {
+      for (var c = 0, f = h[a].length; c < f; c++) {
+        if (h[a][c] === b) return c;
+      }
+
+      return -1;
+    }
+
+    var f = this,
+        P = a && e(a).eq(0) || ba,
+        w = q.instances,
+        v = null;
+    a = P[0];
+    e.each(w, function (b, c) {
+      b && b.frame === a && (v = !0);
+    });
+    if (!a || v) v ? W("Scrollax: Scrollax has been initialized for this frame!") : W("Scrollax: Frame is not available!");else {
+      var t = e.extend({}, q.defaults, g),
+          x = [],
+          O = null,
+          ga = t.parentSelector || "[data-scrollax-parent]",
+          qa = t.elementsSelector || "[data-scrollax]",
+          h = {},
+          V = [],
+          G,
+          fa = Y(a),
+          m,
+          E,
+          F,
+          ia,
+          Q,
+          H,
+          r,
+          R,
+          y,
+          I,
+          ja,
+          A,
+          J,
+          z,
+          S,
+          T,
+          oa,
+          U,
+          B,
+          n,
+          D,
+          K;
+      f.frame = a;
+      f.options = t;
+      f.parents = x;
+      f.initialized = !1;
+      f.reload = k;
+
+      var na = function na(a, b) {
+        var c = e(b),
+            f = X(e(b)),
+            d = {};
+        d.element = b;
+        d.options = f;
+        d.parallaxElements = [];
+        c.find(qa).each(function (a, b) {
+          var c = X(e(b));
+          c.element = b;
+          C.call(d.parallaxElements, c);
+        });
+        C.call(x, d);
+      };
+
+      f.scroll = d;
+      f.getIndex = pa;
+
+      f.one = function (a, b) {
+        function c() {
+          b.apply(f, arguments);
+          f.off(a, c);
+        }
+
+        f.on(a, c);
+        return f;
+      };
+
+      f.on = function (a, b) {
+        if ("object" === _typeof(a)) for (var c in a) {
+          if (aa.call(a, c)) f.on(c, a[c]);
+        } else if ("function" === typeof b) {
+          c = a.split(" ");
+
+          for (var d = 0, g = c.length; d < g; d++) {
+            h[c[d]] = h[c[d]] || [], -1 === p(c[d], b) && C.call(h[c[d]], b);
+          }
+        } else if ("array" === typeof b) for (c = 0, d = b.length; c < d; c++) {
+          f.on(a, b[c]);
+        }
+        return f;
+      };
+
+      f.off = function (a, c) {
+        if (c instanceof Array) for (var b = 0, d = c.length; b < d; b++) {
+          f.off(a, c[b]);
+        } else for (var b = a.split(" "), d = 0, g = b.length; d < g; d++) {
+          if (h[b[d]] = h[b[d]] || [], "undefined" === typeof c) h[b[d]].length = 0;else {
+            var k = p(b[d], c);
+            -1 !== k && Z.call(h[b[d]], k, 1);
+          }
+        }
+        return f;
+      };
+
+      f.set = function (a, b) {
+        e.isPlainObject(a) ? e.extend(t, a) : aa.call(t, a) && (t[a] = b);
+        k();
+        return f;
+      };
+
+      f.destroy = function () {
+        N(window, "resize", l);
+        N(a, "scroll", d);
+        e.each(w, function (b, c) {
+          b && b.frame === a && Z.call(q.instances, c, 1);
+        });
+        x.length = 0;
+        f.initialized = !1;
+        u("destroy");
+        return f;
+      };
+
+      f.init = function () {
+        if (!f.initialized) return f.on(c), k(), M(window, "resize", l), M(a, "scroll", d), C.call(q.instances, f), f.initialized = !0, u("initialized"), f;
+      };
+    }
+  };
+
+  q.instances = [];
+
+  (function () {
+    var a, g, c, k, l, d, b, e;
+
+    _L = function L(u, p) {
+      g = u.ownerDocument || u;
+      c = g.documentElement;
+      k = Y(p) ? p : g.defaultView || window;
+      p = p && p !== g ? p : c;
+      l = (k.pageYOffset || c.scrollTop) - c.clientTop;
+      d = (k.pageXOffset || c.scrollLeft) - c.clientLeft;
+      b = {
+        top: 0,
+        left: 0
+      };
+
+      if (u && u.getBoundingClientRect) {
+        var f = {},
+            q = u.getBoundingClientRect();
+
+        for (a in q) {
+          f[a] = q[a];
+        }
+
+        b = f;
+        b.width = b.right - b.left;
+        b.height = b.bottom - b.top;
+      } else return null;
+
+      if (p === k) return b;
+      b.top += l;
+      b.left += d;
+      b.right += d;
+      b.bottom += l;
+      if (p === c) return b;
+      e = _L(p);
+      b.left -= e.left;
+      b.right -= e.left;
+      b.top -= e.top;
+      b.bottom -= e.top;
+      return b;
+    };
+  })();
+
+  (function () {
+    function a() {
+      this.returnValue = !1;
+    }
+
+    function g() {
+      this.cancelBubble = !0;
+    }
+
+    M = window.addEventListener ? function (a, g, e, d) {
+      a.addEventListener(g, e, d || !1);
+      return e;
+    } : function (c, e, l) {
+      var d = e + l;
+
+      c[d] = c[d] || function () {
+        var b = window.event;
+        b.target = b.srcElement;
+        b.preventDefault = a;
+        b.stopPropagation = g;
+        l.call(c, b);
+      };
+
+      c.attachEvent("on" + e, c[d]);
+      return l;
+    };
+    N = window.removeEventListener ? function (a, g, e, d) {
+      a.removeEventListener(g, e, d || !1);
+      return e;
+    } : function (a, g, e) {
+      var d = g + e;
+      a.detachEvent("on" + g, a[d]);
+
+      try {
+        delete a[d];
+      } catch (b) {
+        a[d] = void 0;
+      }
+
+      return e;
+    };
+  })();
+
+  (function () {
+    function a(a) {
+      for (var e = 0, d = g.length; e < d; e++) {
+        var b = g[e] ? g[e] + a.charAt(0).toUpperCase() + a.slice(1) : a;
+        if (null != c.style[b]) return b;
+      }
+    }
+
+    var g = ["", "webkit", "moz", "ms", "o"],
+        c = document.createElement("div");
+    da = a("transform");
+    ea = a("perspective") ? "translateZ(0) " : "";
+  })();
+
+  q.defaults = {
+    horizontal: !1,
+    offset: 0,
+    parentSelector: null,
+    elementsSelector: null,
+    performanceTrick: !1
+  };
+  window.Scrollax = q;
+
+  e.fn.Scrollax = function (a, g) {
+    var c, k;
+
+    if (!e.isPlainObject(a)) {
+      if ("string" === typeof a || !1 === a) c = !1 === a ? "destroy" : a, k = slice.call(arguments, 1);
+      a = {};
+    }
+
+    return this.each(function (l, d) {
+      var b = e.data(d, "scrollax");
+      b || c ? b && c && b[c] && b[c].apply(b, k) : e.data(d, "scrollax", new q(d, a, g).init());
+    });
+  };
+
+  e.Scrollax = function (a, e) {
+    ba.Scrollax(a, e);
+  };
+
+  var v = document.head || document.getElementsByTagName("head")[0],
+      w = document.createElement("style");
+  w.type = "text/css";
+  w.styleSheet ? w.styleSheet.cssText = ".scrollax-performance, .scrollax-performance *, .scrollax-performance *:before, .scrollax-performance *:after { pointer-events: none !important; -webkit-animation-play-state: paused !important; animation-play-state: paused !important; };" : w.appendChild(document.createTextNode(".scrollax-performance, .scrollax-performance *, .scrollax-performance *:before, .scrollax-performance *:after { pointer-events: none !important; -webkit-animation-play-state: paused !important; animation-play-state: paused !important; };"));
+  v.appendChild(w);
+  return q;
+});
 
 /***/ }),
 
@@ -37124,15 +43984,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/_topic_body.scss ***!
-  \***********************************************************************************************/
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/gary/code/airsyd/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/gary/code/airsyd/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/gary/code/airsyd/resources/sass/_topic_body.scss */"./resources/sass/_topic_body.scss");
+module.exports = __webpack_require__(/*! /Users/gary/code/airsyd/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
