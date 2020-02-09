@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Language Lines
+    | Password Reminder Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are the default lines which match reasons
@@ -12,11 +12,11 @@ return [
     |
     */
 
-    'password'  => 'The password is at least :length characters and should match the confirmation password.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
-    'throttled' => 'Please wait before retrying.',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'password'  => '密码至少是 :length 位字符并且应与确认密码匹配。',
+    'reset'     => '密码重置成功！',
+    'sent'      => '密码重置邮件已发送！',
+    'throttled' => '请稍候再试。',
+    'token'     => '密码重置令牌无效。',
+    'user'      => '找不到该邮箱对应的用户。',
 
 ];
