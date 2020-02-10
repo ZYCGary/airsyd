@@ -11,7 +11,8 @@
                 <div class="col-md-9 ftco-animate pb-5 text-center">
                     <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('theme.home') }}">Home <i
                                     class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a
-                                href="{{ route('theme.blog') }}">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i
+                                href="{{ route('theme.blog') }}">Blog <i class="ion-ios-arrow-forward"></i></a></span>
+                        <span>Blog Single <i
                                 class="ion-ios-arrow-forward"></i></span></p>
                     <h1 class="mb-3 bread">Our Blog</h1>
                 </div>
@@ -30,7 +31,7 @@
                         perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae
                         voluptates soluta architecto tempora.</p>
                     <p>
-                        <img src="url('{{ asset('images/image_7.jpg')}}')" alt="" class="img-fluid">
+                        <img src="{{ asset('images/image_7.jpg') }}" alt="" class="img-fluid">
                     </p>
                     <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat
                         sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem
@@ -42,7 +43,7 @@
                         Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos
                         odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
                     <p>
-                        <img src="url('{{ asset('images/image_8.jpg')}}')" alt="" class="img-fluid">
+                        <img src="{{ asset('images/image_8.jpg') }}" alt="" class="img-fluid">
                     </p>
                     <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo
                         quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis
@@ -73,7 +74,8 @@
 
                     <div class="about-author d-flex p-4 bg-light">
                         <div class="bio mr-5">
-                            <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder" class="img-fluid mb-4">
+                            <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder"
+                                 class="img-fluid mb-4">
                         </div>
                         <div class="desc">
                             <h3>George Washington</h3>
@@ -89,7 +91,7 @@
                         <ul class="comment-list">
                             <li class="comment">
                                 <div class="vcard bio">
-                                    <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder">
+                                    <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>John Doe</h3>
@@ -103,7 +105,7 @@
 
                             <li class="comment">
                                 <div class="vcard bio">
-                                    <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder">
+                                    <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>John Doe</h3>
@@ -117,7 +119,8 @@
                                 <ul class="children">
                                     <li class="comment">
                                         <div class="vcard bio">
-                                            <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder">
+                                            <img src="{{ asset('images/person_1.jpg') }}"
+                                                 alt="Image placeholder">
                                         </div>
                                         <div class="comment-body">
                                             <h3>John Doe</h3>
@@ -133,7 +136,8 @@
                                         <ul class="children">
                                             <li class="comment">
                                                 <div class="vcard bio">
-                                                    <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder">
+                                                    <img src="{{ asset('images/person_1.jpg') }}"
+                                                         alt="Image placeholder">
                                                 </div>
                                                 <div class="comment-body">
                                                     <h3>John Doe</h3>
@@ -148,7 +152,8 @@
                                                 <ul class="children">
                                                     <li class="comment">
                                                         <div class="vcard bio">
-                                                            <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder">
+                                                            <img src="{{ asset('images/person_1.jpg') }}"
+                                                                 alt="Image placeholder">
                                                         </div>
                                                         <div class="comment-body">
                                                             <h3>John Doe</h3>
@@ -170,7 +175,7 @@
 
                             <li class="comment">
                                 <div class="vcard bio">
-                                    <img src="url('{{ asset('images/person_1.jpg')}}')" alt="Image placeholder">
+                                    <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>John Doe</h3>
@@ -237,7 +242,8 @@
                     <div class="sidebar-box ftco-animate">
                         <h3>Recent Blog</h3>
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url('{{ asset('images/image_1.jpg')}}');"></a>
+                            <a class="blog-img mr-4"
+                               style="background-image: url('{{ asset('images/image_1.jpg') }}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                         blind texts</a></h3>
@@ -249,7 +255,8 @@
                             </div>
                         </div>
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url('{{ asset('images/image_2.jpg')}}');"></a>
+                            <a class="blog-img mr-4"
+                               style="background-image: url('{{ asset('images/image_2.jpg')}}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                         blind texts</a></h3>
@@ -261,7 +268,8 @@
                             </div>
                         </div>
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url('{{ asset('images/image_3.jpg')}}');"></a>
+                            <a class="blog-img mr-4"
+                               style="background-image: url('{{ asset('images/image_3.jpg')}}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                         blind texts</a></h3>
