@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="hero-wrap auth" id="login" style="background-image: url('{{ asset('images/bg_1.jpg') }}');"
+    <div class="hero-wrap auth" id="register" style="background-image: url('{{ asset('images/bg_1.jpg') }}');"
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="password-confirm" hidden></label>
-                                        <input id="password-confirm" type="password" class="form-control @error('email') is-invalid @enderror"
+                                        <input id="password-confirm" type="password" class="form-control"
                                                name="password_confirmation" required autocomplete="new-password"
                                                placeholder="{{ __('Confirm Password') }}">
                                     </div>
