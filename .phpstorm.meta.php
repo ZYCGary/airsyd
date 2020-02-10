@@ -1269,7 +1269,7 @@ namespace PHPSTORM_META {
 
 	override(\factory(0), map([
         '' => '@FactoryBuilder',
-        'App\User' => \App\UserFactoryBuilder::class,
+        'App\Models\User' => \App\Models\UserFactoryBuilder::class,
 	]));
 
     override(\Illuminate\Support\Arr::add(0), type(0));
