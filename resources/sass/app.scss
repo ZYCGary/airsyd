@@ -2434,3 +2434,8 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+/* Customise universial style */
+.btn-link, .btn-link:hover {
+    color: $primary;
+}

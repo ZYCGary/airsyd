@@ -13465,3 +13465,10 @@ textarea.form-control {
   }
 }
 
+/* Customise universial style */
+
+.btn-link,
+.btn-link:hover {
+  color: #e86ed0;
+}
+

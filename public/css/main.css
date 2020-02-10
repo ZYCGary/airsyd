@@ -6,11 +6,11 @@
 
 /* Authentication Pages */
 
-#login .text-center {
+.auth .text-center {
   min-width: 100%;
 }
 
-#login form input {
+.auth form input {
   text-align: center;
 }
 

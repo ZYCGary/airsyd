@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="hero-wrap" id="login" style="background-image: url('{{ asset('images/bg_1.jpg') }}'); height: 100%"
+    <div class="hero-wrap auth" id="login" style="background-image: url('{{ asset('images/bg_1.jpg') }}');"
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
