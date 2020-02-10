@@ -30,6 +30,9 @@
 
 @include('layouts._footer')
 
+@include('sweetalert::alert')
+
+
 {{-- Loader --}}
 <div id="ftco-loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
