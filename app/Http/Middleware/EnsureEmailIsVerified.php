@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
 use Alert;
+use Closure;
 
 class EnsureEmailIsVerified
 {
@@ -23,7 +23,7 @@ class EnsureEmailIsVerified
             // 根据客户端返回对应的内容
             return $request->expectsJson()
                 ? Alert::error(trans('Before proceeding, please check your email for a verification link.'))
-                : redirect()->route('verification.notice');
+                : redirect()->route('web.verification.notice');
         }
 
         return $next($request);

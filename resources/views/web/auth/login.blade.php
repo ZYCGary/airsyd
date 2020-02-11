@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <input type="submit" value="{{ __('Login') }}" class="btn btn-primary py-3 px-5">
                                     </div>
-                                    @if (Route::has('password.request'))
+                                    @if (Route::has('web.password.request'))
                                         <div>
                                             <a class="btn btn-link" href="{{ route('web.password.request') }}">
                                                 {{ __('Forgot Your Password?') }}

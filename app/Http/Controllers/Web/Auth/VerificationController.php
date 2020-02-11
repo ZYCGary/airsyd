@@ -4,7 +4,12 @@ namespace App\Http\Controllers\Web\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Auth\VerifiesEmails;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
+use Illuminate\View\View;
 
 class VerificationController extends Controller
 {
@@ -38,5 +43,18 @@ class VerificationController extends Controller
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
+    }
+
+    /**
+     * Show the email verification notice.
+     *
+     * @param Request $request
+     * @return Factory|RedirectResponse|Redirector|View
+     */
+    public function show(Request $request)
+    {
+        return $request->user()->hasVerifiedEmail()
+            ? redirect($this->redirectPath())
+            : view('web.auth.verify');
     }
 }

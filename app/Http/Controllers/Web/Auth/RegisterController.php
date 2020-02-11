@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Web\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 
 class RegisterController extends Controller
 {
@@ -40,6 +42,16 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+    /**
+     * Show the application registration form.
+     *
+     * @return Factory|View
+     */
+    public function showRegistrationForm()
+    {
+        return view('web.auth.register');
+    }
+
 
     /**
      * Get a validator for an incoming registration request.
