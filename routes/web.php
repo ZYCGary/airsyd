@@ -15,7 +15,7 @@
 /* Web pages routes */
 Route::namespace('Web')->name('web.')->group(function () {
     /* Web auth routes */
-    Route::namespace('Auth')->group(function() {
+    /*Route::namespace('Auth')->group(function() {
         // User authentication routes
         Route::get('login', 'LoginController@showLoginForm')->name('login');
         Route::post('login', 'LoginController@login');
@@ -35,7 +35,8 @@ Route::namespace('Web')->name('web.')->group(function () {
         Route::get('email/verify', 'VerificationController@show')->name('verification.notice');
         Route::get('email/verify/{id}/{hash}', 'VerificationController@verify')->name('verification.verify');
         Route::post('email/resend', 'VerificationController@resend')->name('verification.resend');
-    });
+    });*/
+    Auth::routes();
 
     Route::get('/', 'PagesController@home')->name('home');
 

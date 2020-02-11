@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Web\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Auth\PasswordBroker;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Support\Facades\Password;
+use Illuminate\View\View;
 
 class ForgotPasswordController extends Controller
 {
@@ -23,11 +27,20 @@ class ForgotPasswordController extends Controller
     /**
      * Display the form to request a password reset link.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function showLinkRequestForm()
     {
         return view('web.auth.passwords.email');
     }
 
+    /**
+     * Get the broker to be used during password reset.
+     *
+     * @return PasswordBroker
+     */
+    public function broker()
+    {
+        return Password::broker();
+    }
 }
