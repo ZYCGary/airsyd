@@ -18,11 +18,27 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+    // Fake datetime
+    $date_time = $faker->date . '' . $faker->time;
+    // Fake avatars
+    $avatars = [
+        asset('images/defaults/avatars/avatar_1.png'),
+        asset('images/defaults/avatars/avatar_2.png'),
+        asset('images/defaults/avatars/avatar_3.png'),
+        asset('images/defaults/avatars/avatar_4.png'),
+        asset('images/defaults/avatars/avatar_5.png'),
+        asset('images/defaults/avatars/avatar_6.png'),
+    ];
+
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => encrypt('11111111'),
         'remember_token' => Str::random(10),
+        'introduction' => $faker->sentence(),
+        'avatar' => $faker->randomElement($avatars),
+        'created_at' => $date_time,
+        'updated_at' => $date_time,
     ];
 });
