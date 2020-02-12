@@ -13,7 +13,7 @@ class ThemeController extends Controller
 
     public function about()
     {
-        return view('web.web.theme.about');
+        return view('web.theme.about');
     }
 
     public function contact()

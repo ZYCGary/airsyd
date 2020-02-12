@@ -25,11 +25,11 @@
                            data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">{{ __('profile') }}</a>
+                            <a class="dropdown-item" href="{{ route('web.users.show', ['user' => Auth::user()]) }}">{{ __('users.profile.profile') }}</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="">
+                            {{--<a class="dropdown-item" href="">
                                 <button class="btn btn-primary">{{ __('profile-edit') }}</button>
-                            </a>
+                            </a>--}}
                             <a class="dropdown-item" id="logout" href="javascript:void(0)">
                                 <form action="{{ route('web.logout') }}" method="POST">
                                     @csrf

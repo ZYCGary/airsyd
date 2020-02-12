@@ -1,16 +1,8 @@
 /* Header Nav */
 
-.navbar-nav > .dropdown > .dropdown-menu > .dropdown-item button {
-  min-width: 100%;
-}
+/* Page Content */
 
-/* Authentication Pages */
-
-.auth .text-center {
-  min-width: 100%;
-}
-
-.auth form input {
-  text-align: center;
+.no-hero-wrap {
+  padding-top: 150px;
 }
 

@@ -13472,3 +13472,27 @@ textarea.form-control {
   color: #e86ed0;
 }
 
+.navbar-nav > .dropdown > .dropdown-menu > .dropdown-item button {
+  min-width: 100%;
+}
+
+.no-hero-wrap {
+  padding-top: 150px;
+}
+
+/* Authentication Pages */
+
+.auth .text-center {
+  min-width: 100%;
+}
+
+.auth form input {
+  text-align: center;
+}
+
+/* Profile Pages */
+
+#user-show .profile-card {
+  border-bottom: 1px solid #dee2e6;
+}
+

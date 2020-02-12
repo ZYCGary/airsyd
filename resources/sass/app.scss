@@ -2436,6 +2436,35 @@ textarea.form-control {
 }
 
 /* Customise universial style */
+//Links
 .btn-link, .btn-link:hover {
     color: $primary;
+}
+
+// Navbar
+.navbar-nav > .dropdown > .dropdown-menu > .dropdown-item button {
+    min-width: 100%;
+}
+
+// Page Content
+.no-hero-wrap {
+    padding-top: 150px;
+}
+
+/* Authentication Pages */
+.auth {
+    .text-center {
+        min-width: 100%;
+    }
+
+    form input {
+        text-align: center;
+    }
+}
+
+/* Profile Pages */
+#user-show{
+    .profile-card {
+        border-bottom: 1px solid $gray-300;
+    }
 }
