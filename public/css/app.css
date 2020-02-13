@@ -10974,10 +10974,7 @@ h5,
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   font-size: 15px;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.9rem 20px;
   color: #000000;
   font-weight: 400;
   opacity: 1 !important;
@@ -10999,7 +10996,7 @@ h5,
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
   border: none;
   background: #fff;
-  box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+  box-shadow: 0 10px 34px -20px rgba(0, 0, 0, 0.41);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
@@ -11034,10 +11031,7 @@ h5,
 .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
   color: #fff;
   border: 1px solid #e86ed0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 0.5rem 18px;
   margin-top: 4px;
   background: #e86ed0;
   border-radius: 2px;
@@ -11111,10 +11105,7 @@ h5,
   color: #fff !important;
   background: #e86ed0;
   border: none !important;
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding: 0.5rem 20px !important;
   margin-top: 6px !important;
   border-radius: 5px;
 }
@@ -11131,9 +11122,9 @@ h5,
 @media (max-width: 991.98px) {
   .ftco-navbar-light.scrolled .navbar-nav {
     background: none;
-    border-radius: 0px;
-    padding-left: 0rem !important;
-    padding-right: 0rem !important;
+    border-radius: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -11159,7 +11150,7 @@ h5,
 }
 
 .ftco-navbar-light.scrolled.awake {
-  margin-top: 0px;
+  margin-top: 0;
   transition: 0.3s all ease-out;
 }
 
@@ -11197,7 +11188,7 @@ h5,
   background: white;
   background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(3%, white), color-stop(54%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom, white 0%, white 3%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#ffffff", GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=0);
   height: 850px;
 }
 
@@ -11313,7 +11304,7 @@ h5,
   border-radius: 40px;
   padding-left: 25px;
   padding-right: 50px;
-  box-shadow: 0px 5px 27px -14px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 5px 27px -14px rgba(0, 0, 0, 0.28);
 }
 
 .search-location .form-group button {
@@ -11368,7 +11359,7 @@ h5,
   background: #fff;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0px 10px 31px -21px rgba(0, 0, 0, 0.33);
+  box-shadow: 0 10px 31px -21px rgba(0, 0, 0, 0.33);
 }
 
 .request-form h2 {
@@ -11426,13 +11417,12 @@ h5,
 }
 
 .request-form .form-control {
-  border: transparent !important;
   border: 1px solid rgba(0, 0, 0, 0.05) !important;
   height: 40px !important;
   background: transparent !important;
   color: rgba(0, 0, 0, 0.4) !important;
   font-size: 12px;
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: none !important;
 }
 
@@ -11674,7 +11664,7 @@ h5,
   margin-top: -50px;
   margin-left: 20px;
   background: #fff;
-  box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 5px 21px -14px rgba(0, 0, 0, 0.14);
   padding: 25px;
 }
 
@@ -11761,7 +11751,7 @@ h5,
 }
 
 .property-wrap:hover .text {
-  box-shadow: 0px 5px 39px -14px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 5px 39px -14px rgba(0, 0, 0, 0.26);
 }
 
 .ftco-property-details .services .media-body .icon span {
@@ -12233,7 +12223,6 @@ textarea.form-control {
 }
 
 .ftco-footer .ftco-footer-widget h2 {
-  font-weight: normal;
   color: #000000;
   margin-bottom: 40px;
   font-size: 20px;
@@ -12327,7 +12316,7 @@ textarea.form-control {
 
 .ftco-media {
   background: #fff;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .ftco-media .heading {
@@ -12474,7 +12463,6 @@ textarea.form-control {
 }
 
 .heading-section .subheading {
-  font-size: 18px;
   display: inline-block;
   margin-bottom: 0;
   color: #e86ed0;
@@ -12631,7 +12619,7 @@ textarea.form-control {
   background: rgba(255, 255, 255, 0.1);
   padding: 0 20px;
   border: 1px solid rgba(0, 0, 0, 0.02);
-  box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 5px 21px -14px rgba(0, 0, 0, 0.14);
 }
 
 .testimony-wrap .user-img {
@@ -12688,7 +12676,7 @@ textarea.form-control {
   margin-top: -50px;
   margin-left: 20px;
   background: #fff;
-  box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 5px 21px -14px rgba(0, 0, 0, 0.14);
 }
 
 @media (min-width: 768px) {
@@ -12830,7 +12818,6 @@ textarea.form-control {
   display: block;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.7);
-  margin-bottom: 10px;
   line-height: 1.2;
   padding-left: 15px;
   margin-bottom: 0;
@@ -13193,7 +13180,7 @@ textarea.form-control {
   border: 1px solid rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.7) !important;
   font-size: 16px;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0 0 5px;
 }
 
 .subscribe-form .form-group input::-webkit-input-placeholder {
@@ -13219,7 +13206,7 @@ textarea.form-control {
 .subscribe-form .form-group .submit {
   color: #fff !important;
   background: #e142c2 !important;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0 5px 5px 0;
   font-size: 16px;
 }
 
@@ -13375,7 +13362,7 @@ textarea.form-control {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
   border-radius: 16px;
   opacity: 0;
   visibility: hidden;
@@ -13494,5 +13481,9 @@ textarea.form-control {
 
 #user-show .profile-card {
   border-bottom: 1px solid #dee2e6;
+}
+
+#blogs .item img {
+  width: 100%;
 }
 

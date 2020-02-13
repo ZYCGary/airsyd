@@ -66,46 +66,41 @@
 </div>
 
 <div class="sidebar-box ftco-animate profile-card">
-    <div id="listings">
+    <div id="blogs">
         <h3>{{ __('users.profile.his_her_blog', ['name' => $user->name]) }}</h3>
         <div class="row ftco-animate">
-            <div class="col-md-12 row">
-                <div class="carousel-testimony owl-carousel ftco-owl">
-                    <a href="" class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
+            <div class="col-md-4">
+                <a href="" class="item">
+                    <div class="testimony-wrap py-4">
+                        <div class="text">
+                            <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                            <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
-                    </a>
-                    <a href="" class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="" class="item">
+                    <div class="testimony-wrap py-4">
+                        <div class="text">
+                            <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                            <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
-                    </a>
-                    {{--<div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img"
-                                         style="background-image: url('{{ asset('images/person_2.jpg') }}')"></div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="" class="item">
+                    <div class="testimony-wrap py-4">
+                        <div class="text">
+                            <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                            <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
-                    </div>--}}
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
