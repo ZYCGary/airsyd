@@ -5,7 +5,8 @@
         </div>
         <div class="desc">
             <h3>{{ $user->name }}</h3>
-            <p class="h-info"><span class="location">{{ __('users.profile.join_time') }} &mdash;</span> <span class="details"> {{ $user->created_at->diffForHumans() }}</span>
+            <p class="h-info"><span class="location">{{ __('users.profile.join_time') }} &mdash;</span> <span
+                    class="details"> {{ $user->created_at->diffForHumans() }}</span>
             </p>
         </div>
     </div>

@@ -13483,7 +13483,13 @@ textarea.form-control {
   border-bottom: 1px solid #dee2e6;
 }
 
-#blogs .item img {
+#user-show #blog .item img {
   width: 100%;
+}
+
+#user-edit .bio,
+#user-edit .edit-form-btn {
+  max-width: 300px;
+  margin: 0 auto;
 }
 

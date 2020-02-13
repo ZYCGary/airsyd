@@ -1,5 +1,7 @@
-<div class="sidebar-box ftco-animate">
+<div class="sidebar-box ftco-animate" style="margin-bottom: 0!important;">
     <h1>{{ __('users.profile.hi') }}, {{ __('users.profile.i_am') }} {{ $user->name }}</h1>
+    <a href="{{ route('web.users.edit', Auth::user()->id) }}"
+       class="btn btn-primary py-2 px-3">{{ __('users.update', ['attr' => __('users.profile.information')]) }}</a>
 </div>
 
 <div class="sidebar-box ftco-animate profile-card">
@@ -66,7 +68,7 @@
 </div>
 
 <div class="sidebar-box ftco-animate profile-card">
-    <div id="blogs">
+    <div id="blog">
         <h3>{{ __('users.profile.his_her_blog', ['name' => $user->name]) }}</h3>
         <div class="row ftco-animate">
             <div class="col-md-4">

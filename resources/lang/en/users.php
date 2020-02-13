@@ -13,6 +13,7 @@ return [
 
     'profile' => [
         'profile' => 'Profile',
+        'information' => 'profile',
         'join_time' => 'Joint In',
         'introduction' => 'Introduction',
         'contact' => 'Contact Information',
@@ -21,6 +22,13 @@ return [
         'his_her_listings' => ':name\'s Listings',
         'his_her_blog' => ':name\'s Blog',
         'reviews' => ':numReviews',
+        'personal_info' => 'Personal Info',
+        'my_listings' => 'My Listings',
+        'my_blog' => 'My Blog',
+        'update_avatar' => 'Update Photo',
+        'email' => 'Email',
+        'location' => 'Location',
+        'lang' => 'Language I Speak',
 
     ]
 ];

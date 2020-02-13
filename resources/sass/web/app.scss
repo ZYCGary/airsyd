@@ -2781,12 +2781,21 @@ textarea.form-control {
     .profile-card {
         border-bottom: 1px solid $gray-300;
     }
-}
 
-#blogs {
-    .item {
-        img {
-            width: 100%;
+    #blog {
+        .item {
+            img {
+                width: 100%;
+            }
         }
     }
 }
+
+#user-edit {
+    .bio, .edit-form-btn {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
