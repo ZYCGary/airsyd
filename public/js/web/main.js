@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/main.js":
-/*!******************************!*\
-  !*** ./resources/js/main.js ***!
-  \******************************/
+/***/ "./resources/js/web/main.js":
+/*!**********************************!*\
+  !*** ./resources/js/web/main.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -389,13 +389,13 @@ AOS.init({
 /***/ }),
 
 /***/ 1:
-/*!************************************!*\
-  !*** multi ./resources/js/main.js ***!
-  \************************************/
+/*!****************************************!*\
+  !*** multi ./resources/js/web/main.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/gary/code/airsyd/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/gary/code/airsyd/resources/js/web/main.js */"./resources/js/web/main.js");
 
 
 /***/ })

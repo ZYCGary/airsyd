@@ -4,6 +4,7 @@
     <title>Uptown - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     {{-- Styles --}}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
           rel="stylesheet">
@@ -41,21 +42,22 @@
     </svg>
 </div>
 
+{{-- Scripts --}}
 <script src="{{ mix('js/app.js') }}"></script>
-<script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
-<script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
-<script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
-<script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
-<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('js/aos.js') }}"></script>
-<script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
-<script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('js/jquery.timepicker.min.js') }}"></script>
-<script src="{{ asset('js/scrollax.min.js') }}"></script>
+<script src="{{ asset('js/web/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ asset('js/web/jquery.easing.1.3.js') }}"></script>
+<script src="{{ asset('js/web/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('js/web/jquery.stellar.min.js') }}"></script>
+<script src="{{ asset('js/web/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/web/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/web/aos.js') }}"></script>
+<script src="{{ asset('js/web/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ asset('js/web/bootstrap-datepicker.js') }}"></script>
+<script src="{{ asset('js/web/jquery.timepicker.min.js') }}"></script>
+<script src="{{ asset('js/web/scrollax.min.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="{{ asset('js/google-map.js') }}"></script>
-<script src="{{ mix('js/main.js') }}"></script>
+<script src="{{ asset('js/web/google-map.js') }}"></script>
+<script src="{{ mix('js/web/main.js') }}"></script>
 @yield('scripts')
 
 
