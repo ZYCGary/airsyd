@@ -19,7 +19,7 @@
                     <a href="" class="item">
                         <div class="testimony-wrap py-4">
                             <div class="text">
-                                <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                                <img src="{{ asset('images/web/theme/image_1.jpg') }}" alt="listing_property">
                                 <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                     Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
@@ -28,7 +28,7 @@
                     <a href="" class="item">
                         <div class="testimony-wrap py-4">
                             <div class="text">
-                                <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                                <img src="{{ asset('images/web/theme/image_1.jpg') }}" alt="listing_property">
                                 <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                     Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
@@ -37,7 +37,7 @@
                     <div class="item">
                         <div class="testimony-wrap py-4">
                             <div class="text">
-                                <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                                <img src="{{ asset('images/web/theme/image_1.jpg') }}" alt="listing_property">
                                 <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                     Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
@@ -50,7 +50,7 @@
                                     Vokalia and Consonantia, there live the blind texts.</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img"
-                                         style="background-image: url('{{ asset('images/person_2.jpg') }}')"></div>
+                                         style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
                                     <div class="pl-3">
                                         <p class="name">Roger Scott</p>
                                         <span class="position">Marketing Manager</span>
@@ -73,7 +73,7 @@
                 <a href="" class="item">
                     <div class="testimony-wrap py-4">
                         <div class="text">
-                            <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                            <img src="{{ asset('images/web/theme/image_1.jpg') }}" alt="listing_property">
                             <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                 Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
@@ -84,7 +84,7 @@
                 <a href="" class="item">
                     <div class="testimony-wrap py-4">
                         <div class="text">
-                            <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                            <img src="{{ asset('images/web/theme/image_1.jpg') }}" alt="listing_property">
                             <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                 Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
@@ -95,7 +95,7 @@
                 <a href="" class="item">
                     <div class="testimony-wrap py-4">
                         <div class="text">
-                            <img src="{{ asset('images/image_1.jpg') }}" alt="listing_property">
+                            <img src="{{ asset('images/web/theme/image_1.jpg') }}" alt="listing_property">
                             <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                 Vokalia and Consonantia, there live the blind texts.</p>
                         </div>

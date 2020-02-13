@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight"
-             style="background-image: url('{{ asset('images/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
+             style="background-image: url('{{ asset('images/web/theme/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -24,7 +24,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -36,7 +36,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-2.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-2.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -48,7 +48,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-3.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-3.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -60,7 +60,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-4.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-4.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -73,7 +73,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-5.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-5.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -85,7 +85,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-6.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-6.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -97,7 +97,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-7.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-7.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -109,7 +109,7 @@
                 <div class="col-md-3">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-8.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-8.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>

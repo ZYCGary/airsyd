@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight"
-             style="background-image: url('{{ asset('images/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
+             style="background-image: url('{{ asset('images/web/theme/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -31,7 +31,7 @@
                         perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae
                         voluptates soluta architecto tempora.</p>
                     <p>
-                        <img src="{{ asset('images/image_7.jpg') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('images/web/theme/image_7.jpg') }}" alt="" class="img-fluid">
                     </p>
                     <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat
                         sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem
@@ -43,7 +43,7 @@
                         Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos
                         odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
                     <p>
-                        <img src="{{ asset('images/image_8.jpg') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('images/web/theme/image_8.jpg') }}" alt="" class="img-fluid">
                     </p>
                     <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo
                         quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis
@@ -74,7 +74,7 @@
 
                     <div class="about-author d-flex p-4 bg-light">
                         <div class="bio mr-5">
-                            <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder"
+                            <img src="{{ asset('images/web/theme/person_1.jpg') }}" alt="Image placeholder"
                                  class="img-fluid mb-4">
                         </div>
                         <div class="desc">
@@ -91,7 +91,7 @@
                         <ul class="comment-list">
                             <li class="comment">
                                 <div class="vcard bio">
-                                    <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder">
+                                    <img src="{{ asset('images/web/theme/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>John Doe</h3>
@@ -105,7 +105,7 @@
 
                             <li class="comment">
                                 <div class="vcard bio">
-                                    <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder">
+                                    <img src="{{ asset('images/web/theme/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>John Doe</h3>
@@ -119,7 +119,7 @@
                                 <ul class="children">
                                     <li class="comment">
                                         <div class="vcard bio">
-                                            <img src="{{ asset('images/person_1.jpg') }}"
+                                            <img src="{{ asset('images/web/theme/person_1.jpg') }}"
                                                  alt="Image placeholder">
                                         </div>
                                         <div class="comment-body">
@@ -136,7 +136,7 @@
                                         <ul class="children">
                                             <li class="comment">
                                                 <div class="vcard bio">
-                                                    <img src="{{ asset('images/person_1.jpg') }}"
+                                                    <img src="{{ asset('images/web/theme/person_1.jpg') }}"
                                                          alt="Image placeholder">
                                                 </div>
                                                 <div class="comment-body">
@@ -152,7 +152,7 @@
                                                 <ul class="children">
                                                     <li class="comment">
                                                         <div class="vcard bio">
-                                                            <img src="{{ asset('images/person_1.jpg') }}"
+                                                            <img src="{{ asset('images/web/theme/person_1.jpg') }}"
                                                                  alt="Image placeholder">
                                                         </div>
                                                         <div class="comment-body">
@@ -175,7 +175,7 @@
 
                             <li class="comment">
                                 <div class="vcard bio">
-                                    <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder">
+                                    <img src="{{ asset('images/web/theme/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>John Doe</h3>
@@ -243,7 +243,7 @@
                         <h3>Recent Blog</h3>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4"
-                               style="background-image: url('{{ asset('images/image_1.jpg') }}');"></a>
+                               style="background-image: url('{{ asset('images/web/theme/image_1.jpg') }}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                         blind texts</a></h3>
@@ -256,7 +256,7 @@
                         </div>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4"
-                               style="background-image: url('{{ asset('images/image_2.jpg')}}');"></a>
+                               style="background-image: url('{{ asset('images/web/theme/image_2.jpg')}}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                         blind texts</a></h3>
@@ -269,7 +269,7 @@
                         </div>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4"
-                               style="background-image: url('{{ asset('images/image_3.jpg')}}');"></a>
+                               style="background-image: url('{{ asset('images/web/theme/image_3.jpg')}}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                         blind texts</a></h3>

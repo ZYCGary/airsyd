@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight"
-             style="background-image: url('{{ asset('images/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
+             style="background-image: url('{{ asset('images/web/theme/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -31,7 +31,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_1.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_1.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -48,7 +48,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_2.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_2.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -65,7 +65,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_3.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_3.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -82,7 +82,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_4.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_4.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -100,7 +100,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_5.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_5.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -117,7 +117,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_6.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_6.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -134,7 +134,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_7.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_7.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -151,7 +151,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_8.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_8.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>

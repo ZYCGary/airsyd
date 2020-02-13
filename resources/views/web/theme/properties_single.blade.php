@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight"
-             style="background-image: url('{{ asset('images/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
+             style="background-image: url('{{ asset('images/web/theme/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -23,7 +23,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="property-details">
-                        <div class="img" style="background-image: url('{{ asset('images/work-1.jpg') }}');"></div>
+                        <div class="img" style="background-image: url('{{ asset('images/web/theme/work-1.jpg') }}');"></div>
                         <div class="text text-center">
                             <span class="subheading">Oakland</span>
                             <h2>The Blue Sky Home</h2>
@@ -114,7 +114,7 @@
                                         <h3 class="head">23 Reviews</h3>
                                         <div class="review d-flex">
                                             <div class="user-img"
-                                                 style="background-image: url('{{ asset('images/person_1.jpg') }}')"></div>
+                                                 style="background-image: url('{{ asset('images/web/theme/person_1.jpg') }}')"></div>
                                             <div class="desc">
                                                 <h4>
                                                     <span class="text-left">Jacob Webb</span>
@@ -137,7 +137,7 @@
                                         </div>
                                         <div class="review d-flex">
                                             <div class="user-img"
-                                                 style="background-image: url('{{ asset('images/person_2.jpg') }}')"></div>
+                                                 style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
                                             <div class="desc">
                                                 <h4>
                                                     <span class="text-left">Jacob Webb</span>
@@ -160,7 +160,7 @@
                                         </div>
                                         <div class="review d-flex">
                                             <div class="user-img"
-                                                 style="background-image: url('{{ asset('images/person_2.jpg') }}')"></div>
+                                                 style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
                                             <div class="desc">
                                                 <h4>
                                                     <span class="text-left">Jacob Webb</span>

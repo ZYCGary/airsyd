@@ -3,7 +3,7 @@
 @section('title', 'Air Sydney')
 
 @section('content')
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ asset('images/bg_1.jpg') }}');"
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{{ asset('images/web/theme/bg_1.jpg') }}');"
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -104,7 +104,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="property-wrap ftco-animate">
-                        <a href="#" class="img" style="background-image: url('{{ asset('images/work-1.jpg') }}');"></a>
+                        <a href="#" class="img" style="background-image: url('{{ asset('images/web/theme/work-1.jpg') }}');"></a>
                         <div class="text">
                             <p class="price"><span class="old-price">800,000</span><span
                                     class="orig-price">$3,050<small>/mo</small></span></p>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="property-wrap ftco-animate">
-                        <a href="#" class="img" style="background-image: url('{{ asset('images/work-2.jpg') }}');"></a>
+                        <a href="#" class="img" style="background-image: url('{{ asset('images/web/theme/work-2.jpg') }}');"></a>
                         <div class="text">
                             <p class="price"><span class="old-price">800,000</span><span
                                     class="orig-price">$3,050<small>/mo</small></span></p>
@@ -142,7 +142,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="property-wrap ftco-animate">
-                        <a href="#" class="img" style="background-image: url('{{ asset('images/work-3.jpg') }}');"></a>
+                        <a href="#" class="img" style="background-image: url('{{ asset('images/web/theme/work-3.jpg') }}');"></a>
                         <div class="text">
                             <p class="price"><span class="old-price">800,000</span><span
                                     class="orig-price">$3,050<small>/mo</small></span></p>
@@ -164,7 +164,7 @@
     </section>
 
     <section class="ftco-section ftco-degree-bg services-section img mx-md-5"
-             style="background-image: url('{{ asset('images/bg_2.jpg') }}');">
+             style="background-image: url('{{ asset('images/web/theme/bg_2.jpg') }}');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-start mb-5">
@@ -230,7 +230,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
-                     style="background-image: url('{{ asset('images/about.jpg') }}');">
+                     style="background-image: url('{{ asset('images/web/theme/about.jpg') }}');">
                 </div>
                 <div class="col-md-6 wrap-about py-md-5 ftco-animate">
                     <div class="heading-section p-md-5">
@@ -307,7 +307,7 @@
                                         and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                             style="background-image: url('{{ asset('images/person_1.jpg') }}')"></div>
+                                             style="background-image: url('{{ asset('images/web/theme/person_1.jpg') }}')"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -323,7 +323,7 @@
                                         and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                             style="background-image: url('{{ asset('images/person_2.jpg') }}')"></div>
+                                             style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -339,7 +339,7 @@
                                         and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                             style="background-image: url('{{ asset('images/person_3.jpg') }}')"></div>
+                                             style="background-image: url('{{ asset('images/web/theme/person_3.jpg') }}')"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -355,7 +355,7 @@
                                         and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                             style="background-image: url('{{ asset('images/person_1.jpg') }}')"></div>
+                                             style="background-image: url('{{ asset('images/web/theme/person_1.jpg') }}')"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -371,7 +371,7 @@
                                         and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                             style="background-image: url('{{ asset('images/person_2.jpg') }}')"></div>
+                                             style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
                                         <div class="pl-3">
                                             <p class="name">Roger Scott</p>
                                             <span class="position">Marketing Manager</span>
@@ -398,7 +398,7 @@
                 <div class="col-md-3 ftco-animate">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -410,7 +410,7 @@
                 <div class="col-md-3 ftco-animate">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-2.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-2.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -422,7 +422,7 @@
                 <div class="col-md-3 ftco-animate">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-3.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-3.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -434,7 +434,7 @@
                 <div class="col-md-3 ftco-animate">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-4.jpg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/web/theme/team-4.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
                             <h3><a href="{{ route('web.theme.properties') }}">James Stallon</a></h3>
@@ -466,7 +466,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_1.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_1.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -483,7 +483,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_2.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_2.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -500,7 +500,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_3.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_3.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -517,7 +517,7 @@
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
                             <a href="{{ route('web.theme.blog.single') }}" class="block-20 img"
-                               style="background-image: url('{{ asset('images/image_4.jpg') }}');">
+                               style="background-image: url('{{ asset('images/web/theme/image_4.jpg') }}');">
                             </a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>

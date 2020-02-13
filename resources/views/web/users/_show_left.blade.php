@@ -1,7 +1,7 @@
 <div class="sidebar-box bg-light">
     <div class="bio agent">
         <div class="img">
-            <img src="{{ asset('images/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
+            <img src="{{ asset('images/web/theme/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
         </div>
         <div class="desc">
             <h3>{{ $user->name }}</h3>
@@ -29,7 +29,7 @@
     <h3>Recent Blog</h3>
     <div class="block-21 mb-4 d-flex">
         <a class="blog-img mr-4"
-           style="background-image: url('{{ asset('images/image_1.jpg') }}');"></a>
+           style="background-image: url('{{ asset('images/web/theme/image_1.jpg') }}');"></a>
         <div class="text">
             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                     blind texts</a></h3>
@@ -42,7 +42,7 @@
     </div>
     <div class="block-21 mb-4 d-flex">
         <a class="blog-img mr-4"
-           style="background-image: url('{{ asset('images/image_2.jpg')}}');"></a>
+           style="background-image: url('{{ asset('images/web/theme/image_2.jpg')}}');"></a>
         <div class="text">
             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                     blind texts</a></h3>
@@ -55,7 +55,7 @@
     </div>
     <div class="block-21 mb-4 d-flex">
         <a class="blog-img mr-4"
-           style="background-image: url('{{ asset('images/image_3.jpg')}}');"></a>
+           style="background-image: url('{{ asset('images/web/theme/image_3.jpg')}}');"></a>
         <div class="text">
             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                     blind texts</a></h3>
