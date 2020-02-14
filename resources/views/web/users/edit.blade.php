@@ -70,7 +70,7 @@
                                         {{-- Right Side --}}
                                         <div class="col-md-8">
                                             <div class="form-group">
-                                                <label for="edit_name">{{ __('Name') }}</label>
+                                                <label for="edit-name">{{ __('Name') }}</label>
                                                 <input type="text"
                                                        class="form-control  @error('name') is-invalid @enderror"
                                                        placeholder="{{ __('placeholders.name') }}"
@@ -82,7 +82,7 @@
                                                 @enderror
                                             </div>
                                             <div class="form-group">
-                                                <label for="edit_location">{{ __('users.profile.location') }}</label>
+                                                <label for="edit-location">{{ __('users.profile.location') }}</label>
                                                 <input type="text" class="form-control"
                                                        placeholder="{{ __('placeholders.location') }}"
                                                        value="{{ $user->location }}"
@@ -285,7 +285,6 @@
                                 {{-- My Blog End --}}
 
                             </div>
-                            {{-- Tab Content End--}}
 
                         </div>
                         {{-- Tab Content End --}}

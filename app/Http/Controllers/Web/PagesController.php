@@ -8,11 +8,6 @@ use Illuminate\View\View;
 
 class PagesController extends Controller
 {
-    /**
-     * Display the home page.
-     *
-     * @return Factory|View
-     */
     public function home() {
         return view('web.pages.home');
     }
