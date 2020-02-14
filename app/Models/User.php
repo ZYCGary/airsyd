@@ -47,6 +47,13 @@ class User extends Authenticatable implements MustVerifyEmailContract
     use Notifiable, MustVerifyEmailTrait;
 
     /**
+     * The attributes that should not be modified.
+     *
+     * @var array
+     */
+    protected $guarded = ['id'];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

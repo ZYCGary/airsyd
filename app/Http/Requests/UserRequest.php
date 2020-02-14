@@ -2,20 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class UserRequest extends FormRequest
+class UserRequest extends Request
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return true;
-    }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -23,8 +11,38 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
+        $maxIntro = '80';
+
+        switch ($this->method()) {
+            // CREATE
+            case 'POST':
+            {
+                return [
+                    // CREATE ROLES
+                ];
+            }
+            // UPDATE
+            case 'PUT':
+            case 'PATCH':
+            {
+                return [
+                    'name' => 'required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/',
+                    'introduction' => 'max:' . $maxIntro,
+                ];
+            }
+            case 'GET':
+            case 'DELETE':
+            default:
+            {
+                return [];
+            }
+        }
+    }
+
+    public function messages()
+    {
         return [
-            //
+            // Validation messages
         ];
     }
 }
