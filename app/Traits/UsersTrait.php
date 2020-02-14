@@ -13,24 +13,9 @@ use Illuminate\View\View;
 
 trait UsersTrait
 {
-    /**
-     * Display user profile page.
-     *
-     * @param User $user
-     * @return Factory|View
-     */
-    public function show(User $user)
-    {
-        return view('web.users.show', compact('user'));
-    }
-
-    public function edit(User $user)
-    {
-        return view('web.users.edit', compact('user'));
-    }
-
     public function update(UserRequest $request, User $user)
     {
+        $this->authorize('update', $user);
         // Validate request.
         $maxIntro = '80';
         $rules = [

@@ -93,4 +93,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         $this->notify(new WebEmailVerificationNotification());
     }
+
+    public function isSameUser(User $user)
+    {
+        return $this->id === $user->id;
+    }
 }
