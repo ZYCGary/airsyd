@@ -74,6 +74,18 @@ class User extends Authenticatable implements MustVerifyEmailContract
     ];
 
     /**
+     * Route to get single model URI link.
+     *
+     * @param array $params
+     * @return string
+     */
+    public function link($params = [])
+    {
+        $params = array_merge([$this->id], $params);
+        return route('users.show', $params);
+    }
+
+    /**
      * Send the password reset notification.
      *
      * @param  string  $token
@@ -94,6 +106,13 @@ class User extends Authenticatable implements MustVerifyEmailContract
         $this->notify(new WebEmailVerificationNotification());
     }
 
+
+    /**
+     * Check whether the current user is same as the specific user.
+     *
+     * @param User $user
+     * @return bool
+     */
     public function isSameUser(User $user)
     {
         return $this->id === $user->id;
