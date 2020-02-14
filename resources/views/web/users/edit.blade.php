@@ -112,6 +112,7 @@
                                     </div>
                                 </form>
                                 {{-- Personal Information End --}}
+                            </div>
 
                                 {{-- My Listings --}}
                                 <div class="tab-pane fade" id="pills-listings" role="tabpanel"

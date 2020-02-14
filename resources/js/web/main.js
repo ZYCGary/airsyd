@@ -119,17 +119,17 @@ AOS.init({
                 navbar = $('.ftco_navbar'),
                 sd = $('.js-scroll-wrap');
 
-            if (st > 150) {
+            if (st > 80) {
                 if (!navbar.hasClass('scrolled')) {
                     navbar.addClass('scrolled');
                 }
             }
-            if (st < 150) {
+            if (st < 80) {
                 if (navbar.hasClass('scrolled')) {
                     navbar.removeClass('scrolled sleep');
                 }
             }
-            if (st > 350) {
+            if (st > 130) {
                 if (!navbar.hasClass('awake')) {
                     navbar.addClass('awake');
                 }
@@ -138,7 +138,7 @@ AOS.init({
                     sd.addClass('sleep');
                 }
             }
-            if (st < 350) {
+            if (st < 130) {
                 if (navbar.hasClass('awake')) {
                     navbar.removeClass('awake');
                     navbar.addClass('sleep');
