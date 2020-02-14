@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Lang;
 
-class WebResetPasswordNotification extends Notification
+class UserResetPasswordNotification extends Notification
 {
     use Queueable;
 

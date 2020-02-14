@@ -11,7 +11,7 @@ use Config;
 use Lang;
 use URL;
 
-class WebEmailVerificationNotification extends Notification
+class UserEmailVerificationNotification extends Notification
 {
     use Queueable;
 
