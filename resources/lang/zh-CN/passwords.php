@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Password Reminder Language Lines
+    | Password Reminder Locale Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are the default lines which match reasons

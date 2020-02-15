@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Authentication Locale Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used during authentication for various

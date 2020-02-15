@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Pagination Language Lines
+    | Pagination Locale Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used by the paginator library to build

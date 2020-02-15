@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Users Relative Language Lines
+    | Users Relative Locale Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are the default lines which match all users

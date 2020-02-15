@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Validation Language Lines
+    | Validation Locale Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines contain the default error messages used by
@@ -119,7 +119,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
+    | Custom Validation Locale Lines
     |--------------------------------------------------------------------------
     |
     | Here you may specify custom validation messages for attributes using the
