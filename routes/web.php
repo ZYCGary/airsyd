@@ -37,4 +37,8 @@ Route::namespace('Web')->name('web.')->group(function () {
     });
 });
 
-
+/* Admin routes */
+Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
+    // Locale routes
+    Route::resource('locales', 'LocalesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+});
