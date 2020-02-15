@@ -17,10 +17,17 @@ class LocalesTableSeeder extends Seeder
             }
             if ($index == 1) {
                 $locale->code = 'en-AU';
-                $locale->language = 'English (Australia)';
+                $locale->language = 'English (AU)';
                 $locale->speak = 'English';
                 $locale->is_app_lang = true;
                 $locale->is_admin_lang = true;
+            }
+            if ($index == 2) {
+                $locale->code = 'zh-HK';
+                $locale->language = '繁体中文';
+                $locale->speak = '中文 (粤语)';
+                $locale->is_app_lang = true;
+                $locale->is_admin_lang = false;
             }
         });
 

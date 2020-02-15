@@ -37,11 +37,9 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\EnsureEmailIsVerified::class,
 
-            /**
-             * Customise Middleware Groups
-             */
-            // Sweet Alert 2
+            /* Customise Middleware Groups */
             \RealRashid\SweetAlert\ToSweetAlert::class,
+            \App\Http\Middleware\Localization::class,
         ],
 
         'api' => [

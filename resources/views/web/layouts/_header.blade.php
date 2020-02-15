@@ -15,8 +15,12 @@
                 <li class="nav-item"><a href="{{ route('web.theme.properties') }}" class="nav-link">Properties</a></li>
                 <li class="nav-item"><a href="{{ route('web.theme.blog') }}" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="{{ route('web.theme.contact') }}" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="" class="nav-link" data-toggle="modal"
-                                        data-target="#lang-select">Contact</a></li>
+                <li class="nav-item">
+                    <a href="" class="nav-link" data-toggle="modal" data-target="#lang-select">
+                        <span
+                            class="flaticon-bed mr-1"></span><span>{{ get_app_locale()[app()->getLocale()]['language'] }}</span>
+                    </a>
+                </li>
                 @guest
                     <li class="nav-item"><a href="{{ route('web.login') }}" class="nav-link">{{ __('Login') }}</a></li>
                     <li class="nav-item"><a href="{{ route('web.register') }}" class="nav-link">{{ __('Register') }}</a>
@@ -53,13 +57,15 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{ __('sys.select_lang') }}</h5>
                 <a href="" type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
             </div>
-            <div class="modal-body">
-                ...
+            <div class="modal-body row">
+                @foreach(get_app_locale() as $local)
+                    <div class="col-md-4">{{ $local['language'] }}</div>
+                @endforeach
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
