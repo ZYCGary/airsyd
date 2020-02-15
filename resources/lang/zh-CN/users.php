@@ -29,6 +29,8 @@ return [
         'email' => '邮箱',
         'location' => '居住地',
         'lang' => '我会说的语言',
+        'lives_in' => '住在',
+        'speaks' => '说',
 
     ],
 

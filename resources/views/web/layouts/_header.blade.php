@@ -15,6 +15,8 @@
                 <li class="nav-item"><a href="{{ route('web.theme.properties') }}" class="nav-link">Properties</a></li>
                 <li class="nav-item"><a href="{{ route('web.theme.blog') }}" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="{{ route('web.theme.contact') }}" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="" class="nav-link" data-toggle="modal"
+                                        data-target="#lang-select">Contact</a></li>
                 @guest
                     <li class="nav-item"><a href="{{ route('web.login') }}" class="nav-link">{{ __('Login') }}</a></li>
                     <li class="nav-item"><a href="{{ route('web.register') }}" class="nav-link">{{ __('Register') }}</a>
@@ -25,7 +27,8 @@
                            data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('web.users.show', ['user' => Auth::user()]) }}">{{ __('users.profile.profile') }}</a>
+                            <a class="dropdown-item"
+                               href="{{ route('web.users.show', ['user' => Auth::user()]) }}">{{ __('users.profile.profile') }}</a>
                             <div class="dropdown-divider"></div>
                             {{--<a class="dropdown-item" href="">
                                 <button class="btn btn-primary">{{ __('profile-edit') }}</button>
@@ -44,3 +47,24 @@
         </div>
     </div>
 </nav>
+
+<div id="lang-select" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <a href="" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

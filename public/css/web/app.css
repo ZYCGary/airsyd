@@ -13467,6 +13467,10 @@ textarea.form-control {
   padding-top: 100px;
 }
 
+.modal {
+  padding-top: 100px;
+}
+
 /* Authentication Pages */
 
 .auth .text-center {
@@ -13485,6 +13489,11 @@ textarea.form-control {
 
 #user-show #blog .item img {
   width: 100%;
+}
+
+#user-show ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 #user-edit .bio,

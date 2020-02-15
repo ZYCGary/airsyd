@@ -2765,6 +2765,11 @@ textarea.form-control {
     padding-top: 100px;
 }
 
+// Modal
+.modal {
+    padding-top: 100px;
+}
+
 /* Authentication Pages */
 .auth {
     .text-center {
@@ -2788,6 +2793,10 @@ textarea.form-control {
                 width: 100%;
             }
         }
+    }
+
+    ul {
+        padding-inline-start: 0;
     }
 }
 

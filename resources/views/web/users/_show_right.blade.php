@@ -1,5 +1,7 @@
-<div class="sidebar-box ftco-animate" style="margin-bottom: 0!important;">
+<div class="sidebar-box ftco-animate profile-card">
     <h1>{{ __('users.profile.hi') }}, {{ __('users.profile.i_am') }} {{ $user->name }}</h1>
+    <h3><span class="flaticon-bed mr-1"></span>{{ __('users.profile.lives_in') }} Sydney</h3>
+    <h3><span class="flaticon-bed mr-1"></span>{{ __('users.profile.speaks') }} Lang</h3>
     <a href="{{ route('web.users.edit', Auth::user()->id) }}"
        class="btn btn-primary py-2 px-3">{{ __('users.update', ['attr' => __('users.profile.information')]) }}</a>
 </div>
@@ -7,8 +9,11 @@
 <div class="sidebar-box ftco-animate profile-card">
     <div class="categories">
         <h3>{{ __('users.profile.contact') }}</h3>
-        <li><span>{{ __('Email') }}</span><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></li>
-        <li><a href="#">Visual Assistant <span>(22)</span></a></li>
+        <ul>
+            <li><span class="flaticon-bed mr-1"></span><span>{{ __('Email') }}</span><a
+                        href="mailto:{{ $user->email }}">{{ $user->email }}</a></li>
+            <li><a href="#">Visual Assistant <span>(22)</span></a></li>
+        </ul>
     </div>
 </div>
 

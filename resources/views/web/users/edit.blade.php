@@ -62,8 +62,8 @@
                                             <div class="form-group edit-form-btn">
                                                 <input type="submit" value="{{ __('operations.save') }}"
                                                        class="btn btn-primary py-2 px-3">
-                                                <button
-                                                    class="btn btn-outline-secondary py-2 px-3">{{ __('operations.cancel') }}</button>
+                                                <a href="{{ route('web.users.show', Auth::user()->id) }}"
+                                                   class="btn btn-outline-secondary py-2 px-3">{{ __('operations.cancel') }}</a>
                                             </div>
                                         </div>
 
@@ -114,41 +114,41 @@
                                 {{-- Personal Information End --}}
                             </div>
 
-                                {{-- My Listings --}}
-                                <div class="tab-pane fade" id="pills-listings" role="tabpanel"
-                                     aria-labelledby="pills-listings-tab">
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an
-                                        almost
-                                        unorthographic life One day however a small line of blind text by the name
-                                        of
-                                        Lorem
-                                        Ipsum decided to leave for the far World of Grammar.</p>
-                                    <p>When she reached the first hills of the Italic Mountains, she had a last view
-                                        back on
-                                        the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village
-                                        and
-                                        the
-                                        subline of her own road, the Line Lane. Pityful a rethoric question ran over
-                                        her
-                                        cheek, then she continued her way.</p>
-                                </div>
-                                {{-- My Listings End --}}
+                            {{-- My Listings --}}
+                            <div class="tab-pane fade" id="pills-listings" role="tabpanel"
+                                 aria-labelledby="pills-listings-tab">
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an
+                                    almost
+                                    unorthographic life One day however a small line of blind text by the name
+                                    of
+                                    Lorem
+                                    Ipsum decided to leave for the far World of Grammar.</p>
+                                <p>When she reached the first hills of the Italic Mountains, she had a last view
+                                    back on
+                                    the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village
+                                    and
+                                    the
+                                    subline of her own road, the Line Lane. Pityful a rethoric question ran over
+                                    her
+                                    cheek, then she continued her way.</p>
+                            </div>
+                            {{-- My Listings End --}}
 
-                                {{-- My Blog --}}
-                                <div class="tab-pane fade" id="pills-blog" role="tabpanel"
-                                     aria-labelledby="pills-review-tab">
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <h3 class="head">23 Reviews</h3>
-                                            <div class="review d-flex">
-                                                <div class="user-img"
-                                                     style="background-image: url('{{ asset('images/web/theme/person_1.jpg') }}')"></div>
-                                                <div class="desc">
-                                                    <h4>
-                                                        <span class="text-left">Jacob Webb</span>
-                                                        <span class="text-right">14 March 2018</span>
-                                                    </h4>
-                                                    <p class="star">
+                            {{-- My Blog --}}
+                            <div class="tab-pane fade" id="pills-blog" role="tabpanel"
+                                 aria-labelledby="pills-review-tab">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h3 class="head">23 Reviews</h3>
+                                        <div class="review d-flex">
+                                            <div class="user-img"
+                                                 style="background-image: url('{{ asset('images/web/theme/person_1.jpg') }}')"></div>
+                                            <div class="desc">
+                                                <h4>
+                                                    <span class="text-left">Jacob Webb</span>
+                                                    <span class="text-right">14 March 2018</span>
+                                                </h4>
+                                                <p class="star">
 									   				<span>
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
@@ -156,74 +156,74 @@
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
 								   					</span>
-                                                        <span class="text-right"><a href="#" class="reply"><i
-                                                                    class="icon-reply"></i></a></span>
-                                                    </p>
-                                                    <p>When she reached the first hills of the Italic Mountains, she
-                                                        had
-                                                        a
-                                                        last view back on the skyline of her hometown
-                                                        Bookmarksgrov</p>
-                                                </div>
-                                            </div>
-                                            <div class="blog d-flex">
-                                                <div class="user-img"
-                                                     style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
-                                                <div class="desc">
-                                                    <h4>
-                                                        <span class="text-left">Jacob Webb</span>
-                                                        <span class="text-right">14 March 2018</span>
-                                                    </h4>
-                                                    <p class="star">
-									   				<span>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-								   					</span>
-                                                        <span class="text-right"><a href="#" class="reply"><i
-                                                                    class="icon-reply"></i></a></span>
-                                                    </p>
-                                                    <p>When she reached the first hills of the Italic Mountains, she
-                                                        had
-                                                        a
-                                                        last view back on the skyline of her hometown
-                                                        Bookmarksgrov</p>
-                                                </div>
-                                            </div>
-                                            <div class="review d-flex">
-                                                <div class="user-img"
-                                                     style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
-                                                <div class="desc">
-                                                    <h4>
-                                                        <span class="text-left">Jacob Webb</span>
-                                                        <span class="text-right">14 March 2018</span>
-                                                    </h4>
-                                                    <p class="star">
-									   				<span>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-									   					<i class="ion-ios-star"></i>
-								   					</span>
-                                                        <span class="text-right"><a href="#" class="reply"><i
-                                                                    class="icon-reply"></i></a></span>
-                                                    </p>
-                                                    <p>When she reached the first hills of the Italic Mountains, she
-                                                        had
-                                                        a
-                                                        last view back on the skyline of her hometown
-                                                        Bookmarksgrov</p>
-                                                </div>
+                                                    <span class="text-right"><a href="#" class="reply"><i
+                                                                class="icon-reply"></i></a></span>
+                                                </p>
+                                                <p>When she reached the first hills of the Italic Mountains, she
+                                                    had
+                                                    a
+                                                    last view back on the skyline of her hometown
+                                                    Bookmarksgrov</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
-                                            <div class="rating-wrap">
-                                                <h3 class="head">Give a Review</h3>
-                                                <div class="wrap">
-                                                    <p class="star">
+                                        <div class="blog d-flex">
+                                            <div class="user-img"
+                                                 style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
+                                            <div class="desc">
+                                                <h4>
+                                                    <span class="text-left">Jacob Webb</span>
+                                                    <span class="text-right">14 March 2018</span>
+                                                </h4>
+                                                <p class="star">
+									   				<span>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+								   					</span>
+                                                    <span class="text-right"><a href="#" class="reply"><i
+                                                                class="icon-reply"></i></a></span>
+                                                </p>
+                                                <p>When she reached the first hills of the Italic Mountains, she
+                                                    had
+                                                    a
+                                                    last view back on the skyline of her hometown
+                                                    Bookmarksgrov</p>
+                                            </div>
+                                        </div>
+                                        <div class="review d-flex">
+                                            <div class="user-img"
+                                                 style="background-image: url('{{ asset('images/web/theme/person_2.jpg') }}')"></div>
+                                            <div class="desc">
+                                                <h4>
+                                                    <span class="text-left">Jacob Webb</span>
+                                                    <span class="text-right">14 March 2018</span>
+                                                </h4>
+                                                <p class="star">
+									   				<span>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+									   					<i class="ion-ios-star"></i>
+								   					</span>
+                                                    <span class="text-right"><a href="#" class="reply"><i
+                                                                class="icon-reply"></i></a></span>
+                                                </p>
+                                                <p>When she reached the first hills of the Italic Mountains, she
+                                                    had
+                                                    a
+                                                    last view back on the skyline of her hometown
+                                                    Bookmarksgrov</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="rating-wrap">
+                                            <h3 class="head">Give a Review</h3>
+                                            <div class="wrap">
+                                                <p class="star">
 									   				<span>
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
@@ -232,9 +232,9 @@
 									   					<i class="ion-ios-star"></i>
 									   					(98%)
 								   					</span>
-                                                        <span>20 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
+                                                    <span>20 Reviews</span>
+                                                </p>
+                                                <p class="star">
 									   				<span>
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
@@ -243,9 +243,9 @@
 									   					<i class="ion-ios-star"></i>
 									   					(85%)
 								   					</span>
-                                                        <span>10 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
+                                                    <span>10 Reviews</span>
+                                                </p>
+                                                <p class="star">
 									   				<span>
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
@@ -254,9 +254,9 @@
 									   					<i class="ion-ios-star"></i>
 									   					(70%)
 								   					</span>
-                                                        <span>5 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
+                                                    <span>5 Reviews</span>
+                                                </p>
+                                                <p class="star">
 									   				<span>
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
@@ -265,9 +265,9 @@
 									   					<i class="ion-ios-star"></i>
 									   					(10%)
 								   					</span>
-                                                        <span>0 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
+                                                    <span>0 Reviews</span>
+                                                </p>
+                                                <p class="star">
 									   				<span>
 									   					<i class="ion-ios-star"></i>
 									   					<i class="ion-ios-star"></i>
@@ -276,21 +276,20 @@
 									   					<i class="ion-ios-star"></i>
 									   					(0%)
 								   					</span>
-                                                        <span>0 Reviews</span>
-                                                    </p>
-                                                </div>
+                                                    <span>0 Reviews</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                {{-- My Blog End --}}
-
                             </div>
+                            {{-- My Blog End --}}
 
                         </div>
-                        {{-- Tab Content End --}}
 
                     </div>
+                    {{-- Tab Content End --}}
+
                 </div>
             </div>
         </div>

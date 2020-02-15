@@ -28,7 +28,8 @@ return [
         'update_avatar' => 'Update Photo',
         'email' => 'Email',
         'location' => 'Location',
-        'lang' => 'Language I Speak',
-
+        'lang' => 'Languages I Speak',
+        'lives_in' => 'Lives In',
+        'speaks' => 'Speaks',
     ]
 ];
