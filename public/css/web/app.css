@@ -13471,6 +13471,16 @@ textarea.form-control {
   padding-top: 100px;
 }
 
+.modal .card {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.modal .card:hover {
+  border-color: #e86ed0;
+  color: #e86ed0;
+}
+
 /* Authentication Pages */
 
 .auth .text-center {

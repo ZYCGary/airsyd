@@ -15,19 +15,28 @@ class UsersTableSeeder extends Seeder
         // Generate Fake users
         $users = factory(User::class)
             ->times(20)
-            ->make();
+            ->make()
+            ->each(function ($user, $index) {
+                if ($index == 0) {
+                    $user->name = 'Gary';
+                    $user->email = 'gary@airsyd.com';
+                    $user->avatar = asset('images/defaults/avatars/avatar_5.png');
+                    $user->introduction = 'Hello, I am Gary.';
+                    $user->prefer_lang = 'zh-cn';
+                }
+                if ($index == 1) {
+                    $user->name = 'Nancy';
+                    $user->email = 'nancy@airsyd.com';
+                    $user->avatar = asset('images/defaults/avatars/avatar_4.png');
+                    $user->introduction = 'Hello, I am Nancy.';
+                    $user->prefer_lang = 'en-au';
+                }
+            });
 
         // Make hidden fields visible
         $user_array = $users->makeVisible(['password', 'remember_token'])->toArray();
 
         // Insert fake users into the database
         User::insert($user_array);
-
-        // Set the first user data
-        $user = User::find(1);
-        $user->name = 'Gary';
-        $user->email = 'gary@airsyd.com';
-        $user->avatar = asset('images/defaults/avatars/avatar_5.png');
-        $user->save();
     }
 }

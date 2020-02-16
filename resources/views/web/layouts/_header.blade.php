@@ -52,6 +52,7 @@
     </div>
 </nav>
 
+{{-- Language Select Modal --}}
 <div id="lang-select" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -64,13 +65,16 @@
             </div>
             <div class="modal-body row">
                 @foreach(get_app_locale() as $local)
-                    <div class="col-md-4">{{ $local['language'] }}</div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="{{ route('web.locales.set', $local['code']) }}" class="card">
+                            <div class="card-body">
+                                {{ $local['language'] }}
+                            </div>
+                        </a>
+                    </div>
                 @endforeach
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
 </div>
+{{-- Language Select Modal End --}}

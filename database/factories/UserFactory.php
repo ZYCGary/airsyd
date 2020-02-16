@@ -30,6 +30,9 @@ $factory->define(User::class, function (Faker $faker) {
         asset('images/defaults/avatars/avatar_5.png'),
         asset('images/defaults/avatars/avatar_6.png'),
     ];
+    // Fake language codes
+    $languageCodes = ['zh-cn', 'zh-hk', 'en-au'];
+
 
     return [
         'name' => $faker->name,
@@ -39,6 +42,7 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
         'introduction' => $faker->sentence(),
         'avatar' => $faker->randomElement($avatars),
+        'prefer_lang' => $faker->randomElement($languageCodes),
         'created_at' => $date_time,
         'updated_at' => $date_time,
     ];

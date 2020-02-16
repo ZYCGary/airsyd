@@ -26,7 +26,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'introduction', 'avatar'
+        'name', 'email', 'password', 'introduction', 'avatar', 'prefer_lang',
     ];
 
     /**
@@ -79,7 +79,6 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         $this->notify(new UserEmailVerificationNotification());
     }
-
 
     /**
      * Check whether the current user is same as the specific user.

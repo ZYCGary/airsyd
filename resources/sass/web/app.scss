@@ -2768,6 +2768,15 @@ textarea.form-control {
 // Modal
 .modal {
     padding-top: 100px;
+    .card {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .card:hover {
+        border-color: $primary;
+        color: $primary;
+    }
 }
 
 /* Authentication Pages */
