@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html @guest lang="{{ app()->getLocale() }}" @else lang="{{ Auth::user()->prefer_lang }}" @endguest>
 <head>
     <title>@yield('title', 'Air Sydney')</title>
     <meta charset="utf-8">

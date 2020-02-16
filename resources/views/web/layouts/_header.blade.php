@@ -17,8 +17,12 @@
                 <li class="nav-item"><a href="{{ route('web.theme.contact') }}" class="nav-link">Contact</a></li>
                 <li class="nav-item">
                     <a href="" class="nav-link" data-toggle="modal" data-target="#lang-select">
-                        <span
-                            class="flaticon-bed mr-1"></span><span>{{ get_app_locale()[app()->getLocale()]['language'] }}</span>
+                        <span class="flaticon-bed mr-1"></span>
+                        @guest
+                            <span>{{ get_app_locale()[app()->getLocale()]['language'] }}</span>
+                        @else
+                            <span>{{ get_app_locale()[Auth::user()->prefer_lang]['language'] }}</span>
+                        @endguest
                     </a>
                 </li>
                 @guest
@@ -40,6 +44,8 @@
                             <a class="dropdown-item" id="logout" href="javascript:void(0)">
                                 <form action="{{ route('web.logout') }}" method="POST">
                                     @csrf
+                                    <input type="hidden" name="locale" value="{{ app()->getLocale() }}">
+
                                     <button class="btn btn-primary" type="submit"
                                             name="button">{{ __('Logout') }}</button>
                                 </form>

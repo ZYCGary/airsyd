@@ -5,5 +5,6 @@ return [
     'email' => '您的邮箱',
     'introduction' => '介绍一下您自己 ~',
     'location' => '您的居住地',
+    'password' => '设置密码',
 
 ];
