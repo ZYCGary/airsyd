@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Shared;
 
 use App\Http\Controllers\Controller;
+use Auth;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Session;
 
 class LocalesController extends Controller
@@ -21,6 +21,11 @@ class LocalesController extends Controller
             case 'web':
                 if (array_key_exists($locale, get_app_locale())) {
                     Session::put('locale', $locale);
+
+                    if (Auth::check()) {
+                        $user = Auth::user();
+                        $user->update(['prefer_lang' => $locale]);
+                    }
                 }
                 break;
             case 'admin':

@@ -18,18 +18,15 @@
                 <li class="nav-item">
                     <a href="" class="nav-link" data-toggle="modal" data-target="#lang-select">
                         <span class="flaticon-bed mr-1"></span>
-                        @guest
-                            <span>{{ get_app_locale()[app()->getLocale()]['language'] }}</span>
-                        @else
-                            <span>{{ get_app_locale()[Auth::user()->prefer_lang]['language'] }}</span>
-                        @endguest
+                        <span>{{ get_app_locale()[app()->getLocale()]['language'] }}</span>
                     </a>
                 </li>
                 @guest
                     <li class="nav-item"><a href="{{ route('web.login') }}" class="nav-link">{{ __('Login') }}</a></li>
                     <li class="nav-item"><a href="{{ route('web.register') }}" class="nav-link">{{ __('Register') }}</a>
                     </li>
-                @else
+                @endguest
+                @auth('web')
                     <li class="nav-item dropdown">
                         <a href="#" id="navbarDropdown" class="nav-link dropdown-toggle" role="button"
                            data-toggle="dropdown"
@@ -52,7 +49,7 @@
                             </a>
                         </div>
                     </li>
-                @endguest
+                @endauth
             </ul>
         </div>
     </div>
