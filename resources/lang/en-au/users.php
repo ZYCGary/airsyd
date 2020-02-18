@@ -13,7 +13,7 @@ return [
 
     'profile' => [
         'profile' => 'Profile',
-        'information' => 'profile',
+        'information' => 'Profile',
         'join_time' => 'Joint In',
         'introduction' => 'Introduction',
         'contact' => 'Contact Information',
@@ -31,5 +31,8 @@ return [
         'lang' => 'Languages I Speak',
         'lives_in' => 'Lives In',
         'speaks' => 'Speaks',
-    ]
+    ],
+
+    'update' => 'Update :attr',
+    'change' => 'Change :attr',
 ];

@@ -14,8 +14,8 @@
                                 <form method="POST" action="{{ route('web.register') }}">
                                     @csrf
 
-                                    <input type="hidden" name="locale" value="{{ app()->getLocale() }}">
-                                    <input type="hidden" name="speaks" value="{{ get_speaks()[app()->getLocale()] }}">
+                                    <input type="hidden" name="prefer_lang" value="{{ app()->getLocale() }}">
+                                    <input type="hidden" name="can_speak[]" value="{{ get_speaks()[app()->getLocale()] }}">
 
                                     <div class="form-group">
                                         <label for="name" hidden></label>
