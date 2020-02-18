@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/web/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/web/icomoon.css') }}">
     <link rel="stylesheet" href="{{ mix('css/web/app.css')  }}">
+
     @yield('styles')
 </head>
 <body>
@@ -58,6 +59,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="{{ asset('js/web/google-map.js') }}"></script>
 <script src="{{ mix('js/web/main.js') }}"></script>
+
 @yield('scripts')
 
 

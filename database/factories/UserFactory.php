@@ -32,6 +32,7 @@ $factory->define(User::class, function (Faker $faker) {
     ];
     // Fake language codes
     $languageCodes = ['zh-cn', 'zh-hk', 'en-au'];
+    $languages = ['English', '中文 (普通话)', '中文 (粤语)'];
 
 
     return [
@@ -45,5 +46,6 @@ $factory->define(User::class, function (Faker $faker) {
         'prefer_lang' => $faker->randomElement($languageCodes),
         'created_at' => $date_time,
         'updated_at' => $date_time,
+        'can_speak' => json_encode($faker->randomElements($languages, 2)),
     ];
 });

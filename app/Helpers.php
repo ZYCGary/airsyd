@@ -48,3 +48,15 @@ if (!function_exists('get_admin_locale')) {
         return LocaleTrait::getAllAdminLocales();
     }
 }
+
+if (!function_exists('get_speaks')) {
+    /**
+     * Get all languages speak.
+     *
+     * @return array
+     */
+    function get_speaks()
+    {
+        return LocaleTrait::getAllSpeaks();
+    }
+}

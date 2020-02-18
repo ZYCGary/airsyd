@@ -15,6 +15,7 @@
                                     @csrf
 
                                     <input type="hidden" name="locale" value="{{ app()->getLocale() }}">
+                                    <input type="hidden" name="speaks" value="{{ get_speaks()[app()->getLocale()] }}">
 
                                     <div class="form-group">
                                         <label for="name" hidden></label>

@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.12.1",
+        "bootstrap-select": "^1.13.12",
         "webpack": "^4.41.5"
     }
 }

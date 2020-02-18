@@ -129,8 +129,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'speaks' => [
+            'in_array' => '您选择的部分语言没有在语言列表中。',
         ],
     ],
 

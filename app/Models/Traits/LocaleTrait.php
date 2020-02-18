@@ -33,8 +33,8 @@ trait LocaleTrait
         $result = [];
         foreach (self::getAllLocales() as $code => $locale) {
             if ($locale->is_app_lang) {
-                $result[$locale->code] = [
-                    'code' => $locale->code,
+                $result[$code] = [
+                    'code' => $code,
                     'language' => $locale->language,
                     'speak' => $locale->speak,
                 ];
@@ -53,11 +53,27 @@ trait LocaleTrait
         $result = [];
         foreach (self::getAllLocales() as $code => $locale) {
             if ($locale->is_admin_lang) {
-                $result[$locale->code] = [
-                    'code' => $locale->code,
+                $result[$code] = [
+                    'code' => $code,
                     'language' => $locale->language,
                     'speak' => $locale->speak,
                 ];
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * Get all languages speak.
+     *
+     * @return array
+     */
+    public static function getAllSpeaks()
+    {
+        $result = [];
+        foreach (self::getAllLocales() as $code => $locale) {
+            if (!in_array($locale->speak, $result)) {
+                $result[$code] = $locale->speak;
             }
         }
         return $result;

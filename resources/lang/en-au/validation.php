@@ -130,8 +130,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'speaks' => [
+            'in_array' => 'The language(s) you selected is not in our language list.',
         ],
     ],
 

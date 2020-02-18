@@ -90,12 +90,30 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="edit_lang">{{ __('users.profile.lang') }}</label>
-                                                <div class="tagcloud" id="edit_lang">
-                                                    <a href="#" class="tag-cloud-link">English</a>
-                                                    <a href="#" class="tag-cloud-link">中文</a>
-                                                </div>
+                                                <select name="speaks[]" id="speak_lang"
+                                                        class="selectpicker form-control @error('speaks.*') is-invalid @enderror"
+                                                        multiple
+                                                        data-live-search="true" title="{{ __('placeholders.lang') }}">
+                                                    @foreach(get_speaks() as $language)
+                                                        @if(old('speaks'))
+                                                            <option
+                                                                value="{{ $language }}" {{ (collect(old('speaks'))->contains($language)) ? 'selected' : '' }}>
+                                                                {{ $language }}
+                                                            </option>
+                                                        @else
+                                                            <option
+                                                                value="{{ $language }}" {{ in_array($language, $user->can_speak) ? 'selected' : '' }}>
+                                                                {{ $language }}
+                                                            </option>
+                                                        @endif
+                                                    @endforeach
+                                                </select>
+                                                @error('speaks.*')
+                                                <span class="invalid-feedback"
+                                                      role="alert"><strong>{{ $message }}</strong></span>
+                                                @enderror
                                             </div>
-                                            <div class="form-group">
+                                            <div class=" form-group">
                                                 <label
                                                     for="edit-intro">{{ __('users.profile.introduction') }}</label>
                                                 <textarea id="" cols="30" rows="7"

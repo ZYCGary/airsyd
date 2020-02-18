@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
+
 class UserRequest extends Request
 {
     /**
@@ -28,6 +30,7 @@ class UserRequest extends Request
                 return [
                     'name' => 'required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/',
                     'introduction' => 'max:' . $maxIntro,
+                    'speaks.*' => Rule::in(get_speaks()),
                 ];
             }
             case 'GET':
@@ -42,7 +45,7 @@ class UserRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+            'speaks.*.in' => trans('validation.custom.speaks.in_array'),
         ];
     }
 }

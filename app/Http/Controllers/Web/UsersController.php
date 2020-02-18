@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
-use Validator;
-use Redirect;
 
 class UsersController extends Controller
 {
@@ -27,12 +25,13 @@ class UsersController extends Controller
         return view('web.users.edit', compact('user'));
     }
 
-    public function update(UserRequest $request, User $user)
+    public function update(UserRequest $userRequest, User $user)
     {
         $this->authorize('update', $user);
-
-        // Update user information with valid request.
-        $user->update($request->all());
+        $request = $userRequest->all();
+//        dd($request);
+        $request['can_speak'] = ($request['speaks']);
+        $user->update($request);
         toast(trans('alerts.success.update', ['info' => trans('users.profile.information')]), 'success');
         return redirect()->route('web.users.show', $user->id);
     }

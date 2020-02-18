@@ -26,7 +26,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'introduction', 'avatar', 'prefer_lang',
+        'name', 'email', 'password', 'introduction', 'avatar', 'prefer_lang', 'can_speak',
     ];
 
     /**
@@ -45,6 +45,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'can_speak' => 'array',
     ];
 
     /**
