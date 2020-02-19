@@ -28,7 +28,7 @@
 
 <div class="sidebar-box ftco-animate profile-card">
     <div id="listings">
-        <h3>{{ __('users.profile.his_her_listings', ['name' => $user->name]) }}</h3>
+        <h3>{{ __('users.profile.somebody_listing', ['name' => $user->name]) }}</h3>
         <div class="row ftco-animate">
             <div class="col-md-12">
                 <div class="carousel-testimony owl-carousel ftco-owl">
@@ -83,7 +83,7 @@
 
 <div class="sidebar-box ftco-animate profile-card">
     <div id="blog">
-        <h3>{{ __('users.profile.his_her_blog', ['name' => $user->name]) }}</h3>
+        <h3>{{ __('users.profile.somebody_blog', ['name' => $user->name]) }}</h3>
         <div class="row ftco-animate">
             <div class="col-md-4">
                 <a href="" class="item">
