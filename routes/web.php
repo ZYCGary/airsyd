@@ -20,16 +20,19 @@ Route::name('web.')->group(function () {
     Route::get('locales/{code}/set', 'Shared\LocalesController@set')->name('locales.set');
 
     Route::namespace('Web')->group(function () {
-        /* Web auth routes */
+        // Web auth routes
         Auth::routes(['verify' => true]);
 
-        /* Static pages routes */
+        // Static pages routes
         Route::get('/', 'PagesController@home')->name('home');
 
-        /* User profile routes */
+        // Users profile routes
         Route::resource('users', 'UsersController', ['show', 'edit', 'update']);
 
-        /* Theme routes */
+        // Properties routes
+        Route::resource('properties', 'PropertiesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+        /* Themes routes */
         Route::prefix('theme')->group(function () {
             Route::get('', 'ThemeController@home')->name('theme.home');
             Route::get('about', 'ThemeController@about')->name('theme.about');
@@ -50,7 +53,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('locales/{code}/set', 'Shared\LocalesController@set')->name('locales.set');
 
     Route::namespace('Admin')->group(function () {
-        // Locale routes
+        // Locales routes
         Route::resource('locales', 'LocalesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+        // Categories routes
+        Route::resource('categories', 'CategoriesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
     });
 });

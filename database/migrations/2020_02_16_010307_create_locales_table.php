@@ -20,6 +20,6 @@ class CreateLocalesTable extends Migration
 
 	public function down()
 	{
-		Schema::drop('locales');
+		Schema::dropIfExists('locales');
 	}
 }
