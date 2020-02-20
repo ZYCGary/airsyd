@@ -7,7 +7,10 @@ class PropertiesTableSeeder extends Seeder
 {
     public function run()
     {
-        $properties = factory(Property::class)->times(50)->make()->each(function ($property, $index) {
+        $properties = factory(Property::class)
+            ->times(50)
+            ->make()
+            ->each(function ($property, $index) {
             if ($index == 0) {
                 // $property->field = 'value';
             }
