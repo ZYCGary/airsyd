@@ -29,6 +29,9 @@ Route::name('web.')->group(function () {
         /* User profile routes */
         Route::resource('users', 'UsersController', ['show', 'edit', 'update']);
 
+        // Properties routes
+        Route::resource('properties', 'PropertiesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
         /* Theme routes */
         Route::prefix('theme')->group(function () {
             Route::get('', 'ThemeController@home')->name('theme.home');
