@@ -28,8 +28,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
 	{
 		\App\Models\User::observe(\App\Observers\UserObserver::class);
-		\App\Models\Category::observe(\App\Observers\CategoryObserver::class);
-		\App\Models\Property::observe(\App\Observers\PropertyObserver::class);
 		\App\Models\Locale::observe(\App\Observers\LocaleObserver::class);
 
         //
