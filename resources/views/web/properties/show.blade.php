@@ -38,7 +38,7 @@
 	{{ $property->street }}
 </p> <label>Suburb</label>
 <p>
-	{{ $property->suburb }}
+	{{ $property->suburb_id }}
 </p> <label>Total_bedrooms</label>
 <p>
 	{{ $property->total_bedrooms }}

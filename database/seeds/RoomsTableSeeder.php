@@ -19,11 +19,10 @@ class RoomsTableSeeder extends Seeder
         $rooms = factory(Room::class)
             ->times(50)
             ->make()
-        ->each(function ($room, $index)
-        use($property_ids, $faker)
-        {
-            $room->property_id = $faker->randomElement($property_ids);
-        });
+            ->each(function ($room, $index)
+            use ($property_ids, $faker) {
+                $room->property_id = $faker->randomElement($property_ids);
+            });
 
         Room::insert($rooms->toArray());
     }

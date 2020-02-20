@@ -27,7 +27,7 @@
               <tr>
                 <td class="text-xs-center"><strong>{{$property->id}}</strong></td>
 
-                <td>{{$property->user_id}}</td> <td>{{$property->category_id}}</td> <td>{{$property->type}}</td> <td>{{$property->street}}</td> <td>{{$property->suburb}}</td> <td>{{$property->total_bedrooms}}</td> <td>{{$property->total_bathrooms}}</td> <td>{{$property->max_load}}</td>
+                <td>{{$property->user_id}}</td> <td>{{$property->category_id}}</td> <td>{{$property->type}}</td> <td>{{$property->street}}</td> <td>{{$property->suburb_id}}</td> <td>{{$property->total_bedrooms}}</td> <td>{{$property->total_bathrooms}}</td> <td>{{$property->max_load}}</td>
 
                 <td class="text-xs-right">
                   <a class="btn btn-sm btn-primary" href="{{ route('web.properties.show', $property->id) }}">

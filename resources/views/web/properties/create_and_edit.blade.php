@@ -47,8 +47,8 @@
                 	<input class="form-control" type="text" name="street" id="street-field" value="{{ old('street', $property->street ) }}" />
                 </div>
                 <div class="form-group">
-                    <label for="suburb-field">Suburb</label>
-                    <input class="form-control" type="text" name="suburb" id="suburb-field" value="{{ old('suburb', $property->suburb ) }}" />
+                    <label for="suburb_id-field">Suburb</label>
+                    <input class="form-control" type="text" name="suburb" id="suburb-field" value="{{ old('suburb', $property->suburb_id ) }}" />
                 </div>
                 <div class="form-group">
                     <label for="total_bedrooms-field">Total_bedrooms</label>

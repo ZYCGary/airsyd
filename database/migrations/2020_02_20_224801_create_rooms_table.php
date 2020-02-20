@@ -22,7 +22,6 @@ class CreateRoomsTable extends Migration
             $table->integer('bed_size')->unsigned();
             $table->integer('bond')->unsigned();
             $table->integer('bills')->unsigned();
-            $table->timestamps();
         });
     }
 
