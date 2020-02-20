@@ -6,6 +6,7 @@ use App\Notifications\Auth\UserEmailVerificationNotification;
 use App\Notifications\Auth\UserResetPasswordNotification;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -90,5 +91,15 @@ class User extends Authenticatable implements MustVerifyEmailContract
     public function isSameUser(User $user)
     {
         return $this->id === $user->id;
+    }
+
+    /**
+     * Get the properties that the user posted.
+     *
+     * @return HasMany
+     */
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
     }
 }
