@@ -27,10 +27,13 @@ Route::name('web.')->group(function () {
         Route::get('/', 'PagesController@home')->name('home');
 
         /* User profile routes */
-        Route::resource('users', 'UsersController', ['show', 'edit', 'update']);
+        Route::resource('users', 'UsersController', ['only' => ['show', 'edit', 'update']]);
 
         // Properties routes
         Route::resource('properties', 'PropertiesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+        // Rooms routes
+        Route::resource('rooms', 'RoomsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
         /* Theme routes */
         Route::prefix('theme')->group(function () {
@@ -57,3 +60,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('locales', 'LocalesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
     });
 });
+
