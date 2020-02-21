@@ -3,7 +3,6 @@
 @section('title', 'Profile')
 
 @section('content')
-    {{ dd(Auth::user()->properties) }}
     <section id="user-show" class="ftco-section ftco-degree-bg no-hero-wrap">
         <div class="container">
             <div class="row">

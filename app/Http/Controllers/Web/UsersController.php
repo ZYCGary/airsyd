@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Handlers\ImageUploadHandler;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
@@ -25,11 +26,17 @@ class UsersController extends Controller
         return view('web.users.edit', compact('user'));
     }
 
-    public function update(UserRequest $userRequest, User $user)
+    public function update(UserRequest $userRequest, ImageUploadHandler $uploader,  User $user)
     {
         $this->authorize('update', $user);
         $request = $userRequest->all();
-//        dd($request);
+
+        if ($userRequest->avatar) {
+            $result = $uploader->save($userRequest->avatar, 'avatars', $user->id, 'web', 416);
+            if ($result) {
+                $request['avatar'] = $result['path'];
+            }
+        }
         $request['can_speak'] = ($request['speaks']);
         $user->update($request);
         toast(trans('alerts.success.update', ['info' => trans('users.profile.information')]), 'success');

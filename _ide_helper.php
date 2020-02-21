@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 6.14.0 on 2020-02-17 15:51:14.
+ * Generated for Laravel 6.14.0 on 2020-02-21 11:02:12.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -8097,6 +8097,86 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Migrate the delayed jobs that are ready to the regular queue.
+         *
+         * @param string $from
+         * @param string $to
+         * @return array 
+         * @static 
+         */ 
+        public static function migrateExpiredJobs($from, $to)
+        {
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        return $instance->migrateExpiredJobs($from, $to);
+        }
+        
+        /**
+         * Delete a reserved job from the queue.
+         *
+         * @param string $queue
+         * @param \Illuminate\Queue\Jobs\RedisJob $job
+         * @return void 
+         * @static 
+         */ 
+        public static function deleteReserved($queue, $job)
+        {
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        $instance->deleteReserved($queue, $job);
+        }
+        
+        /**
+         * Delete a reserved job from the reserved queue and release it.
+         *
+         * @param string $queue
+         * @param \Illuminate\Queue\Jobs\RedisJob $job
+         * @param int $delay
+         * @return void 
+         * @static 
+         */ 
+        public static function deleteAndRelease($queue, $job, $delay)
+        {
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        $instance->deleteAndRelease($queue, $job, $delay);
+        }
+        
+        /**
+         * Get the queue or return the default.
+         *
+         * @param string|null $queue
+         * @return string 
+         * @static 
+         */ 
+        public static function getQueue($queue)
+        {
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        return $instance->getQueue($queue);
+        }
+        
+        /**
+         * Get the connection for the queue.
+         *
+         * @return \Illuminate\Redis\Connections\Connection 
+         * @static 
+         */ 
+        public static function getConnection()
+        {
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        return $instance->getConnection();
+        }
+        
+        /**
+         * Get the underlying Redis instance.
+         *
+         * @return \Illuminate\Contracts\Redis\Factory 
+         * @static 
+         */ 
+        public static function getRedis()
+        {
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        return $instance->getRedis();
+        }
+        
+        /**
          * Get the retry delay for an object-based queue handler.
          *
          * @param mixed $job
@@ -8106,7 +8186,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobRetryDelay($job)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
                         return $instance->getJobRetryDelay($job);
         }
         
@@ -8120,7 +8200,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobExpiration($job)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
                         return $instance->getJobExpiration($job);
         }
         
@@ -8134,7 +8214,7 @@ namespace Illuminate\Support\Facades {
         public static function createPayloadUsing($callback)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        \Illuminate\Queue\SyncQueue::createPayloadUsing($callback);
+                        \Illuminate\Queue\RedisQueue::createPayloadUsing($callback);
         }
         
         /**
@@ -8147,7 +8227,7 @@ namespace Illuminate\Support\Facades {
         public static function setContainer($container)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        /** @var \Illuminate\Queue\RedisQueue $instance */
                         $instance->setContainer($container);
         }
          
@@ -15727,6 +15807,75 @@ namespace Facade\Ignition\Facades {
  
 }
 
+namespace Intervention\Image\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Image {
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = [])
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -18612,6 +18761,8 @@ namespace  {
     class Alert extends \RealRashid\SweetAlert\Facades\Alert {}
 
     class Flare extends \Facade\Ignition\Facades\Flare {}
+
+    class Image extends \Intervention\Image\Facades\Image {}
  
 }
 
@@ -18644,10 +18795,24 @@ namespace Illuminate\Support {
 
 namespace App\Models {
     /**
+    * @method \Illuminate\Database\Eloquent\Collection|Room[]|Room create($attributes = [])
+    * @method \Illuminate\Database\Eloquent\Collection|Room[]|Room make($attributes = [])
+    */
+    class RoomFactoryBuilder extends \Illuminate\Database\Eloquent\FactoryBuilder {}
+}
+namespace App\Models {
+    /**
     * @method \Illuminate\Database\Eloquent\Collection|User[]|User create($attributes = [])
     * @method \Illuminate\Database\Eloquent\Collection|User[]|User make($attributes = [])
     */
     class UserFactoryBuilder extends \Illuminate\Database\Eloquent\FactoryBuilder {}
+}
+namespace App\Models {
+    /**
+    * @method \Illuminate\Database\Eloquent\Collection|Property[]|Property create($attributes = [])
+    * @method \Illuminate\Database\Eloquent\Collection|Property[]|Property make($attributes = [])
+    */
+    class PropertyFactoryBuilder extends \Illuminate\Database\Eloquent\FactoryBuilder {}
 }
 namespace App\Models {
     /**

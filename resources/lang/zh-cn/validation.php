@@ -177,6 +177,7 @@ return [
         'available' => '可用的',
         'size' => '大小',
         'introduction' => '个人简介',
+        'avatar' => '头像',
 
     ],
 ];

@@ -1,7 +1,7 @@
 <div class="sidebar-box bg-light">
     <div class="bio agent">
         <div class="img">
-            <img src="{{ asset('images/web/theme/team-1.jpg') }}" class="img-fluid" alt="Colorlib Template">
+            <img src="{{ $user->avatar }}" class="img-fluid" alt="{{ $user->name }}">
         </div>
         <div class="desc">
             <h3>{{ $user->name }}</h3>

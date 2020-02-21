@@ -178,7 +178,7 @@ return [
         'available' => 'Available',
         'size' => 'Size',
         'introduction' => 'Introduction',
+        'avatar' => 'Avatar',
 
     ],
-
 ];

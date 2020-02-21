@@ -40,7 +40,7 @@
                             <div class="tab-pane fade show active" id="pills-information" role="tabpanel"
                                  aria-labelledby="pills-information-tab">
                                 <form action="{{ route('web.users.update', $user->id) }}" method="POST"
-                                      accept-charset="UTF-8">
+                                      accept-charset="UTF-8" enctype="multipart/form-data">
                                     @csrf
                                     {{ method_field('PUT') }}
 
@@ -50,12 +50,18 @@
                                         <div class="col-md-4">
                                             <div class="bio agent">
                                                 <div class="img">
-                                                    <img src="{{ asset('images/web/theme/team-1.jpg') }}"
-                                                         class="img-fluid"
-                                                         alt="Colorlib Template" width="100%">
+                                                    <img src="{{ $user->avatar }}" class="img-fluid"
+                                                         alt="{{ $user->name }}" width="100%">
                                                 </div>
                                                 <div class="desc">
-                                                    <h3>{{ __('users.profile.update_avatar') }}</h3>
+                                                    <label
+                                                        for="edit-avatar">{{ __('users.profile.update_avatar') }}</label>
+                                                    <input type="file" name="avatar" id="edit-avatar"
+                                                           class="form-control  @error('avatar') is-invalid @enderror">
+                                                    @error('avatar')
+                                                    <span class="invalid-feedback"
+                                                          role="alert"><strong>{{ $message }}</strong></span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
