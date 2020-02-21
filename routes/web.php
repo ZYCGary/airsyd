@@ -28,6 +28,7 @@ Route::name('web.')->group(function () {
 
         /* User profile routes */
         Route::resource('users', 'UsersController', ['only' => ['show', 'edit', 'update']]);
+        Route::patch('users/{user}/avatar', 'UserController@updateAvatar')->name('users.update.avatar');
 
         // Properties routes
         Route::resource('properties', 'PropertiesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

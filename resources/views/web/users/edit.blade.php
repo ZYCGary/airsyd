@@ -59,7 +59,7 @@
                                                     <input type="file" name="avatar" id="edit-avatar"
                                                            class="form-control  @error('avatar') is-invalid @enderror">
                                                     @error('avatar')
-                                                    <span class="invalid-feedback"
+                                                    <span class="invalid-feedback" id="avatar-invalid-feedback"
                                                           role="alert"><strong>{{ $message }}</strong></span>
                                                     @enderror
                                                 </div>

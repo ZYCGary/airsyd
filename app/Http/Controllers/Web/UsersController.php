@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Handlers\ImageUploadHandler;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Request;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 
@@ -26,7 +27,7 @@ class UsersController extends Controller
         return view('web.users.edit', compact('user'));
     }
 
-    public function update(UserRequest $userRequest, ImageUploadHandler $uploader,  User $user)
+    public function update(UserRequest $userRequest, ImageUploadHandler $uploader, User $user)
     {
         $this->authorize('update', $user);
         $request = $userRequest->all();
@@ -41,5 +42,10 @@ class UsersController extends Controller
         $user->update($request);
         toast(trans('alerts.success.update', ['info' => trans('users.profile.information')]), 'success');
         return redirect()->route('web.users.show', $user->id);
+    }
+
+    public function updateAvatar(Request $request, ImageUploadHandler $uploader, User $user)
+    {
+
     }
 }

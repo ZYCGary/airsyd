@@ -315,4 +315,68 @@ AOS.init({
     goHere();
 
 
+    /**
+     * Send an AJAX request by clicking a button.
+     * Disable the button before receiving server response, enable the button when responded.
+     *
+     * @param btn The button should be disabled/enabled during the request.
+     * @param type The type of the AJAX request.
+     * @param url The url the request send to.
+     * @param data The data the request send with.
+     * @param doneFn The callback function for a 'success' response.
+     * @param failFn The callback function for a 'error' response.
+     * */
+    window.sendRequestOnBtn = function(btn, type, url, data, doneFn, failFn) {
+        btn.attr('disabled', true);
+        $.ajax({
+            type: type,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            },
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function (xhr, data, status) {
+                btn.attr('disable', false);
+                doneFn(xhr, data, status);
+            },
+            error: function (xhr, data, status) {
+                btn.attr('disable', false);
+                failFn(xhr, data, status);
+            }
+        })
+    };
+
+    /**
+     * Send an AJAX request by clicking a button.
+     * Display a loading popup before receiving server response, hide the popup when responded.
+     *
+     * @param btn The button should be disabled/enabled during the request.
+     * @param type The type of the AJAX request.
+     * @param url The url the request send to.
+     * @param data The data the request send with.
+     * @param doneFn The callback function for a 'success' response.
+     * @param failFn The callback function for a 'error' response.
+     * */
+    window.sendRequestOnPopup = function(type, url, data, doneFn, failFn) {
+        Swal.showLoading();
+        $.ajax({
+            type: type,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            },
+            url: url,
+            data: data,
+            dataType: 'json',
+            success: function (xhr, data, status) {
+                Swal.hideLoading();
+                doneFn(xhr, data, status);
+            },
+            error: function (xhr, data, status) {
+                Swal.hideLoading();
+                failFn(xhr, data, status);
+            }
+        })
+    };
+
 })(jQuery);

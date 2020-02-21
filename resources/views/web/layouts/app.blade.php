@@ -2,8 +2,13 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     <title>@yield('title', 'Air Sydney')</title>
+    <meta name="description" content="@yield('description', 'Air Sydney Description')"/>
+    <meta name="keyword" content="@yield('keyword', 'Air Sydney Keyword')"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{-- SCRF-TOKEN --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Styles --}}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
