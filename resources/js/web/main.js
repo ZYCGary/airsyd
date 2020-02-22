@@ -351,7 +351,6 @@ AOS.init({
      * Send an AJAX request by clicking a button.
      * Display a loading popup before receiving server response, hide the popup when responded.
      *
-     * @param btn The button should be disabled/enabled during the request.
      * @param type The type of the AJAX request.
      * @param url The url the request send to.
      * @param data The data the request send with.

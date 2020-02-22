@@ -13992,7 +13992,11 @@ textarea.form-control {
   border-bottom: 1px solid #dee2e6;
 }
 
-#user-show #blog .item img {
+#user-show #listings .item {
+  color: #666666;
+}
+
+#user-show #listings .item img {
   width: 100%;
 }
 

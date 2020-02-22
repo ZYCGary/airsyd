@@ -2798,8 +2798,9 @@ textarea.form-control {
         border-bottom: 1px solid $gray-300;
     }
 
-    #blog {
+    #listings {
         .item {
+            color: lighten($black, 40%);
             img {
                 width: 100%;
             }
@@ -2827,7 +2828,7 @@ textarea.form-control {
         }
 
         .bs-placeholder {
-            color: $gray-600!important;
+            color: $gray-600 !important;
         }
     }
 
