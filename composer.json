@@ -13,8 +13,12 @@
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
+<<<<<<< HEAD
         "overtrue/laravel-lang": "^3.0",
         "realrashid/sweet-alert": "^3.1"
+=======
+        "overtrue/laravel-lang": "^3.0"
+>>>>>>> c0f3b8b60686050c5bb38f4d03a04b9cb63c05a9
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",

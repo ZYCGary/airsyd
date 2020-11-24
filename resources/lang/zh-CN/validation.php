@@ -154,7 +154,10 @@ return [
         'password'              => '密码',
         'password_confirmation' => '确认密码',
         'city'                  => '城市',
+<<<<<<< HEAD
         'state'                 => '州/省',
+=======
+>>>>>>> c0f3b8b60686050c5bb38f4d03a04b9cb63c05a9
         'country'               => '国家',
         'address'               => '地址',
         'phone'                 => '电话',

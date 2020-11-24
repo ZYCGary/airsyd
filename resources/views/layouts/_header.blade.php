@@ -6,6 +6,7 @@
             <span class="oi oi-menu"></span> Menu
         </button>
 
+<<<<<<< HEAD
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="{{ route('theme.home') }}" class="nav-link">Home</a></li>
@@ -40,6 +41,19 @@
                         </div>
                     </li>
                 @endguest
+=======
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav navbar-right">
+                <!-- Authentication Links -->
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+>>>>>>> c0f3b8b60686050c5bb38f4d03a04b9cb63c05a9
             </ul>
         </div>
     </div>

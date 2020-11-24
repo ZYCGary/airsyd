@@ -14,6 +14,7 @@
 Route::get('/', 'PagesController@home')->name('home');
 
 Auth::routes();
+<<<<<<< HEAD
 
 
 /* Theme Routes */
@@ -28,3 +29,5 @@ Route::prefix('theme')->group(function (){
     Route::get('properties', 'ThemeController@properties')->name('theme.properties');
     Route::get('properties-single', 'ThemeController@singleProperties')->name('theme.properties.single');
 });
+=======
+>>>>>>> c0f3b8b60686050c5bb38f4d03a04b9cb63c05a9
